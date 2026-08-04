@@ -17,20 +17,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SPANO Industry — Retail Display & Storage Racking Solutions",
+  title: "SPANO Industry | Retail Display & Storage Racking Solutions",
   description:
-    "SPANO Industry — 30 years of expertise in manufacturing innovative, durable, and functional racking systems for supermarkets, departmental stores, and warehouses across India.",
+    "SPANO Industry has 30 years of expertise in manufacturing innovative, durable, and functional racking systems for supermarkets, departmental stores, and warehouses across India.",
   keywords: [
-    "supermarket racks",
-    "display racks",
-    "storage racks",
-    "retail fixtures",
-    "racking systems",
-    "SPANO industry",
-    "Surat",
+    "supermarket display racks",
+    "retail display stands",
+    "heavy duty storage racks",
+    "slotted angle racks",
+    "custom retail fixtures",
+    "racking manufacturer Surat India",
   ],
   openGraph: {
-    title: "SPANO Industry — Retail Display & Storage Racking Solutions",
+    title: "SPANO Industry | Retail Display & Storage Racking Solutions",
     description:
       "30 years of expertise in manufacturing innovative racking systems for supermarkets, departmental stores, and warehouses.",
     type: "website",

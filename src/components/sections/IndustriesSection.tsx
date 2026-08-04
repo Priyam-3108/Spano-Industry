@@ -1,7 +1,7 @@
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { IndustryCard } from '@/components/ui/IndustryCard';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import { industries } from '@/components/data/content';
+import { seoIndustries } from '@/components/data/content';
 
 export function IndustriesSection() {
   return (
@@ -12,11 +12,11 @@ export function IndustriesSection() {
         </AnimatedSection>
 
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {industries.map((industry, i) => (
+          {seoIndustries.slice(0, 8).map((industry, i) => (
             <IndustryCard
-              key={industry.number}
-              number={industry.number}
-              label={industry.label}
+              key={industry.id}
+              number={`0${i + 1}`}
+              label={industry.name}
               imageSrc={industry.imageSrc}
               delay={i * 0.07}
             />

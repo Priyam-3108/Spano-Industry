@@ -1,9 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { IMAGES } from '@/components/data/images';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ArrowRight, ShieldCheck } from 'lucide-react';
+import { useState } from 'react';
+import { EnquireModal } from '@/components/ui/EnquireModal';
 
 export function HeroSection() {
+  const [isEnquireOpen, setIsEnquireOpen] = useState(false);
+
   return (
     <section
       id="home"
@@ -14,129 +19,143 @@ export function HeroSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGES.hero.background}
-          alt="SPANO Industry — Retail racking solutions"
+          alt="SPANO Industry Modern Retail Racking Solutions"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
           loading="eager"
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/85 via-[var(--color-spano-dark)]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/50 via-transparent to-transparent" />
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16">
-        <div className="max-w-2xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20">
+        <div className="max-w-3xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-[var(--color-spano-bright)]/20 border border-[var(--color-spano-bright)]/40 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-bright)]/20 border border-[var(--color-spano-bright)]/40 backdrop-blur-md"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-spano-bright)] animate-pulse" />
-            <span className="text-[var(--color-spano-bright)] text-xs font-semibold tracking-widest uppercase font-body">
-              30 Years of Excellence
+            <ShieldCheck size={14} className="text-[var(--color-spano-bright)]" />
+            <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase font-heading">
+              30 Years of Racking Excellence
             </span>
           </motion.div>
 
-          {/* Brand name */}
+          {/* Main Title (Primary Highlight: SPANO Industry) & Subtitle (Secondary Highlight: Modern Retail Racking Solutions) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mb-2"
+            className="mb-4"
           >
-            <span className="font-heading font-black text-white leading-none tracking-tight"
-              style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
-              SPANO
-            </span>
-            <span className="font-heading font-light text-[var(--color-spano-bright)] text-xl tracking-[0.4em] uppercase ml-3 align-super">
-              Industry
-            </span>
+            <h1
+              className="font-heading font-black tracking-tight leading-none mb-3 drop-shadow-sm"
+              style={{ fontSize: 'clamp(2.8rem, 7vw, 5.2rem)' }}
+            >
+              <span className="text-white">SPANO </span>
+              <span className="text-[var(--color-spano-bright)]">INDUSTRY</span>
+            </h1>
+
+            <h2
+              className="font-heading font-extrabold text-white/95 tracking-tight leading-tight"
+              style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)' }}
+            >
+              Modern Retail <span className="text-[var(--color-spano-bright)]">Racking Solutions</span>
+            </h2>
           </motion.div>
 
           {/* Tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            className="font-heading font-bold text-white/90 text-lg sm:text-xl leading-snug"
           >
-            <p className="font-heading font-semibold text-white/90 leading-snug"
-              style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.6rem)' }}>
-              <span className="text-[var(--color-spano-bright)]">STRONG STRUCTURES.</span>
-              <br />
-              SEAMLESS SHOPPING.
-            </p>
-          </motion.div>
+            STRONG STRUCTURES. SEAMLESS SHOPPING.
+          </motion.p>
 
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-6 text-white/70 text-base leading-relaxed max-w-lg font-body"
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-4 text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl font-body"
           >
-            Manufacturer &amp; Supplier of innovative racking systems for supermarkets, departmental stores, and warehouses across India.
+            Manufacturer &amp; supplier of innovative, durable supermarket racks, retail display stands, heavy-duty warehouse storage, and custom store fixtures across India.
           </motion.p>
 
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-8 flex flex-wrap gap-4"
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-8 flex flex-wrap items-center gap-4"
           >
-            <a
-              href="#products"
-              className="px-6 py-3 bg-[var(--color-spano-bright)] text-white font-bold rounded-xl hover:bg-[var(--color-spano-lime)] transition-all duration-300 hover:shadow-lg hover:shadow-[var(--color-spano-bright)]/30 hover:-translate-y-0.5 font-heading text-sm"
+            <Link
+              href="/products"
+              className="group px-7 py-3.5 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-[var(--color-spano-bright)]/40 hover:-translate-y-0.5 font-heading text-sm flex items-center gap-2"
             >
               Explore Products
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl border border-white/25 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm font-heading text-sm"
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <button
+              onClick={() => setIsEnquireOpen(true)}
+              className="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/25 transition-all duration-300 backdrop-blur-sm font-heading text-sm"
             >
-              Get a Free Quote
-            </a>
+              Get Free Quote
+            </button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats Bar */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-12 flex flex-wrap gap-8"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-12 pt-8 border-t border-white/15 grid grid-cols-3 gap-6 max-w-lg"
           >
             {[
               { value: '30+', label: 'Years Experience' },
-              { value: '500+', label: 'Projects Delivered' },
-              { value: '8+', label: 'Product Categories' },
+              { value: '12+', label: 'Major Retail Clients' },
+              { value: '6+', label: 'Product Categories' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-heading font-black text-[var(--color-spano-bright)] text-3xl leading-none">{stat.value}</p>
-                <p className="text-white/55 text-xs mt-1 font-body">{stat.label}</p>
+                <p className="font-heading font-black text-[var(--color-spano-bright)] text-2xl sm:text-3xl leading-none">
+                  {stat.value}
+                </p>
+                <p className="text-white/60 text-xs mt-1 font-body">{stat.label}</p>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+        transition={{ delay: 1 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
       >
-        <span className="text-white/40 text-xs font-body tracking-widest uppercase">Scroll</span>
+        <span className="text-white/40 text-[10px] font-body tracking-widest uppercase">Scroll Down</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.4 }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronDown className="text-white/40" size={18} />
+          <ChevronDown className="text-white/50" size={18} />
         </motion.div>
       </motion.div>
+
+      {/* Modal */}
+      <EnquireModal
+        isOpen={isEnquireOpen}
+        onClose={() => setIsEnquireOpen(false)}
+        defaultProduct="Modern Retail Racking Solutions"
+      />
     </section>
   );
 }

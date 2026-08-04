@@ -57,6 +57,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+/* 3D Perspective Stage for Carousel */
+.perspective-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
 /* Section scroll offset for sticky nav */
 section {
   scroll-margin-top: 70px;
@@ -72,4 +78,24 @@ section {
 ::-webkit-scrollbar-thumb {
   background: #124a3c;
   border-radius: 3px;
+}
+
+/* Infinite Left-to-Right Marquee Ticker */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 28s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
 }

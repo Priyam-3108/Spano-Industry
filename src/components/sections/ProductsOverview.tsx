@@ -1,7 +1,7 @@
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { ProductCard } from '@/components/ui/ProductCard';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import { products, processSteps } from '@/components/data/content';
+import { homeProductsSummary, processSteps } from '@/components/data/content';
 
 export function ProductsOverview() {
   return (
@@ -17,13 +17,13 @@ export function ProductsOverview() {
         </AnimatedSection>
 
         {/* Products grid */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {products.map((product, i) => (
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6">
+          {homeProductsSummary.map((product, i) => (
             <ProductCard
-              key={product.id}
+              key={product.title}
               imageSrc={product.imageSrc}
               title={product.title}
-              anchor={product.anchor}
+              anchor={product.href}
               delay={i * 0.07}
             />
           ))}
@@ -37,14 +37,12 @@ export function ProductsOverview() {
 
           {/* Process timeline */}
           <div className="mt-10 relative">
-            {/* Connector line (desktop) */}
             <div className="hidden lg:block absolute top-10 left-[calc(100%/12)] right-[calc(100%/12)] h-0.5 bg-gradient-to-r from-[var(--color-spano-bright)]/30 via-[var(--color-spano-bright)] to-[var(--color-spano-bright)]/30" />
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-4">
               {processSteps.map((step, i) => (
                 <AnimatedSection key={step.number} delay={i * 0.08}>
                   <div className="flex flex-col items-center text-center group">
-                    {/* Circle */}
                     <div className="relative mb-4 w-20 h-20 rounded-full bg-white border-2 border-[var(--color-spano-bright)]/30 group-hover:border-[var(--color-spano-bright)] shadow-md group-hover:shadow-lg transition-all duration-300 flex items-center justify-center z-10">
                       <span className="font-heading font-black text-2xl text-[var(--color-spano-dark)]">{step.number}</span>
                     </div>
