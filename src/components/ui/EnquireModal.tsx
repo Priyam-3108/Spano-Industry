@@ -11,6 +11,8 @@ interface EnquireModalProps {
 export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireModalProps) {
   const [product, setProduct] = useState(defaultProduct);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -38,6 +40,8 @@ export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireMo
     } else {
       document.body.style.overflow = 'unset';
       setSubmitted(false);
+      setIsSubmitting(false);
+      setErrorMessage('');
     }
     return () => {
       document.body.style.overflow = 'unset';
@@ -47,10 +51,47 @@ export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireMo
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate inquiry submission
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    const ACCESS_KEY = "2a6bc4c0-9b5a-4d31-9791-be40d412d600";
+
+    const data = {
+      access_key: ACCESS_KEY,
+      subject: `New Web Racking Inquiry | ${formData.name} - ${product || 'General Racking'}`,
+      from_name: "SPANO Industry Website",
+      "Name": formData.name,
+      "Phone": formData.phone,
+      "Email": formData.email || 'N/A',
+      "City / Location": formData.city || 'N/A',
+      "Product Interest": product || 'General Racking',
+      "Message": formData.message || 'No details provided.'
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const resData = await response.json();
+      setIsSubmitting(false);
+
+      if (resData.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(resData.message || "Submission failed. Please check access key.");
+      }
+    } catch (error: any) {
+      setIsSubmitting(false);
+      setErrorMessage(error?.message || "Network error. Please try again.");
+    }
   };
 
   return (
@@ -90,10 +131,10 @@ export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireMo
                 <CheckCircle2 size={36} />
               </div>
               <h4 className="font-heading font-bold text-xl text-[var(--color-spano-dark)]">
-                Inquiry Received!
+                Inquiry Sent Successfully!
               </h4>
               <p className="text-[var(--color-spano-text)] text-sm max-w-xs mx-auto font-body">
-                Thank you <strong className="text-black">{formData.name}</strong>. Our team will contact you shortly regarding <strong className="text-emerald-700">{product || 'Racking Solutions'}</strong>.
+                Thank you <strong className="text-black">{formData.name}</strong>. Our team has received your inquiry regarding <strong className="text-emerald-700">{product || 'Racking Solutions'}</strong> and will call you shortly.
               </p>
               <button
                 onClick={onClose}
@@ -104,6 +145,12 @@ export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireMo
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 font-body">
+              {errorMessage && (
+                <div className="p-3 text-xs font-bold text-red-600 bg-red-50 border border-red-200 rounded-xl">
+                  {errorMessage}
+                </div>
+              )}
+
               <div>
                 <label className="block text-xs font-bold text-[var(--color-spano-dark)] uppercase mb-1">
                   Product / Requirement
@@ -189,10 +236,11 @@ export function EnquireModal({ isOpen, onClose, defaultProduct = '' }: EnquireMo
 
               <button
                 type="submit"
-                className="w-full py-3.5 px-6 bg-[var(--color-spano-bright)] text-white font-bold rounded-xl hover:bg-[var(--color-spano-dark)] transition-colors duration-300 flex items-center justify-center gap-2 font-heading shadow-md hover:shadow-lg"
+                disabled={isSubmitting}
+                className="w-full py-3.5 px-6 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-dark)] disabled:opacity-60 text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 font-heading shadow-md hover:shadow-lg"
               >
                 <Send size={16} />
-                Send Inquiry Now
+                <span>{isSubmitting ? 'Sending Inquiry...' : 'Send Inquiry Now'}</span>
               </button>
             </form>
           )}

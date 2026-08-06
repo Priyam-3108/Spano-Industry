@@ -28,9 +28,12 @@ export default function IndustriesPage() {
         <section className="relative pt-28 pb-20 bg-[var(--color-spano-dark)] text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <AnimatedSection>
-              <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase block mb-3 font-heading">
-                Tailored Retail Racking
-              </span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-bright)]/15 border border-[var(--color-spano-bright)]/30 backdrop-blur-md mb-4">
+                <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)] animate-pulse" />
+                <span className="text-[var(--color-spano-bright)] text-xs font-heading font-black tracking-widest uppercase">
+                  Tailored Retail Racking
+                </span>
+              </div>
               <h1 className="font-heading font-black text-white leading-tight text-3xl sm:text-5xl max-w-3xl">
                 Industries &amp; Retail Sectors We Serve
               </h1>
@@ -54,10 +57,11 @@ export default function IndustriesPage() {
                       alt={`${ind.name} Display Racks`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3.5 py-1 bg-[var(--color-spano-dark)]/90 text-[var(--color-spano-bright)] text-xs font-bold rounded-full font-heading backdrop-blur-sm">
-                        Sector #{i + 1}
-                      </span>
+                    <div className="absolute top-4 left-4 z-10">
+                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-xs font-heading font-black tracking-wider shadow-lg backdrop-blur-md">
+                        <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)]" />
+                        <span>SECTOR #{String(i + 1).padStart(2, '0')}</span>
+                      </div>
                     </div>
                   </div>
 
@@ -65,13 +69,13 @@ export default function IndustriesPage() {
                   <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
                     <div>
                       {/* SEO Tags */}
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <div className="flex flex-wrap items-center gap-2 mb-4">
                         {ind.searchTerms.map((term) => (
                           <span
                             key={term}
-                            className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md font-heading"
+                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-heading font-bold text-[var(--color-spano-dark)] bg-[var(--color-spano-light)]/70 hover:bg-[var(--color-spano-bright)]/15 border border-[var(--color-spano-dark)]/10 transition-colors shadow-xs"
                           >
-                            <Search size={10} />
+                            <Search size={11} className="text-[var(--color-spano-bright)]" />
                             {term}
                           </span>
                         ))}

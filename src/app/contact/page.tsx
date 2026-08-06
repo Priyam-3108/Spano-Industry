@@ -9,6 +9,8 @@ import { Phone, Mail, MapPin, Send, CheckCircle2, MessageCircle, Clock } from 'l
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -18,9 +20,47 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    const ACCESS_KEY = "2a6bc4c0-9b5a-4d31-9791-be40d412d600";
+
+    const data = {
+      access_key: ACCESS_KEY,
+      subject: `New Web Inquiry | ${formData.name} - ${formData.category}`,
+      from_name: "SPANO Industry Website",
+      "Name": formData.name,
+      "Phone": formData.phone,
+      "Email": formData.email || 'N/A',
+      "City / State": formData.city || 'N/A',
+      "Product Category": formData.category,
+      "Message": formData.message || 'No additional message provided.'
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const resData = await response.json();
+      setIsSubmitting(false);
+
+      if (resData.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(resData.message || "Submission failed. Please check your credentials.");
+      }
+    } catch (error: any) {
+      setIsSubmitting(false);
+      setErrorMessage(error?.message || "Network error. Please try again.");
+    }
   };
 
   return (
@@ -84,11 +124,14 @@ export default function ContactPage() {
                         <Mail size={20} />
                       </div>
                       <div>
-                        <h4 className="font-heading font-bold text-[var(--color-spano-dark)] text-sm uppercase">Email Sales</h4>
-                        <a href="mailto:Sales@spanoindustry.com" className="block text-base font-bold text-[var(--color-spano-mid)] hover:underline mt-1 font-body">
+                        <h4 className="font-heading font-bold text-[var(--color-spano-dark)] text-sm uppercase">Email Inquiries</h4>
+                        <a href="mailto:info@spanoindustry.com" className="block text-base font-bold text-[var(--color-spano-mid)] hover:underline mt-1 font-body">
+                          info@spanoindustry.com
+                        </a>
+                        <a href="mailto:Sales@spanoindustry.com" className="block text-xs font-semibold text-gray-600 hover:underline mt-0.5 font-body">
                           Sales@spanoindustry.com
                         </a>
-                        <p className="text-xs text-[var(--color-spano-text)] mt-0.5">Quick response guaranteed within 2 hours</p>
+                        <p className="text-xs text-[var(--color-spano-text)] mt-1">Quick response guaranteed within 2 hours</p>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -178,6 +221,12 @@ export default function ContactPage() {
                       </div>
                     ) : (
                       <form onSubmit={handleSubmit} className="space-y-5 font-body">
+                        {errorMessage && (
+                          <div className="p-4 text-xs font-bold text-red-600 bg-red-50 border border-red-200 rounded-xl">
+                            {errorMessage}
+                          </div>
+                        )}
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                           <div>
                             <label className="block text-xs font-bold text-[var(--color-spano-dark)] uppercase mb-1 font-heading">
@@ -270,10 +319,11 @@ export default function ContactPage() {
 
                         <button
                           type="submit"
-                          className="w-full py-4 px-6 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-dark)] text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 font-heading text-sm shadow-lg"
+                          disabled={isSubmitting}
+                          className="w-full py-4 px-6 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-dark)] disabled:opacity-60 text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 font-heading text-sm shadow-lg"
                         >
                           <Send size={18} />
-                          Submit Racking Inquiry
+                          <span>{isSubmitting ? 'Sending Inquiry...' : 'Submit Racking Inquiry'}</span>
                         </button>
                       </form>
                     )}

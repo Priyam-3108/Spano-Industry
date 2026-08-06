@@ -130,15 +130,25 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:Sales@spanoindustry.com"
-                  className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
-                >
-                  <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-white/10 group-hover:bg-[var(--color-spano-bright)]/20 flex items-center justify-center text-[var(--color-spano-bright)] transition-colors">
+                <div className="flex items-center gap-3 text-white/80">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-[var(--color-spano-bright)]">
                     <Mail size={14} />
                   </span>
-                  <span className="text-xs text-white/90 font-semibold">Sales@spanoindustry.com</span>
-                </a>
+                  <div className="text-xs">
+                    <a
+                      href="mailto:info@spanoindustry.com"
+                      className="block text-white/90 font-semibold hover:text-[var(--color-spano-bright)] transition-colors"
+                    >
+                      info@spanoindustry.com
+                    </a>
+                    <a
+                      href="mailto:Sales@spanoindustry.com"
+                      className="block text-white/60 hover:text-[var(--color-spano-bright)] transition-colors"
+                    >
+                      Sales@spanoindustry.com
+                    </a>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
