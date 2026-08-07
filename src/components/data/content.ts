@@ -111,7 +111,7 @@ export const productCategories: ProductCategoryGroup[] = [
         id: 'gift-stationery-display',
         name: 'Gift & Stationery Displays',
         category: 'Display Rack & Retail Fixtures',
-        imageSrc: IMAGES.displayRacks.giftStationery,
+        imageSrc: IMAGES.industries.bookStores,
         description: 'Multi-tiered shallow shelf units engineered for books, greeting cards, fancy gifts, and office stationery items.',
         features: [
           'Slanted magazine / card display shelves',
@@ -124,7 +124,7 @@ export const productCategories: ProductCategoryGroup[] = [
         id: 'gift-kids-rack',
         name: 'Gift & Kids Store Rack',
         category: 'Display Rack & Retail Fixtures',
-        imageSrc: IMAGES.displayRacks.cornerRack,
+        imageSrc: IMAGES.displayRacks.giftStationery,
         description: 'Vibrant, safe, and accessible toy & children merchandise display units designed for high visibility and easy browsing.',
         features: [
           'Child-safe rounded corner edges',

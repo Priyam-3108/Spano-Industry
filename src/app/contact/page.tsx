@@ -203,14 +203,14 @@ export default function ContactPage() {
 
                     {submitted ? (
                       <div className="py-12 text-center space-y-4">
-                        <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                        <div className="w-20 h-20 rounded-full bg-[var(--color-spano-bright)]/15 text-[var(--color-spano-bright)] flex items-center justify-center mx-auto">
                           <CheckCircle2 size={44} />
                         </div>
                         <h4 className="font-heading font-bold text-2xl text-[var(--color-spano-dark)]">
                           Thank You for Your Inquiry!
                         </h4>
                         <p className="text-[var(--color-spano-text)] text-sm max-w-md mx-auto font-body">
-                          We have received your message regarding <strong className="text-black">{formData.category}</strong>. One of our sales engineers will call you at <strong className="text-emerald-700">{formData.phone}</strong> shortly.
+                          We have received your message regarding <strong className="text-black">{formData.category}</strong>. One of our sales engineers will call you at <strong className="text-[var(--color-spano-mid)]">{formData.phone}</strong> shortly.
                         </p>
                         <button
                           onClick={() => setSubmitted(false)}

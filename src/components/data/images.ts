@@ -53,7 +53,7 @@ export const IMAGES = {
     wallMounted: getImg('/images/latexImage_2acfa9b56df287af51f1ede0aaab0cff.webp'),
     garmentDisplay: getImg('/images/latexImage_82fd2529ed9d289924c84b0316415357.webp'), // Wooden shelves with folded shirts & hanging garments
     giftStationery: getImg('/images/latexImage_db282988c4348a6dde930cb27e8212ad.webp'), // Kids bags, diaper bags & boys wear wall display
-    woodenRack: getImg('/images/latexImage_db8f8ff239edd3d0e4ef3e9503297745.webp'), // Wooden finish shelving with bottles
+    woodenRack: getImg('/images/latexImage_db8f8ff239edd3d0e4ef3e9503297745_straightened.webp'), // Wooden finish shelving with bottles (de-skewed from source asset)
   },
   customSolutions: {
     woodenMetal: getImg('/images/latexImage_8424ff3ed76a8c5ea7f1e229b82af70e.webp'), // Wood & metal combination display fixture render

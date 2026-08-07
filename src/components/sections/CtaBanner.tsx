@@ -30,7 +30,7 @@ export function CtaBanner() {
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 flex-shrink-0">
               <button
                 onClick={() => setIsQuoteOpen(true)}
-                className="px-6 py-3 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-[var(--color-spano-dark)] font-heading font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-2"
+                className="btn-shine px-6 py-3 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-[var(--color-spano-dark)] font-heading font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-2"
               >
                 Get Free Quote
                 <ArrowRight size={15} />

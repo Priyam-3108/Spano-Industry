@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, PhoneCall } from 'lucide-react';
@@ -16,13 +16,41 @@ const navLinks = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [isEnquireOpen, setIsEnquireOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Keep --navbar-h in sync with the header's real height (it shrinks on scroll),
+  // so sticky bars elsewhere on the site never gap or overlap beneath it.
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const setHeight = () => {
+      document.documentElement.style.setProperty('--navbar-h', `${header.offsetHeight}px`);
+    };
+    setHeight();
+    const observer = new ResizeObserver(setHeight);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   const handleLinkClick = () => setOpen(false);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-spano-dark)] backdrop-blur-md border-b border-white/10 shadow-lg py-3.5 transition-all duration-300">
+      <header
+        ref={headerRef}
+        className={`fixed top-0 left-0 right-0 z-50 bg-[var(--color-spano-dark)] backdrop-blur-md border-b border-white/10 transition-all duration-300 ${
+          scrolled ? 'py-2 shadow-2xl' : 'py-3.5 shadow-lg'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -33,7 +61,11 @@ export function Navbar() {
             >
               <div className="flex flex-col">
                 <div className="flex items-baseline gap-1">
-                  <span className="font-heading font-black text-2xl lg:text-3xl text-white tracking-tight group-hover:text-[var(--color-spano-bright)] transition-colors">
+                  <span
+                    className={`font-heading font-black text-white tracking-tight group-hover:text-[var(--color-spano-bright)] transition-all duration-300 ${
+                      scrolled ? 'text-xl lg:text-2xl' : 'text-2xl lg:text-3xl'
+                    }`}
+                  >
                     SPANO
                   </span>
                   <span className="font-heading font-light text-xs text-[var(--color-spano-bright)] tracking-widest uppercase ml-1">
@@ -82,7 +114,7 @@ export function Navbar() {
 
               <button
                 onClick={() => setIsEnquireOpen(true)}
-                className="px-4 py-2 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-white font-bold text-xs rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[var(--color-spano-bright)]/30 font-heading"
+                className="btn-shine px-4 py-2 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-white font-bold text-xs rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[var(--color-spano-bright)]/30 font-heading"
               >
                 Enquire Now
               </button>
@@ -136,7 +168,7 @@ export function Navbar() {
                 setOpen(false);
                 setIsEnquireOpen(true);
               }}
-              className="mt-3 w-full py-3 px-4 bg-[var(--color-spano-bright)] text-white text-sm font-bold rounded-xl text-center hover:bg-[var(--color-spano-lime)] transition-colors font-heading"
+              className="btn-shine mt-3 w-full py-3 px-4 bg-[var(--color-spano-bright)] text-white text-sm font-bold rounded-xl text-center hover:bg-[var(--color-spano-lime)] transition-colors font-heading"
             >
               Enquire Now
             </button>

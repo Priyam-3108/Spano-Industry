@@ -60,7 +60,7 @@ export default function ProductsPage() {
         </section>
 
         {/* Sticky Category Navigation Bar (Section 2 Top) */}
-        <div className="sticky top-[70px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div className="sticky top-[var(--navbar-h)] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
             {/* 1. Mobile Dropdown Selector (sm:hidden) */}
             <div className="w-full sm:hidden">
@@ -206,7 +206,8 @@ export default function ProductsPage() {
               {/* Items Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {catGroup.items.map((item: ProductItem, i: number) => {
-                  const isFeatured = i === 0 && catGroup.items.length > 1;
+                  // Featured treatment only when >=3 regular cards remain, so it never leaves an orphaned partial row
+                  const isFeatured = i === 0 && catGroup.items.length >= 4;
                   return (
                     <AnimatedSection
                       key={item.id}
@@ -220,14 +221,14 @@ export default function ProductsPage() {
                       >
                         {/* Image */}
                         <div
-                          className={`relative overflow-hidden bg-[var(--color-spano-light)]/40 flex-shrink-0 ${
-                            isFeatured ? 'aspect-[16/9] lg:aspect-auto lg:w-2/5' : 'aspect-[4/3]'
+                          className={`relative overflow-hidden bg-[var(--color-spano-light)]/40 flex-shrink-0 p-6 ${
+                            isFeatured ? 'aspect-[4/3] lg:aspect-auto lg:w-2/5 lg:p-10' : 'aspect-[3/4]'
                           }`}
                         >
                           <StaticImage
                             src={item.imageSrc}
                             alt={item.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute top-3 left-3 z-10">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-[10px] font-heading font-black uppercase tracking-wider shadow-lg backdrop-blur-md">

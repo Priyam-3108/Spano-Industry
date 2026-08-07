@@ -108,7 +108,7 @@ export function HeroSection() {
           >
             <Link
               href="/products"
-              className="group px-7 py-3.5 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-[var(--color-spano-bright)]/40 hover:-translate-y-0.5 font-heading text-sm flex items-center gap-2"
+              className="btn-shine group px-7 py-3.5 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-[var(--color-spano-bright)]/40 hover:-translate-y-0.5 font-heading text-sm flex items-center gap-2"
             >
               Explore Products
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

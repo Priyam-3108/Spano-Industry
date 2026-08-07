@@ -40,7 +40,7 @@ export default function AboutPage() {
                     {/* Floating Badge */}
                     <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
                       <div className="flex items-center gap-3 text-white">
-                        <div className="w-10 h-10 rounded-xl bg-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 text-white shadow-md">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] flex items-center justify-center flex-shrink-0 text-[var(--color-spano-bright)] shadow-md">
                           <Award size={22} />
                         </div>
                         <div>
