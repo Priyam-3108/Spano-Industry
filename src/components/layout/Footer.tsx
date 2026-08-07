@@ -49,7 +49,7 @@ export function Footer() {
                 href="https://wa.me/919173564015"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-colors font-heading shadow-md"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-spano-mid)] hover:bg-[var(--color-spano-bright)] text-white font-bold text-xs rounded-xl transition-colors font-heading shadow-md"
               >
                 <MessageCircle size={14} />
                 WhatsApp Us

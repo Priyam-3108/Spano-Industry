@@ -47,16 +47,19 @@ export default function IndustriesPage() {
         {/* Industries List */}
         <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            {seoIndustries.map((ind: SeoIndustry, i: number) => (
-              <AnimatedSection key={ind.id} delay={0.05}>
+            {seoIndustries.map((ind: SeoIndustry, i: number) => {
+              const reversed = i % 2 === 1;
+              return (
+              <AnimatedSection key={ind.id} delay={0.05} direction={reversed ? 'right' : 'left'}>
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
                   {/* Image (5 cols) */}
-                  <div className="lg:col-span-5 relative min-h-[280px] lg:min-h-full overflow-hidden bg-[var(--color-spano-light)]">
+                  <div className={`lg:col-span-5 relative min-h-[280px] lg:min-h-full overflow-hidden bg-[var(--color-spano-light)] ${reversed ? 'lg:order-2' : ''}`}>
                     <StaticImage
                       src={ind.imageSrc}
                       alt={`${ind.name} Display Racks`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden" />
                     <div className="absolute top-4 left-4 z-10">
                       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-xs font-heading font-black tracking-wider shadow-lg backdrop-blur-md">
                         <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)]" />
@@ -66,7 +69,7 @@ export default function IndustriesPage() {
                   </div>
 
                   {/* Content (7 cols) */}
-                  <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                  <div className={`lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between ${reversed ? 'lg:order-1' : ''}`}>
                     <div>
                       {/* SEO Tags */}
                       <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -124,7 +127,8 @@ export default function IndustriesPage() {
                   </div>
                 </div>
               </AnimatedSection>
-            ))}
+            );
+            })}
           </div>
         </section>
 

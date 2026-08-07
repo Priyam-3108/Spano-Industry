@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 const montserrat = Montserrat({
   variable: "--font-heading",
@@ -43,8 +45,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="min-h-full antialiased">{children}</body>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${montserrat.variable} ${inter.variable}`}
+    >
+      <body className="min-h-full antialiased">
+        <ScrollProgressBar />
+        <PageTransition>{children}</PageTransition>
+      </body>
     </html>
   );
 }

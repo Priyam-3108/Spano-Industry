@@ -27,7 +27,7 @@ export function DisplayRacks() {
         <AnimatedSection>
           <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase font-body block mb-3">03</span>
           <div className="mb-2">
-            <h2 className="font-heading font-bold text-white leading-tight" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
+            <h2 className="font-heading font-bold text-white leading-tight text-fluid-section">
               Display Racks &{' '}
               <span className="text-[var(--color-spano-bright)]">Retail Fixtures</span>
             </h2>

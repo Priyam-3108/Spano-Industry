@@ -183,74 +183,97 @@ export default function ProductsPage() {
         </div>
 
         {/* Categories & Products */}
-        <div className="py-16 lg:py-20 space-y-20 bg-white">
-          {filteredCategories.map((catGroup) => (
+        <div className="py-16 lg:py-20 space-y-24 bg-white">
+          {filteredCategories.map((catGroup, catIndex) => (
             <section
               key={catGroup.id}
               id={catGroup.id}
               className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-32"
             >
               <AnimatedSection>
-                <div className="mb-10">
-                  <h2 className="font-heading font-black text-[var(--color-spano-dark)] text-2xl sm:text-3xl">
-                    {catGroup.title}
-                  </h2>
-                  <p className="text-[var(--color-spano-text)] text-sm sm:text-base mt-2 font-body max-w-3xl">
-                    {catGroup.description}
-                  </p>
-                  <div className="mt-3 h-1 w-20 bg-gradient-to-r from-[var(--color-spano-bright)] to-[var(--color-spano-lime)] rounded-full" />
+                <div className="mb-10 flex items-start gap-5">
+                  <span className="font-heading font-black text-transparent text-6xl sm:text-7xl leading-none flex-shrink-0 [-webkit-text-stroke:1.5px_var(--color-spano-bright)] opacity-40 select-none hidden sm:block">
+                    {String(catIndex + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h2 className="font-heading font-black text-[var(--color-spano-dark)] text-2xl sm:text-3xl">{catGroup.title}</h2>
+                    <p className="text-[var(--color-spano-text)] text-sm sm:text-base mt-2 font-body max-w-3xl">{catGroup.description}</p>
+                    <div className="mt-3 h-1 w-20 bg-gradient-to-r from-[var(--color-spano-bright)] to-[var(--color-spano-lime)] rounded-full" />
+                  </div>
                 </div>
               </AnimatedSection>
 
               {/* Items Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {catGroup.items.map((item: ProductItem, i: number) => (
-                  <AnimatedSection key={item.id} delay={i * 0.08}>
-                    <div className="group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full overflow-hidden">
-                      {/* Image */}
-                      <div className="relative aspect-[4/3] overflow-hidden bg-[var(--color-spano-light)]/40">
-                        <StaticImage
-                          src={item.imageSrc}
-                          alt={item.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute top-3 left-3 z-10">
-                          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-[10px] font-heading font-black uppercase tracking-wider shadow-lg backdrop-blur-md">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-spano-bright)]" />
-                            <span>{item.category}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Details */}
-                      <div className="p-6 flex flex-col flex-grow">
-                        <h3 className="font-heading font-bold text-lg text-[var(--color-spano-dark)] group-hover:text-[var(--color-spano-mid)] transition-colors mb-2">
-                          {item.name}
-                        </h3>
-                        <p className="text-[var(--color-spano-text)] text-xs leading-relaxed font-body mb-5 flex-grow">
-                          {item.description}
-                        </p>
-
-                        {/* Features */}
-                        <div className="mb-6 pt-4 border-t border-gray-100">
-                          <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-spano-dark)] mb-2 font-heading">
-                            Key Specifications
-                          </p>
-                          <FeatureList items={item.features} />
-                        </div>
-
-                        {/* Enquire Now CTA */}
-                        <button
-                          onClick={() => handleEnquire(item.name)}
-                          className="w-full py-3 px-4 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 text-xs font-heading shadow-md"
+                {catGroup.items.map((item: ProductItem, i: number) => {
+                  const isFeatured = i === 0 && catGroup.items.length > 1;
+                  return (
+                    <AnimatedSection
+                      key={item.id}
+                      delay={i * 0.08}
+                      className={isFeatured ? 'lg:col-span-3' : ''}
+                    >
+                      <div
+                        className={`group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-md hover:shadow-2xl transition-all duration-300 flex h-full overflow-hidden ${
+                          isFeatured ? 'flex-col lg:flex-row' : 'flex-col'
+                        }`}
+                      >
+                        {/* Image */}
+                        <div
+                          className={`relative overflow-hidden bg-[var(--color-spano-light)]/40 flex-shrink-0 ${
+                            isFeatured ? 'aspect-[16/9] lg:aspect-auto lg:w-2/5' : 'aspect-[4/3]'
+                          }`}
                         >
-                          <Send size={14} />
-                          Enquire Now for {item.name.split(' ')[0]}
-                        </button>
+                          <StaticImage
+                            src={item.imageSrc}
+                            alt={item.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute top-3 left-3 z-10">
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-[10px] font-heading font-black uppercase tracking-wider shadow-lg backdrop-blur-md">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-spano-bright)]" />
+                              <span>{item.category}</span>
+                            </div>
+                          </div>
+                          {isFeatured && (
+                            <div className="absolute bottom-3 right-3 z-10">
+                              <span className="px-2.5 py-1 rounded-full bg-[var(--color-spano-bright)] text-white text-[10px] font-heading font-black uppercase tracking-wider shadow-lg">
+                                Most Popular
+                              </span>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Details */}
+                        <div className={`p-6 flex flex-col flex-grow ${isFeatured ? 'lg:w-3/5 lg:p-8 lg:justify-center' : ''}`}>
+                          <h3 className={`font-heading font-bold text-[var(--color-spano-dark)] group-hover:text-[var(--color-spano-mid)] transition-colors mb-2 ${isFeatured ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
+                            {item.name}
+                          </h3>
+                          <p className={`text-[var(--color-spano-text)] leading-relaxed font-body mb-5 flex-grow ${isFeatured ? 'text-sm' : 'text-xs'}`}>
+                            {item.description}
+                          </p>
+
+                          {/* Features */}
+                          <div className="mb-6 pt-4 border-t border-gray-100">
+                            <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-spano-dark)] mb-2 font-heading">
+                              Key Specifications
+                            </p>
+                            <FeatureList items={item.features} columns={isFeatured ? 2 : 1} />
+                          </div>
+
+                          {/* Enquire Now CTA */}
+                          <button
+                            onClick={() => handleEnquire(item.name)}
+                            className={`py-3 px-4 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 text-xs font-heading shadow-md ${isFeatured ? 'w-full lg:w-auto lg:px-8' : 'w-full'}`}
+                          >
+                            <Send size={14} />
+                            Enquire Now for {item.name.split(' ')[0]}
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </AnimatedSection>
-                ))}
+                    </AnimatedSection>
+                  );
+                })}
               </div>
             </section>
           ))}

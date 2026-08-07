@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+'use client';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -7,14 +7,9 @@ import { StaticImage } from '@/components/ui/StaticImage';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { IMAGES } from '@/components/data/images';
 import { Factory, ShieldCheck, Cpu, Target, Eye, Award, Sparkles, CheckCircle2 } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'About Us | SPANO Industry | Modern Retail Racking Solutions',
-  description:
-    'Learn about SPANO Industry’s 30-year journey in manufacturing high-performance retail display racks, supermarket shelving, and industrial storage systems in Surat, India.',
-};
 
 export default function AboutPage() {
   return (
@@ -35,8 +30,8 @@ export default function AboutPage() {
                   <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white/5 backdrop-blur-md">
                     <div className="aspect-[4/3] lg:aspect-[3/4] relative w-full overflow-hidden">
                       <StaticImage
-                        src={IMAGES.hero.background}
-                        alt="SPANO Industry Cover"
+                        src={IMAGES.about.main}
+                        alt="SPANO Industry Manufacturing Facility Exterior"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
@@ -80,18 +75,23 @@ export default function AboutPage() {
                   {/* Highlights Badges */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-white/10">
                     <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                      <p className="font-heading font-black text-lg text-[var(--color-spano-bright)]">30+ Years</p>
+                      <p className="font-heading font-black text-lg text-[var(--color-spano-bright)]">
+                        <AnimatedCounter target={30} suffix="+" duration={2000} /> Years
+                      </p>
                       <p className="font-body text-xs text-white/70">Manufacturing Experience</p>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                      <p className="font-heading font-black text-lg text-[var(--color-spano-bright)]">1000+</p>
-                      <p className="font-body text-xs text-white/70">Retail Projects Done</p>
+                      <p className="font-heading font-black text-lg text-[var(--color-spano-bright)]">
+                        <AnimatedCounter target={12} suffix="+" duration={2000} />
+                      </p>
+                      <p className="font-body text-xs text-white/70">Major Retail Clients</p>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                       <p className="font-heading font-black text-lg text-[var(--color-spano-bright)]">Surat, IN</p>
                       <p className="font-body text-xs text-white/70">Advanced Production Hub</p>
                     </div>
                   </div>
+
                 </AnimatedSection>
               </div>
             </div>
@@ -203,8 +203,8 @@ export default function AboutPage() {
               <AnimatedSection direction="right">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
                   <StaticImage
-                    src={IMAGES.about.main}
-                    alt="SPANO Industry Manufacturing Facility"
+                    src={IMAGES.about.facility}
+                    alt="SPANO Industry Warehouse Storage Facility"
                     className="w-full h-full object-cover aspect-[4/3]"
                   />
                 </div>
@@ -229,35 +229,22 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Factory,
-                  title: 'Surat Manufacturing Hub',
-                  desc: 'Spread across multiple production bays in Kamrej NH-8, equipped with hydraulic presses, roll forming lines, and CNC benders.',
-                },
-                {
-                  icon: Cpu,
-                  title: 'Electrostatic Powder Coating',
-                  desc: 'Multi-stage chemical pre-treatment and automatic powder coating plant ensuring scratch-proof, rust-resistant, matte finish durability.',
-                },
-                {
-                  icon: ShieldCheck,
-                  title: 'Strict Load Testing',
-                  desc: 'Every shelf bracket, upright post, and beam connector undergoes rigorous load capacity verification before dispatch.',
-                },
+                { icon: Factory, num: '01', title: 'Surat Manufacturing Hub', desc: 'Spread across multiple production bays in Kamrej NH-8, equipped with hydraulic presses, roll forming lines, and CNC benders.' },
+                { icon: Cpu, num: '02', title: 'Electrostatic Powder Coating', desc: 'Multi-stage chemical pre-treatment and automatic powder coating plant ensuring scratch-proof, rust-resistant, matte finish durability.' },
+                { icon: ShieldCheck, num: '03', title: 'Strict Load Testing', desc: 'Every shelf bracket, upright post, and beam connector undergoes rigorous load capacity verification before dispatch.' },
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <AnimatedSection key={item.title} delay={i * 0.1}>
-                    <div className="p-8 rounded-3xl bg-white border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 text-center h-full flex flex-col items-center">
-                      <div className="w-14 h-14 rounded-2xl bg-[var(--color-spano-dark)] text-[var(--color-spano-bright)] flex items-center justify-center mb-5 shadow-md">
+                    <div className="relative p-8 rounded-3xl bg-white border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 text-center h-full flex flex-col items-center overflow-hidden group">
+                      <span className="absolute -top-3 -right-1 font-heading font-black text-7xl text-[var(--color-spano-light)] group-hover:text-[var(--color-spano-bright)]/15 transition-colors select-none leading-none">
+                        {item.num}
+                      </span>
+                      <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform">
                         <Icon size={28} />
                       </div>
-                      <h4 className="font-heading font-bold text-[var(--color-spano-dark)] text-lg mb-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-[var(--color-spano-text)] text-sm leading-relaxed font-body">
-                        {item.desc}
-                      </p>
+                      <h4 className="relative font-heading font-bold text-[var(--color-spano-dark)] text-lg mb-2">{item.title}</h4>
+                      <p className="relative text-[var(--color-spano-text)] text-sm leading-relaxed font-body">{item.desc}</p>
                     </div>
                   </AnimatedSection>
                 );

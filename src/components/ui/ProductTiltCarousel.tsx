@@ -21,6 +21,8 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedProductForQuote, setSelectedProductForQuote] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  // 3D tilt state for active card
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
@@ -181,12 +183,27 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
               <div
                 key={item.title}
                 onClick={() => !isActive && isVisible && !mouseHasDragged.current && setActiveIndex(index)}
-                className={`absolute transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                onMouseMove={(e) => {
+                  if (!isActive) return;
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const cx = rect.left + rect.width / 2;
+                  const cy = rect.top + rect.height / 2;
+                  const dx = (e.clientX - cx) / (rect.width / 2);
+                  const dy = (e.clientY - cy) / (rect.height / 2);
+                  setTilt({ x: dy * -10, y: dx * 10 });
+                }}
+                onMouseLeave={() => isActive && setTilt({ x: 0, y: 0 })}
+                className={`absolute transition-[opacity,filter,box-shadow] duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
                   isActive ? 'cursor-default' : isVisible ? 'cursor-pointer' : ''
                 }`}
                 style={{
                   width: 'clamp(280px, 32vw, 370px)',
-                  transform: `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
+                  transform: isActive
+                    ? `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale}) perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`
+                    : `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
+                  transition: isActive
+                    ? 'transform 0.12s ease-out, opacity 0.7s cubic-bezier(0.23,1,0.32,1), filter 0.7s, box-shadow 0.7s'
+                    : 'transform 0.7s cubic-bezier(0.23,1,0.32,1), opacity 0.7s, filter 0.7s, box-shadow 0.7s',
                   opacity: cardOpacity,
                   zIndex,
                   filter: filterBlur,

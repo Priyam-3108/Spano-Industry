@@ -8,6 +8,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { StaticImage } from '@/components/ui/StaticImage';
 import { OurProcess } from '@/components/sections/OurProcess';
+import { StatHighlight } from '@/components/sections/StatHighlight';
 import { IndustriesCollage } from '@/components/sections/IndustriesCollage';
 import { OurClients } from '@/components/sections/OurClients';
 import { CtaBanner } from '@/components/sections/CtaBanner';
@@ -52,6 +53,15 @@ export default function HomePage() {
                     </p>
                   </div>
 
+                  <div className="mt-6 grid grid-cols-2 gap-3 max-w-md">
+                    {['In-house Manufacturing', 'Nationwide Delivery', 'Custom Store Fixtures', 'Load-Tested Steel'].map((point) => (
+                      <div key={point} className="flex items-center gap-2 text-xs sm:text-sm font-body text-[var(--color-spano-dark)] font-medium">
+                        <CheckCircle2 size={16} className="text-[var(--color-spano-bright)] flex-shrink-0" />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Link
                       href="/about"
@@ -64,7 +74,9 @@ export default function HomePage() {
                 </AnimatedSection>
               </div>
 
-              <AnimatedSection direction="right">
+              <AnimatedSection direction="right" className="relative">
+                <div className="absolute -top-6 -right-6 w-40 h-40 rounded-full bg-[var(--color-spano-bright)]/10 -z-10" />
+                <div className="absolute -bottom-8 -left-8 w-56 h-56 rounded-full bg-[var(--color-spano-lime)]/10 -z-10" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <StaticImage
                     src={IMAGES.about.main}
@@ -114,14 +126,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 4. Our Process */}
+        {/* 4. Signature Stat Highlight */}
+        <StatHighlight />
+
+        {/* 5. Our Process */}
         <OurProcess />
 
-        {/* 5. Industries We Serve (6-Image Brochure Collage) */}
+        {/* 6. Industries We Serve (6-Image Brochure Collage) */}
         <IndustriesCollage />
 
-        {/* 6. Rack Options Carousel Section */}
-        <section className="py-20 lg:py-28 bg-white border-y border-gray-100">
+        {/* 7. Rack Options Carousel Section */}
+        <section className="py-20 lg:py-28 bg-[var(--color-spano-light)]/40 border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <SectionHeader
@@ -138,10 +153,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 7. Client Logos */}
+        {/* 8. Client Logos */}
         <OurClients />
 
-        {/* 8. Contact CTA Banner */}
+        {/* 9. Contact CTA Banner */}
         <CtaBanner />
       </main>
 

@@ -27,10 +27,9 @@ export function SectionHeader({
         </span>
       )}
       <h2
-        className={`font-heading font-bold leading-tight ${
+        className={`font-heading font-bold leading-tight text-fluid-section ${
           light ? 'text-white' : 'text-[var(--color-spano-dark)]'
         }`}
-        style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}
       >
         {title}
         <br />

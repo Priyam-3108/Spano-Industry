@@ -8,44 +8,24 @@ interface ProcessStepItem {
 }
 
 const steps: ProcessStepItem[] = [
-  {
-    number: '01',
-    title: 'Requirement\nUnderstanding',
-    isTopText: true,
-  },
-  {
-    number: '02',
-    title: 'Store Measurement\n& Planning',
-    isTopText: false,
-  },
-  {
-    number: '03',
-    title: 'Design & Layout\nDevelopment',
-    isTopText: true,
-  },
-  {
-    number: '04',
-    title: 'Manufacturing',
-    isTopText: false,
-  },
-  {
-    number: '05',
-    title: 'Delivery &\nInstallation',
-    isTopText: true,
-  },
-  {
-    number: '06',
-    title: 'Final Quality\nInspection',
-    isTopText: false,
-  },
+  { number: '01', title: 'Requirement\nUnderstanding', isTopText: true  },
+  { number: '02', title: 'Store Measurement\n& Planning',      isTopText: false },
+  { number: '03', title: 'Design & Layout\nDevelopment',       isTopText: true  },
+  { number: '04', title: 'Manufacturing',                       isTopText: false },
+  { number: '05', title: 'Delivery &\nInstallation',           isTopText: true  },
+  { number: '06', title: 'Final Quality\nInspection',          isTopText: false },
 ];
 
 export function OurProcess() {
   return (
     <section id="process" className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Card Container with Dark Green Background matching brochure */}
+        {/* Main Card Container */}
         <div className="relative rounded-3xl bg-[var(--color-spano-dark)] p-8 sm:p-12 lg:p-16 text-white shadow-2xl overflow-hidden border border-white/10">
+          {/* Decorative background glow */}
+          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[var(--color-spano-bright)]/8 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[var(--color-spano-mid)]/10 blur-3xl pointer-events-none" />
+
           {/* Header */}
           <AnimatedSection>
             <div className="mb-14 lg:mb-20">
@@ -68,7 +48,7 @@ export function OurProcess() {
                 <AnimatedSection key={step.number} delay={index * 0.08}>
                   <div className="flex flex-col items-center text-center relative h-64 justify-between">
                     {/* Top Content */}
-                    <div className="h-24 flex items-end justify-center">
+                    <div className="h-24 flex items-end justify-center pb-2">
                       {step.isTopText ? (
                         <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
                           {step.title}
@@ -80,13 +60,17 @@ export function OurProcess() {
                       )}
                     </div>
 
-                    {/* Middle Vertical Tick Line */}
-                    <div className="w-0.5 h-12 bg-[var(--color-spano-bright)] my-2 relative">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-sm" />
+                    {/* Middle Vertical Tick + Node */}
+                    <div className="flex flex-col items-center gap-1.5">
+                      <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
+                      <div className="w-9 h-9 rounded-full bg-[var(--color-spano-bright)] text-[var(--color-spano-dark)] flex items-center justify-center shadow-lg shadow-[var(--color-spano-bright)]/30 border-2 border-white/20 font-heading font-black text-sm">
+                        {step.number}
+                      </div>
+                      <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
                     </div>
 
                     {/* Bottom Content */}
-                    <div className="h-24 flex items-start justify-center">
+                    <div className="h-24 flex items-start justify-center pt-2">
                       {!step.isTopText ? (
                         <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
                           {step.title}

@@ -13,7 +13,7 @@ export function ProductCard({ imageSrc, title, anchor, delay = 0 }: ProductCardP
     <AnimatedSection delay={delay} direction="up">
       <a
         href={anchor}
-        className="group block rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+        className="group block rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:transform-[perspective(800px)_rotateX(2deg)_rotateY(-2deg)_translateY(-4px)] border border-gray-100"
         aria-label={`View ${title}`}
       >
         <div className="relative overflow-hidden aspect-[4/3]">

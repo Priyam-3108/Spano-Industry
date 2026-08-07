@@ -1,21 +1,34 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import { IMAGES } from '@/components/data/images';
 import { ChevronDown, ArrowRight, ShieldCheck } from 'lucide-react';
-import { useState } from 'react';
 import { EnquireModal } from '@/components/ui/EnquireModal';
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 
 export function HeroSection() {
   const [isEnquireOpen, setIsEnquireOpen] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Parallax: background moves at ~40% speed of scroll
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '35%']);
 
   return (
     <section
+      ref={sectionRef}
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background image */}
-      <div className="absolute inset-0">
+      {/* Parallax Background image */}
+      <motion.div
+        className="absolute inset-0 will-change-transform"
+        style={{ y: bgY, scale: 1.15 }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGES.hero.background}
@@ -27,7 +40,7 @@ export function HeroSection() {
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20">
@@ -45,7 +58,7 @@ export function HeroSection() {
             </span>
           </motion.div>
 
-          {/* Main Title (Primary Highlight: SPANO Industry) & Subtitle (Secondary Highlight: Modern Retail Racking Solutions) */}
+          {/* Main Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,16 +66,14 @@ export function HeroSection() {
             className="mb-4"
           >
             <h1
-              className="font-heading font-black tracking-tight leading-none mb-3 drop-shadow-sm"
-              style={{ fontSize: 'clamp(2.8rem, 7vw, 5.2rem)' }}
+              className="font-heading font-black tracking-tight leading-none mb-3 drop-shadow-sm text-fluid-hero"
             >
               <span className="text-white">SPANO </span>
               <span className="text-[var(--color-spano-bright)]">INDUSTRY</span>
             </h1>
 
             <h2
-              className="font-heading font-extrabold text-white/95 tracking-tight leading-tight"
-              style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)' }}
+              className="font-heading font-extrabold text-white/95 tracking-tight leading-tight text-fluid-hero-sub"
             >
               Modern Retail <span className="text-[var(--color-spano-bright)]">Racking Solutions</span>
             </h2>
@@ -111,7 +122,7 @@ export function HeroSection() {
             </button>
           </motion.div>
 
-          {/* Stats Bar */}
+          {/* Animated Stats Bar */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -119,13 +130,13 @@ export function HeroSection() {
             className="mt-12 pt-8 border-t border-white/15 grid grid-cols-3 gap-6 max-w-lg"
           >
             {[
-              { value: '30+', label: 'Years Experience' },
-              { value: '12+', label: 'Major Retail Clients' },
-              { value: '6+', label: 'Product Categories' },
+              { target: 30, suffix: '+', label: 'Years Experience' },
+              { target: 12, suffix: '+', label: 'Major Retail Clients' },
+              { target: 6,  suffix: '+', label: 'Product Categories' },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-heading font-black text-[var(--color-spano-bright)] text-2xl sm:text-3xl leading-none">
-                  {stat.value}
+                  <AnimatedCounter target={stat.target} suffix={stat.suffix} duration={2200} />
                 </p>
                 <p className="text-white/60 text-xs mt-1 font-body">{stat.label}</p>
               </div>

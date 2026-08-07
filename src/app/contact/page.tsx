@@ -101,8 +101,8 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   {/* Phone */}
                   <AnimatedSection delay={0.1} direction="left">
-                    <div className="p-6 rounded-2xl bg-[var(--color-spano-light)]/50 border border-gray-100 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--color-spano-dark)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0">
+                    <div className="group p-6 rounded-2xl bg-[var(--color-spano-light)]/50 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
                         <Phone size={20} />
                       </div>
                       <div>
@@ -119,8 +119,8 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <AnimatedSection delay={0.15} direction="left">
-                    <div className="p-6 rounded-2xl bg-[var(--color-spano-light)]/50 border border-gray-100 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--color-spano-dark)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0">
+                    <div className="group p-6 rounded-2xl bg-[var(--color-spano-light)]/50 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
                         <Mail size={20} />
                       </div>
                       <div>
@@ -138,8 +138,8 @@ export default function ContactPage() {
 
                   {/* Factory Address */}
                   <AnimatedSection delay={0.2} direction="left">
-                    <div className="p-6 rounded-2xl bg-[var(--color-spano-light)]/50 border border-gray-100 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--color-spano-dark)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0">
+                    <div className="group p-6 rounded-2xl bg-[var(--color-spano-light)]/50 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
                         <MapPin size={20} />
                       </div>
                       <div>
@@ -155,8 +155,8 @@ export default function ContactPage() {
 
                   {/* Hours */}
                   <AnimatedSection delay={0.25} direction="left">
-                    <div className="p-6 rounded-2xl bg-[var(--color-spano-light)]/50 border border-gray-100 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--color-spano-dark)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0">
+                    <div className="group p-6 rounded-2xl bg-[var(--color-spano-light)]/50 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
                         <Clock size={20} />
                       </div>
                       <div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp Quick Box */}
                 <AnimatedSection delay={0.3} direction="left">
-                  <div className="p-6 rounded-2xl bg-emerald-600 text-white flex items-center justify-between">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-[var(--color-spano-mid)] to-[var(--color-spano-dark)] text-white flex items-center justify-between shadow-lg">
                     <div>
                       <h4 className="font-heading font-bold text-base">Instant WhatsApp Quote</h4>
                       <p className="text-white/80 text-xs font-body">Share your layout plan or sketch directly on WhatsApp.</p>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                       href="https://wa.me/919173564015"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 bg-white text-emerald-700 font-bold text-xs rounded-xl hover:bg-emerald-50 transition-colors font-heading shadow flex items-center gap-1.5"
+                      className="px-4 py-2.5 bg-white text-[var(--color-spano-dark)] font-bold text-xs rounded-xl hover:bg-[var(--color-spano-light)] transition-colors font-heading shadow flex items-center gap-1.5"
                     >
                       <MessageCircle size={16} />
                       Chat Now
