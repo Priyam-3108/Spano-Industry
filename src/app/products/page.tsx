@@ -228,7 +228,9 @@ export default function ProductsPage() {
                           <StaticImage
                             src={item.imageSrc}
                             alt={item.name}
-                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                            className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
+                              item.imageFit === 'cover' ? 'object-cover' : 'object-contain'
+                            }`}
                           />
                           <div className="absolute top-3 left-3 z-10">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-[10px] font-heading font-black uppercase tracking-wider shadow-lg backdrop-blur-md">

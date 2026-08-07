@@ -7,6 +7,8 @@ export interface ProductItem {
   imageSrc: string;
   description: string;
   features: string[];
+  /** Real photographs should cover the frame; rendered product cutouts should stay fully visible (default). */
+  imageFit?: 'contain' | 'cover';
 }
 
 export interface ProductCategoryGroup {
@@ -112,6 +114,7 @@ export const productCategories: ProductCategoryGroup[] = [
         name: 'Gift & Stationery Displays',
         category: 'Display Rack & Retail Fixtures',
         imageSrc: IMAGES.industries.bookStores,
+        imageFit: 'cover',
         description: 'Multi-tiered shallow shelf units engineered for books, greeting cards, fancy gifts, and office stationery items.',
         features: [
           'Slanted magazine / card display shelves',
@@ -125,6 +128,7 @@ export const productCategories: ProductCategoryGroup[] = [
         name: 'Gift & Kids Store Rack',
         category: 'Display Rack & Retail Fixtures',
         imageSrc: IMAGES.displayRacks.giftStationery,
+        imageFit: 'cover',
         description: 'Vibrant, safe, and accessible toy & children merchandise display units designed for high visibility and easy browsing.',
         features: [
           'Child-safe rounded corner edges',
@@ -138,6 +142,7 @@ export const productCategories: ProductCategoryGroup[] = [
         name: 'Cosmetic & Personal Care Displays',
         category: 'Display Rack & Retail Fixtures',
         imageSrc: IMAGES.customSolutions.glassDisplay,
+        imageFit: 'cover',
         description: 'Premium glass and LED illuminated cosmetics display cases designed to create a high-end luxury shopping environment.',
         features: [
           'Toughened glass shelves & lockable glass doors',
@@ -230,6 +235,7 @@ export const productCategories: ProductCategoryGroup[] = [
         name: 'Warehouse Pallet & Bulk Storage Rack',
         category: 'Heavy Duty Storage Racks',
         imageSrc: IMAGES.heavyDuty.warehouseRack,
+        imageFit: 'cover',
         description: 'Heavy structural steel racking engineered for fork-lift access, pallet storage, and heavy industrial inventory management.',
         features: [
           'Load capacity up to 1000kg - 3000kg per level',
@@ -243,6 +249,7 @@ export const productCategories: ProductCategoryGroup[] = [
         name: 'Industrial Multi-Tier Storage Rack',
         category: 'Heavy Duty Storage Racks',
         imageSrc: IMAGES.heavyDuty.industrialStorage,
+        imageFit: 'cover',
         description: 'High-density multi-tier shelving systems maximizing vertical warehouse volume for spare parts and carton storage.',
         features: [
           'Multi-level floor mezzanine integration',

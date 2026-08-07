@@ -33,7 +33,7 @@ export const IMAGES = {
     hardware: getImg('/images/latexImage_8fdb0aeab6963c906f6b42388245500d.webp'), // Heavy duty steel slotted angle storage racks
     warehouses: getImg('/images/latexImage_51f2c6cdafe28a3591a6431c3af1341e.webp'), // Industrial warehouse pallet racking system
     fashionRetail: getImg('/images/latexImage_de7502084c36c2bcc3809480eab3fea1.webp'), // Boutique apparel store with ethnic wear & hanging displays
-    mobileShops: getImg('/images/latexImage_5baee02d56ef52e8f4d8c58c02de59a6.webp'), // Perforated pegboard & accessory hanging wall system
+    mobileShops: getImg('/images/latexImage_82bfabc4ba8abd0a728257a744eab45e.webp'), // Electronics/appliance showroom (reused from electronics — no dedicated mobile shop photo available)
     bookStores: getImg('/images/latexImage_8d7a631159769401f90bf5e1eb93926e.webp'), // Bookstore & stationery aisle with pens, notebooks, and toys
     fullBleed: getImg('/images/latexImage_a7dfd594390c28ee1c76accb29d6882b.webp'),
   },

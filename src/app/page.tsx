@@ -99,7 +99,7 @@ export default function HomePage() {
         </section>
 
         {/* 3. Our Products Section */}
-        <section className="py-20 lg:py-28 bg-[var(--color-spano-light)]/40">
+        <section className="py-20 lg:py-28 bg-[var(--color-spano-light)]/40 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <SectionHeader
@@ -136,7 +136,7 @@ export default function HomePage() {
         <IndustriesCollage />
 
         {/* 7. Rack Options Carousel Section */}
-        <section className="py-20 lg:py-28 bg-[var(--color-spano-light)]/40 border-y border-gray-100">
+        <section className="py-20 lg:py-28 bg-[var(--color-spano-light)]/40 border-y border-gray-100 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <SectionHeader

@@ -51,9 +51,9 @@ export default function IndustriesPage() {
               const reversed = i % 2 === 1;
               return (
               <AnimatedSection key={ind.id} delay={0.05} direction={reversed ? 'right' : 'left'}>
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 lg:h-[480px]">
                   {/* Image (5 cols) */}
-                  <div className={`lg:col-span-5 relative min-h-[280px] lg:min-h-full overflow-hidden bg-[var(--color-spano-light)] ${reversed ? 'lg:order-2' : ''}`}>
+                  <div className={`lg:col-span-5 relative min-h-[280px] h-full overflow-hidden bg-[var(--color-spano-light)] ${reversed ? 'lg:order-2' : ''}`}>
                     <StaticImage
                       src={ind.imageSrc}
                       alt={`${ind.name} Display Racks`}
