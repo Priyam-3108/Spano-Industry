@@ -18,10 +18,17 @@ const inter = Inter({
   display: "swap",
 });
 
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = rawBasePath ? (rawBasePath.startsWith("/") ? rawBasePath : `/${rawBasePath}`) : "";
+
 export const metadata: Metadata = {
   title: "SPANO Industry | Retail Display & Storage Racking Solutions",
   description:
     "SPANO Industry has 30 years of expertise in manufacturing innovative, durable, and functional racking systems for supermarkets, departmental stores, and warehouses across India.",
+  icons: {
+    icon: `${basePath}/icon.png`,
+    apple: `${basePath}/apple-icon.png`,
+  },
   keywords: [
     "supermarket display racks",
     "retail display stands",
