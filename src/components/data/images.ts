@@ -37,6 +37,20 @@ export const IMAGES = {
     bookStores: getImg('/images/latexImage_8d7a631159769401f90bf5e1eb93926e.webp'), // Bookstore & stationery aisle with pens, notebooks, and toys
     fullBleed: getImg('/images/latexImage_a7dfd594390c28ee1c76accb29d6882b.webp'),
   },
+  brochureIndustries: {
+    supermarkets: getImg('/images/latexImage_2427faa3fdc7e151fdbe284bc1655853.webp'),
+    grocery: getImg('/images/latexImage_e641b9ed108fd8baff4fb098248186da.webp'),
+    departmental: getImg('/images/latexImage_963965ae44d1cc056fa9ce5aaeced96b.webp'),
+    giftShops: getImg('/images/latexImage_4829dc80931c1c8db89cceeabb8111db.webp'),
+    footwear: getImg('/images/latexImage_46f2e72c416ccd9dee7646782ea9138c.webp'),
+    electronics: getImg('/images/latexImage_82bfabc4ba8abd0a728257a744eab45e.webp'),
+    cosmetics: getImg('/images/latexImage_a71a165289d853f7ed0b9ee6d0558e8d.webp'),
+    stationery: getImg('/images/latexImage_c51862a88d575ef4da1751100fe955cb.webp'),
+    warehouses: getImg('/images/latexImage_a7dfd594390c28ee1c76accb29d6882b.webp'),
+    textile: getImg('/images/latexImage_de7502084c36c2bcc3809480eab3fea1.webp'),
+    garments: getImg('/images/latexImage_abded6b2cbcc29737e96695bfa1e622f.webp'),
+    slotted: getImg('/images/latexImage_5bd8f11c9556bf2b7e5151b2ca912fc8.webp'),
+  },
   supermarketRacks: {
     fullBleed: getImg('/images/latexImage_b8cf7241b05b3494b1862a13f088f030.webp'),
     wallUnit: getImg('/images/latexImage_2acfa9b56df287af51f1ede0aaab0cff.webp'),

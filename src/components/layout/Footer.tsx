@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-[var(--color-spano-dark)] text-white relative">
       {/* Main Footer Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand Col */}
           <div className="space-y-4">
@@ -157,7 +157,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-20 flex flex-col sm:flex-row items-center justify-between gap-3 font-body">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 font-body">
           <p className="text-white/40 text-xs text-center sm:text-left">
             © {currentYear} SPANO Industry™. All rights reserved.
           </p>

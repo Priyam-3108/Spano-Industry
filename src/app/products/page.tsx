@@ -10,6 +10,7 @@ import { EnquireModal } from '@/components/ui/EnquireModal';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { productCategories, ProductItem } from '@/components/data/content';
+import { IMAGES } from '@/components/data/images';
 import { Send, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function ProductsPage() {
@@ -39,23 +40,34 @@ export default function ProductsPage() {
     <>
       <Navbar />
       <main>
-        {/* Header Banner (Section 1) */}
-        <section className="relative pt-28 pb-16 bg-[var(--color-spano-dark)] text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-bright)]/15 border border-[var(--color-spano-bright)]/30 backdrop-blur-md mb-4">
-                <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)] animate-pulse" />
-                <span className="text-[var(--color-spano-bright)] text-xs font-heading font-black tracking-widest uppercase">
-                  Complete Product Catalog
-                </span>
-              </div>
-              <h1 className="font-heading font-black text-white leading-tight text-3xl sm:text-5xl max-w-3xl">
-                Retail Racks, Display Fixtures &amp; Heavy Duty Storage
-              </h1>
-              <p className="mt-4 text-white/70 text-base max-w-2xl font-body">
-                Explore our engineering range covering supermarket racks, boutique displays, custom wood-metal fixtures, slotted angles, warehouse racks, and checkout accessories.
-              </p>
-            </AnimatedSection>
+        {/* Header Banner (Full Screen Hero) */}
+        <section className="relative min-h-screen flex items-end overflow-hidden bg-[var(--color-spano-dark)] text-white">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGES.supermarketRacks.fullBleed}
+              alt="SPANO Industry Products & Solutions"
+              className="w-full h-full object-cover object-center opacity-25"
+            />
+            {/* Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-24 sm:pb-28">
+            <div className="max-w-3xl">
+              <AnimatedSection direction="left">
+                <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
+                  <span className="font-extrabold">RETAIL RACKS,</span>{' '}
+                  <span className="font-light whitespace-nowrap">DISPLAY FIXTURES &amp;</span><br />
+                  <span className="text-[var(--color-spano-bright)] font-extrabold">HEAVY DUTY STORAGE</span>
+                </h1>
+                <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
+                  Explore our engineering range covering supermarket racks, boutique displays, custom wood-metal fixtures, slotted angles, warehouse racks, and checkout accessories.
+                </p>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
@@ -196,7 +208,7 @@ export default function ProductsPage() {
                     {String(catIndex + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h2 className="font-heading font-black text-[var(--color-spano-dark)] text-2xl sm:text-3xl">{catGroup.title}</h2>
+                    <h2 className="font-heading font-black text-[var(--color-spano-dark)] text-2xl sm:text-3xl leading-[0.98] sm:leading-[0.96] tracking-tight">{catGroup.title}</h2>
                     <p className="text-[var(--color-spano-text)] text-sm sm:text-base mt-2 font-body max-w-3xl">{catGroup.description}</p>
                     <div className="mt-3 h-1 w-20 bg-gradient-to-r from-[var(--color-spano-bright)] to-[var(--color-spano-lime)] rounded-full" />
                   </div>

@@ -40,12 +40,17 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
 
     timerRef.current = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % total);
-    }, 4000);
+    }, 2500);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isHovered, total]);
+
+  // Reset hover state when active index changes
+  useEffect(() => {
+    setIsHovered(false);
+  }, [activeIndex]);
 
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % total);
@@ -121,8 +126,6 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
   return (
     <div
       className="relative w-full py-4 select-none"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {/* 3D Coverflow Stage */}
       <div
@@ -183,6 +186,11 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
               <div
                 key={item.title}
                 onClick={() => !isActive && isVisible && !mouseHasDragged.current && setActiveIndex(index)}
+                onMouseEnter={() => {
+                  if (isActive) {
+                    setIsHovered(true);
+                  }
+                }}
                 onMouseMove={(e) => {
                   if (!isActive) return;
                   const rect = e.currentTarget.getBoundingClientRect();
@@ -192,7 +200,12 @@ export function ProductTiltCarousel({ items }: ProductTiltCarouselProps) {
                   const dy = (e.clientY - cy) / (rect.height / 2);
                   setTilt({ x: dy * -10, y: dx * 10 });
                 }}
-                onMouseLeave={() => isActive && setTilt({ x: 0, y: 0 })}
+                onMouseLeave={() => {
+                  if (isActive) {
+                    setTilt({ x: 0, y: 0 });
+                    setIsHovered(false);
+                  }
+                }}
                 className={`absolute transition-[opacity,filter,box-shadow] duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
                   isActive ? 'cursor-default' : isVisible ? 'cursor-pointer' : ''
                 }`}

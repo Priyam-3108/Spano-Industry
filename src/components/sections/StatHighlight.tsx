@@ -14,7 +14,7 @@ export function StatHighlight() {
     <section className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimatedSection>
-          <p className="font-heading font-black leading-none tracking-tight text-fluid-stat text-[var(--color-spano-dark)]">
+          <p className="font-heading font-black leading-[0.92] sm:leading-[0.90] tracking-tight text-fluid-stat text-[var(--color-spano-dark)]">
             STRONG <span className="text-[var(--color-spano-bright)]">STRUCTURES.</span>
             <br />
             SEAMLESS <span className="text-[var(--color-spano-bright)]">SHOPPING.</span>

@@ -34,16 +34,16 @@ export default function HomePage() {
         {/* 2. About Us Section (Story Preview) */}
         <section className="py-20 lg:py-28 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
               <div>
-                <AnimatedSection direction="left">
-                  <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase block mb-3 font-heading">
+                <AnimatedSection direction="up">
+                  <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase block mb-2 font-heading text-center leading-none">
                     Welcome to SPANO Industry
                   </span>
-                  <SectionHeader title="About" subtitle="Our Expertise" />
+                  <SectionHeader title="About" subtitle="Our Expertise" align="center" />
                 </AnimatedSection>
 
-                <AnimatedSection delay={0.1} direction="left">
+                <AnimatedSection delay={0.1} direction="up" className="flex flex-col items-center">
                   <div className="space-y-4 text-[var(--color-spano-text)] text-base leading-relaxed font-body">
                     <p>
                       With <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a market leader in designing and producing modern retail display fixtures and industrial storage systems.
@@ -53,7 +53,7 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <div className="mt-6 grid grid-cols-2 gap-3 max-w-md">
+                  <div className="mt-6 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-3xl mx-auto">
                     {['In-house Manufacturing', 'Nationwide Delivery', 'Custom Store Fixtures', 'Load-Tested Steel'].map((point) => (
                       <div key={point} className="flex items-center gap-2 text-xs sm:text-sm font-body text-[var(--color-spano-dark)] font-medium">
                         <CheckCircle2 size={16} className="text-[var(--color-spano-bright)] flex-shrink-0" />
@@ -62,7 +62,7 @@ export default function HomePage() {
                     ))}
                   </div>
 
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
                     <Link
                       href="/about"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold text-xs rounded-xl transition-colors font-heading shadow-md"
@@ -73,27 +73,6 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
-
-              <AnimatedSection direction="right" className="relative">
-                <div className="absolute -top-6 -right-6 w-40 h-40 rounded-full bg-[var(--color-spano-bright)]/10 -z-10" />
-                <div className="absolute -bottom-8 -left-8 w-56 h-56 rounded-full bg-[var(--color-spano-lime)]/10 -z-10" />
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                  <StaticImage
-                    src={IMAGES.about.main}
-                    alt="SPANO Industry Racking Installation"
-                    className="w-full h-full object-cover aspect-[4/3]"
-                  />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-gray-100 flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-[var(--color-spano-bright)]/15 text-[var(--color-spano-dark)] flex items-center justify-center font-heading font-black text-xl">
-                      30
-                    </div>
-                    <div>
-                      <p className="font-heading font-bold text-xs text-[var(--color-spano-dark)]">Years Manufacturing Legacy</p>
-                      <p className="text-[11px] text-[var(--color-spano-text)] font-body">Trusted by retailers across India</p>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -103,7 +82,12 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <SectionHeader
-                title="Our Core Product Range"
+                title={
+                  <span>
+                    <span className="font-light normal-case">Our Core </span>
+                    <span className="font-extrabold uppercase">Product Range</span>
+                  </span>
+                }
                 subtitle="Engineered for Every Retail Need"
                 align="center"
               />

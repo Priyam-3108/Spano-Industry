@@ -63,12 +63,10 @@ export function IndustriesCollage() {
         {/* Header */}
         <AnimatedSection>
           <div className="mb-12">
-            <h2 className="font-heading font-black text-3xl sm:text-4xl text-[var(--color-spano-dark)] tracking-tight">
-              Industries
+            <h2 className="font-heading leading-[0.96] sm:leading-[0.94] tracking-tight text-3xl sm:text-4xl">
+              <span className="font-extrabold uppercase block text-[var(--color-spano-dark)]">INDUSTRIES</span>
+              <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">We Serve</span>
             </h2>
-            <p className="font-heading font-black text-3xl sm:text-4xl text-[var(--color-spano-bright)] tracking-tight">
-              We Serve
-            </p>
           </div>
         </AnimatedSection>
 

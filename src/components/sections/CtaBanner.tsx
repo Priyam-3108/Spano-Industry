@@ -17,9 +17,9 @@ export function CtaBanner() {
               <span className="text-[var(--color-spano-bright)] text-xs font-heading font-bold uppercase tracking-widest block mb-1">
                 SPANO Industry Store Racking Solutions
               </span>
-              <h2 className="font-heading font-black text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight">
-                LET&apos;S BUILD YOUR{' '}
-                <span className="text-[var(--color-spano-bright)]">MODERN RETAIL SPACE</span>
+              <h2 className="font-heading text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-[0.98] sm:leading-[0.96]">
+                <span className="font-extrabold uppercase block">LET&apos;S BUILD YOUR</span>
+                <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">Modern Retail Space</span>
               </h2>
               <p className="text-white/75 text-xs sm:text-sm font-body mt-2">
                 From store floor measurements to manufacturing &amp; final installation across India.

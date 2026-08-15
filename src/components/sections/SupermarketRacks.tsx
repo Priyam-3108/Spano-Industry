@@ -33,9 +33,9 @@ export function SupermarketRacks() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <AnimatedSection direction="left">
               <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase font-body block mb-2">01</span>
-              <h2 className="font-heading font-black text-white leading-tight" style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}>
-                Supermarket<br />
-                <span className="text-[var(--color-spano-bright)]">Racks</span>
+              <h2 className="font-heading leading-[0.96] sm:leading-[0.94] tracking-tight text-white" style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}>
+                <span className="font-extrabold uppercase block">SUPERMARKET</span>
+                <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">Racks</span>
               </h2>
               <p className="text-white/60 text-sm mt-1 font-body italic">Quality · Design · Precision</p>
             </AnimatedSection>

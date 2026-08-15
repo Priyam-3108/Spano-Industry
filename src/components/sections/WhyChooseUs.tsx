@@ -43,6 +43,7 @@ export function WhyChooseUs() {
           <SectionHeader
             title="Why Choose"
             subtitle="SPANO Industry"
+            subtitleFirst
             align="center"
           />
           <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
@@ -55,17 +56,14 @@ export function WhyChooseUs() {
             const Icon = item.icon;
             return (
               <AnimatedSection key={item.title} delay={i * 0.08}>
-                <div className="relative p-7 rounded-2xl bg-[var(--color-spano-light)]/60 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-xl transition-all duration-300 group h-full overflow-hidden">
+                <div className="relative p-5 rounded-2xl bg-[var(--color-spano-light)]/60 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-xl transition-all duration-300 group h-full overflow-hidden flex items-center gap-4">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-spano-mid)] to-[var(--color-spano-bright)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center mb-5 shadow-md group-hover:shadow-[var(--color-spano-bright)]/40 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center shadow-md group-hover:shadow-[var(--color-spano-bright)]/40 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
                     <Icon size={24} />
                   </div>
-                  <h3 className="font-heading font-bold text-[var(--color-spano-dark)] text-base mb-2">
+                  <h3 className="font-heading font-bold text-[var(--color-spano-dark)] text-base mb-0">
                     {item.title}
                   </h3>
-                  <p className="text-[var(--color-spano-text)] text-sm leading-relaxed font-body">
-                    {item.desc}
-                  </p>
                 </div>
               </AnimatedSection>
             );

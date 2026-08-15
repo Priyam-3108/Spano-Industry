@@ -27,9 +27,9 @@ export function DisplayRacks() {
         <AnimatedSection>
           <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase font-body block mb-3">03</span>
           <div className="mb-2">
-            <h2 className="font-heading font-bold text-white leading-tight text-fluid-section">
-              Display Racks &{' '}
-              <span className="text-[var(--color-spano-bright)]">Retail Fixtures</span>
+            <h2 className="font-heading leading-[0.96] sm:leading-[0.94] tracking-tight text-fluid-section text-white">
+              <span className="font-extrabold uppercase block">DISPLAY RACKS &amp;</span>
+              <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">Retail Fixtures</span>
             </h2>
             <div className="mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-[var(--color-spano-bright)] to-[var(--color-spano-lime)]" />
           </div>

@@ -32,11 +32,13 @@ export function OurProcess() {
           {/* Header */}
           <AnimatedSection>
             <div className="mb-14 lg:mb-20">
-              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight block mb-1">
-                Our
-              </span>
-              <h2 className="font-heading font-black text-4xl sm:text-5xl text-white tracking-tight leading-none">
-                Process
+              <h2 className="font-heading leading-[0.96] sm:leading-[0.94] text-white">
+                <span className="font-light normal-case block text-2xl sm:text-3xl text-[var(--color-spano-bright)] tracking-tight mb-1">
+                  Our
+                </span>
+                <span className="font-extrabold uppercase block text-4xl sm:text-5xl text-white tracking-tight">
+                  PROCESS
+                </span>
               </h2>
             </div>
           </AnimatedSection>
@@ -58,55 +60,55 @@ export function OurProcess() {
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                <AnimatedSection key={step.number} delay={index * 0.08}>
-                  <div className="group flex flex-col items-center text-center relative h-64 justify-between">
-                    {/* Top Content */}
-                    <div className="h-24 flex flex-col items-center justify-end gap-2 pb-2">
-                      {step.isTopText ? (
-                        <>
-                          <div className="w-8 h-8 rounded-full bg-white/10 text-[var(--color-spano-bright)] flex items-center justify-center group-hover:bg-[var(--color-spano-bright)]/20 group-hover:scale-110 transition-all duration-300">
-                            <Icon size={16} />
-                          </div>
-                          <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
-                            {step.title}
-                          </p>
-                        </>
-                      ) : (
-                        <span className="font-heading font-black text-3xl text-[var(--color-spano-bright)]">
-                          {step.number}
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Middle Vertical Tick + Node */}
-                    <div className="flex flex-col items-center gap-1.5">
-                      <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
-                      <div className="w-9 h-9 rounded-full bg-[var(--color-spano-bright)] text-[var(--color-spano-dark)] flex items-center justify-center shadow-lg shadow-[var(--color-spano-bright)]/30 border-2 border-white/20 font-heading font-black text-sm group-hover:scale-125 group-hover:shadow-[var(--color-spano-bright)]/60 transition-all duration-300">
-                        {step.number}
+                  <AnimatedSection key={step.number} delay={index * 0.08}>
+                    <div className="group flex flex-col items-center text-center relative h-64 justify-between">
+                      {/* Top Content */}
+                      <div className="h-24 flex flex-col items-center justify-end gap-2 pb-2">
+                        {step.isTopText ? (
+                          <>
+                            <div className="w-8 h-8 rounded-full bg-white/10 text-[var(--color-spano-bright)] flex items-center justify-center group-hover:bg-[var(--color-spano-bright)]/20 group-hover:scale-110 transition-all duration-300">
+                              <Icon size={16} />
+                            </div>
+                            <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
+                              {step.title}
+                            </p>
+                          </>
+                        ) : (
+                          <span className="font-heading font-black text-3xl text-[var(--color-spano-bright)]">
+                            {step.number}
+                          </span>
+                        )}
                       </div>
-                      <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
-                    </div>
 
-                    {/* Bottom Content */}
-                    <div className="h-24 flex flex-col items-center justify-start gap-2 pt-2">
-                      {!step.isTopText ? (
-                        <>
-                          <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
-                            {step.title}
-                          </p>
-                          <div className="w-8 h-8 rounded-full bg-white/10 text-[var(--color-spano-bright)] flex items-center justify-center group-hover:bg-[var(--color-spano-bright)]/20 group-hover:scale-110 transition-all duration-300">
-                            <Icon size={16} />
-                          </div>
-                        </>
-                      ) : (
-                        <span className="font-heading font-black text-3xl text-[var(--color-spano-bright)]">
+                      {/* Middle Vertical Tick + Node */}
+                      <div className="flex flex-col items-center gap-1.5">
+                        <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
+                        <div className="w-9 h-9 rounded-full bg-[var(--color-spano-bright)] text-[var(--color-spano-dark)] flex items-center justify-center shadow-lg shadow-[var(--color-spano-bright)]/30 border-2 border-white/20 font-heading font-black text-sm group-hover:scale-125 group-hover:shadow-[var(--color-spano-bright)]/60 transition-all duration-300">
                           {step.number}
-                        </span>
-                      )}
+                        </div>
+                        <div className="w-0.5 h-5 bg-[var(--color-spano-bright)]" />
+                      </div>
+
+                      {/* Bottom Content */}
+                      <div className="h-24 flex flex-col items-center justify-start gap-2 pt-2">
+                        {!step.isTopText ? (
+                          <>
+                            <p className="font-heading font-bold text-sm text-white leading-snug whitespace-pre-line">
+                              {step.title}
+                            </p>
+                            <div className="w-8 h-8 rounded-full bg-white/10 text-[var(--color-spano-bright)] flex items-center justify-center group-hover:bg-[var(--color-spano-bright)]/20 group-hover:scale-110 transition-all duration-300">
+                              <Icon size={16} />
+                            </div>
+                          </>
+                        ) : (
+                          <span className="font-heading font-black text-3xl text-[var(--color-spano-bright)]">
+                            {step.number}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </AnimatedSection>
-              );
+                  </AnimatedSection>
+                );
               })}
             </div>
           </div>
@@ -117,22 +119,22 @@ export function OurProcess() {
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-              <AnimatedSection key={step.number} delay={index * 0.08}>
-                <div className="group flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-[var(--color-spano-bright)]/30 transition-all duration-300">
-                  <div className="relative w-12 h-12 rounded-xl bg-[var(--color-spano-bright)] text-[var(--color-spano-dark)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
-                    <Icon size={22} />
-                    <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[var(--color-spano-dark)] border-2 border-white/20 text-white text-[10px] font-heading font-black flex items-center justify-center">
-                      {index + 1}
-                    </span>
+                <AnimatedSection key={step.number} delay={index * 0.08}>
+                  <div className="group flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-[var(--color-spano-bright)]/30 transition-all duration-300">
+                    <div className="relative w-12 h-12 rounded-xl bg-[var(--color-spano-bright)] text-[var(--color-spano-dark)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
+                      <Icon size={22} />
+                      <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[var(--color-spano-dark)] border-2 border-white/20 text-white text-[10px] font-heading font-black flex items-center justify-center">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-white text-base leading-snug whitespace-pre-line">
+                        {step.title}
+                      </h4>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-white text-base leading-snug whitespace-pre-line">
-                      {step.title}
-                    </h4>
-                  </div>
-                </div>
-              </AnimatedSection>
-            );
+                </AnimatedSection>
+              );
             })}
           </div>
         </div>

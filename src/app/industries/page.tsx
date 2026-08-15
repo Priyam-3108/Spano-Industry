@@ -9,7 +9,8 @@ import { EnquireModal } from '@/components/ui/EnquireModal';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { seoIndustries, SeoIndustry } from '@/components/data/content';
-import { Check, Send, Store, Search } from 'lucide-react';
+import { IMAGES } from '@/components/data/images';
+import { Check, Send, Store, Search, ArrowRight } from 'lucide-react';
 
 export default function IndustriesPage() {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('');
@@ -24,111 +25,136 @@ export default function IndustriesPage() {
     <>
       <Navbar />
       <main>
-        {/* Banner */}
-        <section className="relative pt-28 pb-20 bg-[var(--color-spano-dark)] text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-bright)]/15 border border-[var(--color-spano-bright)]/30 backdrop-blur-md mb-4">
-                <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)] animate-pulse" />
-                <span className="text-[var(--color-spano-bright)] text-xs font-heading font-black tracking-widest uppercase">
-                  Tailored Retail Racking
-                </span>
-              </div>
-              <h1 className="font-heading font-black text-white leading-tight text-3xl sm:text-5xl max-w-3xl">
-                Industries &amp; Retail Sectors We Serve
-              </h1>
-              <p className="mt-4 text-white/70 text-base max-w-2xl font-body">
-                From high-density supermarket aisles and sterile pharmacy shelving to boutique apparel hangs and heavy warehouse racking, we design customized solutions for every retail niche.
-              </p>
-            </AnimatedSection>
+        {/* Banner (Full Screen Hero) */}
+        <section className="relative min-h-screen flex items-end overflow-hidden bg-[var(--color-spano-dark)] text-white">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGES.industries.fullBleed}
+              alt="Industries & Retail Sectors We Serve"
+              className="w-full h-full object-cover object-center opacity-25"
+            />
+            {/* Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-24 sm:pb-28">
+            <div className="max-w-3xl">
+              <AnimatedSection direction="left">
+                <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
+                  <span className="font-extrabold">INDUSTRIES</span>{' '}
+                  <span className="font-light whitespace-nowrap">&amp; RETAIL SECTORS</span><br />
+                  <span className="text-[var(--color-spano-bright)] font-extrabold">WE SERVE</span>
+                </h1>
+                <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
+                  From high-density supermarket aisles and sterile pharmacy shelving to boutique apparel hangs and heavy warehouse racking, we design customized solutions for every retail niche.
+                </p>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
-        {/* Industries List */}
+        {/* Industries Collage */}
         <section className="py-20 lg:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            {seoIndustries.map((ind: SeoIndustry, i: number) => {
-              const reversed = i % 2 === 1;
-              return (
-              <AnimatedSection key={ind.id} delay={0.05} direction={reversed ? 'right' : 'left'}>
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-[var(--color-spano-bright)]/40 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 lg:h-[480px]">
-                  {/* Image (5 cols) */}
-                  <div className={`lg:col-span-5 relative min-h-[280px] h-full overflow-hidden bg-[var(--color-spano-light)] ${reversed ? 'lg:order-2' : ''}`}>
-                    <StaticImage
-                      src={ind.imageSrc}
-                      alt={`${ind.name} Display Racks`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden" />
-                    <div className="absolute top-4 left-4 z-10">
-                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-xs font-heading font-black tracking-wider shadow-lg backdrop-blur-md">
-                        <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)]" />
-                        <span>SECTOR #{String(i + 1).padStart(2, '0')}</span>
-                      </div>
-                    </div>
-                  </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-12 gap-4 sm:gap-6">
+              {seoIndustries.map((ind: SeoIndustry, i: number) => {
+                const collageClasses = [
+                  'col-span-12 lg:col-span-3 lg:row-span-2 min-h-[320px] lg:min-h-[620px]',  // 1. Supermarkets (Tall left)
+                  'col-span-12 md:col-span-6 lg:col-span-6 h-[295px] sm:h-[315px]',          // 2. Grocery Stores (Wide middle - zoomed out)
+                  'col-span-12 md:col-span-6 lg:col-span-3 lg:row-span-2 min-h-[320px] lg:min-h-[620px]',  // 3. Departmental Stores (Tall right)
+                  'col-span-12 md:col-span-6 lg:col-span-3 h-[270px] sm:h-[285px]',          // 4. Gift Shops (Middle left)
+                  'col-span-12 md:col-span-6 lg:col-span-3 h-[270px] sm:h-[285px]',          // 5. Footwear Stores (Middle right)
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 6. Electronics Stores
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 7. Cosmetic Stores
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 8. Stationery Shops
+                  'col-span-12 lg:col-span-12 h-[280px] md:h-[370px] lg:h-[385px]',          // 9. Warehouses (Full width - increased height & zoomed out)
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 10. Textile Rack
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 11. Garment Stores
+                  'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 12. Slotted Rack
+                ];
 
-                  {/* Content (7 cols) */}
-                  <div className={`lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between ${reversed ? 'lg:order-1' : ''}`}>
-                    <div>
-                      {/* SEO Tags */}
-                      <div className="flex flex-wrap items-center gap-2 mb-4">
-                        {ind.searchTerms.map((term) => (
-                          <span
-                            key={term}
-                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-heading font-bold text-[var(--color-spano-dark)] bg-[var(--color-spano-light)]/70 hover:bg-[var(--color-spano-bright)]/15 border border-[var(--color-spano-dark)]/10 transition-colors shadow-xs"
-                          >
-                            <Search size={11} className="text-[var(--color-spano-bright)]" />
-                            {term}
+                const imagePositions = [
+                  'object-cover object-top sm:object-[center_top]',    // 1. Supermarkets (zoom out to show lights at top)
+                  'object-cover object-[center_50%] sm:object-[center_52%]', // 2. Grocery Stores (zoomed out showing lower shelves & bottom perspective)
+                  'object-cover object-center sm:object-[center_top]', // 3. Departmental Stores (shows full spice racks)
+                  'object-cover object-center',                        // 4. Gift Shops
+                  'object-cover object-center',                        // 5. Footwear Stores
+                  'object-cover object-center',                        // 6. Electronics Stores
+                  'object-cover object-center',                        // 7. Cosmetic Stores
+                  'object-cover object-center',                        // 8. Stationery Shops
+                  'object-cover object-[center_35%]',                  // 9. Warehouses (zoomed out showing upper roof & pallet levels)
+                  'object-cover object-center',                        // 10. Textile Rack
+                  'object-cover object-center',                        // 11. Garment Stores
+                  'object-cover object-center',                        // 12. Slotted Rack
+                ];
+
+                const spanClass = collageClasses[i % collageClasses.length];
+                const imgPosClass = imagePositions[i % imagePositions.length];
+
+                return (
+                  <AnimatedSection key={ind.id} delay={i * 0.05} className={`${spanClass} h-full`}>
+                    <button
+                      onClick={() => handleEnquire(ind.name)}
+                      className="group relative block w-full h-full text-left rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200/80 min-h-[200px] focus:outline-none cursor-pointer"
+                    >
+                      {/* Background Image */}
+                      <StaticImage
+                        src={ind.imageSrc}
+                        alt={ind.name}
+                        className={`w-full h-full ${imgPosClass} transition-transform duration-700 ease-out group-hover:scale-105`}
+                      />
+
+                      {/* Overlays */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      {/* Static Badge (Top-Left) */}
+                      <div className="absolute top-0 left-0 bg-[#82bc00] text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-br-2xl shadow-md z-10 min-w-[120px] max-w-[85%] border-r border-b border-white/20">
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="font-heading font-black text-xs text-white/95 tracking-wide">
+                            {String(i + 1).padStart(2, '0')}
                           </span>
-                        ))}
+                          <div className="h-[1.5px] w-12 bg-white/80" />
+                        </div>
+                        <h3 className="font-heading font-black text-sm sm:text-base text-white tracking-tight leading-tight">
+                          {ind.name}
+                        </h3>
                       </div>
 
-                      <h2 className="font-heading font-black text-2xl sm:text-3xl text-[var(--color-spano-dark)] mb-2">
-                        {ind.name}
-                      </h2>
-                      <p className="text-[var(--color-spano-bright)] text-xs font-bold uppercase tracking-wider mb-4 font-heading">
-                        {ind.subtitle}
-                      </p>
-
-                      <p className="text-[var(--color-spano-text)] text-sm leading-relaxed font-body mb-6">
-                        {ind.description}
-                      </p>
-
-                      {/* Recommended Racks */}
-                      <div className="mb-6 bg-[var(--color-spano-light)]/50 p-4 rounded-2xl border border-gray-100">
-                        <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-spano-dark)] mb-3 font-heading flex items-center gap-1.5">
-                          <Store size={14} className="text-[var(--color-spano-bright)]" />
-                          Recommended Racking Setup
+                      {/* Hover Details (Slide Up) */}
+                      <div className="absolute bottom-0 left-0 right-0 z-20 p-4 sm:p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 ease-out">
+                        <p className="text-[var(--color-spano-bright)] text-[10px] font-bold uppercase tracking-wider mb-1 font-heading">
+                          {ind.subtitle}
                         </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {ind.recommendedRacks.map((rack) => (
-                            <div key={rack} className="flex items-center gap-2 text-xs text-[var(--color-spano-text)] font-body">
-                              <span className="w-4 h-4 rounded-full bg-[var(--color-spano-bright)]/20 text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0">
-                                <Check size={10} strokeWidth={3} />
-                              </span>
-                              <span>{rack}</span>
-                            </div>
+                        <p className="text-white/85 text-xs font-body leading-relaxed mb-2.5 line-clamp-2">
+                          {ind.description}
+                        </p>
+
+                        {/* Recommended Racks Tags */}
+                        <div className="flex flex-wrap gap-1.5 mb-2.5">
+                          {ind.recommendedRacks.slice(0, 3).map((rack) => (
+                            <span
+                              key={rack}
+                              className="px-2 py-0.5 rounded-md bg-white/15 border border-white/15 text-[9px] font-medium font-heading text-white"
+                            >
+                              {rack}
+                            </span>
                           ))}
                         </div>
-                      </div>
-                    </div>
 
-                    {/* CTA */}
-                    <div>
-                      <button
-                        onClick={() => handleEnquire(ind.name)}
-                        className="px-6 py-3 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold rounded-xl transition-colors duration-300 flex items-center gap-2 text-xs font-heading shadow-md"
-                      >
-                        <Send size={14} />
-                        Get Racking Quote for {ind.name}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            );
-            })}
+                        <div className="inline-flex items-center gap-1.5 text-xs font-bold font-heading text-[var(--color-spano-bright)]">
+                          Get Racking Quote
+                          <ArrowRight size={12} />
+                        </div>
+                      </div>
+                    </button>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
           </div>
         </section>
 

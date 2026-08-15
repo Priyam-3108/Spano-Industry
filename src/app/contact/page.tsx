@@ -5,7 +5,8 @@ import { Footer } from '@/components/layout/Footer';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
-import { Phone, Mail, MapPin, Send, CheckCircle2, MessageCircle, Clock } from 'lucide-react';
+import { IMAGES } from '@/components/data/images';
+import { Phone, Mail, MapPin, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -67,20 +68,33 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main>
-        {/* Banner */}
-        <section className="relative pt-28 pb-20 bg-[var(--color-spano-dark)] text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <AnimatedSection>
-              <span className="text-[var(--color-spano-bright)] text-xs font-bold tracking-widest uppercase block mb-3 font-heading">
-                Contact &amp; Inquiry
-              </span>
-              <h1 className="font-heading font-black text-white leading-tight text-3xl sm:text-5xl max-w-2xl">
-                Get in Touch With Our Racking Experts
-              </h1>
-              <p className="mt-4 text-white/70 text-base max-w-xl font-body">
-                Have a store layout plan or need a customized quote for supermarket or warehouse racks? Contact our sales team today.
-              </p>
-            </AnimatedSection>
+        {/* Banner (Full Screen Hero) */}
+        <section className="relative min-h-screen flex items-end overflow-hidden bg-[var(--color-spano-dark)] text-white">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGES.about.main}
+              alt="Get in Touch With SPANO Industry"
+              className="w-full h-full object-cover object-center opacity-25"
+            />
+            {/* Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-24 sm:pb-28">
+            <div className="max-w-4xl">
+              <AnimatedSection direction="left">
+                <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
+                  <span className="font-extrabold">GET IN TOUCH</span><br />
+                  <span className="text-[var(--color-spano-bright)] font-light whitespace-nowrap">WITH OUR RACKING EXPERTS</span>
+                </h1>
+                <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
+                  Have a store layout plan or need a customized quote for supermarket or warehouse racks? Contact our sales team today.
+                </p>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
@@ -131,7 +145,6 @@ export default function ContactPage() {
                         <a href="mailto:Sales@spanoindustry.com" className="block text-xs font-semibold text-gray-600 hover:underline mt-0.5 font-body">
                           Sales@spanoindustry.com
                         </a>
-                        <p className="text-xs text-[var(--color-spano-text)] mt-1">Quick response guaranteed within 2 hours</p>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -149,22 +162,6 @@ export default function ContactPage() {
                           Kosmadi, Kamrej NH-8,<br />
                           Surat – 394326, Gujarat, India
                         </address>
-                      </div>
-                    </div>
-                  </AnimatedSection>
-
-                  {/* Hours */}
-                  <AnimatedSection delay={0.25} direction="left">
-                    <div className="group p-6 rounded-2xl bg-[var(--color-spano-light)]/50 hover:bg-white border border-gray-100 hover:border-[var(--color-spano-bright)]/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-spano-dark)] to-[var(--color-spano-mid)] text-[var(--color-spano-bright)] flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                        <Clock size={20} />
-                      </div>
-                      <div>
-                        <h4 className="font-heading font-bold text-[var(--color-spano-dark)] text-sm uppercase">Factory Operating Hours</h4>
-                        <p className="text-sm text-[var(--color-spano-text)] font-body mt-1">
-                          Monday – Saturday: 9:00 AM – 7:00 PM<br />
-                          Sunday: By appointment only
-                        </p>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -194,7 +191,7 @@ export default function ContactPage() {
               <div className="lg:col-span-7">
                 <AnimatedSection direction="right">
                   <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-2xl">
-                    <h3 className="font-heading font-bold text-2xl text-[var(--color-spano-dark)] mb-2">
+                    <h3 className="font-heading font-bold text-2xl text-[var(--color-spano-dark)] mb-2 leading-[1.05] tracking-tight">
                       Send an Online Inquiry
                     </h3>
                     <p className="text-[var(--color-spano-text)] text-sm font-body mb-8">
