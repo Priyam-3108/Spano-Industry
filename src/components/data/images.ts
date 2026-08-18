@@ -8,6 +8,7 @@ function getImg(path: string): string {
 
 // Central image registry — mapped across all brochure and flyer assets
 export const IMAGES = {
+  logo: getImg('/images/transparent-website-logo.webp'),
   hero: {
     background: getImg('/images/latexImage_70350cf6c45042108f648c67e4b0f4b8.webp'),
     flyerCover: getImg('/images/latexImage_73bf32ac93819be6231b5a9f2923671b.webp'),

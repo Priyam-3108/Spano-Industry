@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, PhoneCall } from 'lucide-react';
 import { EnquireModal } from '@/components/ui/EnquireModal';
+import { IMAGES } from '@/components/data/images';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -61,7 +62,7 @@ export function Navbar() {
               aria-label="SPANO Industry Modern Retail Racking Solutions"
             >
               <Image
-                src="/images/transparent-website-logo.webp"
+                src={IMAGES.logo}
                 alt="SPANO Industry Modern Retail Racking Solutions Logo"
                 width={220}
                 height={78}
