@@ -49,7 +49,7 @@ export default function IndustriesPage() {
                   <span className="text-[var(--color-spano-bright)] font-extrabold">WE SERVE</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  From high-density supermarket aisles and sterile pharmacy shelving to boutique apparel hangs and heavy warehouse racking, we design customized solutions for every retail niche.
+                  From heavy duty warehouse racking and institutional storage cupboards to high-density supermarket aisles and boutique apparel hangs, we design customized solutions for every industry and retail niche.
                 </p>
               </AnimatedSection>
             </div>
@@ -74,6 +74,7 @@ export default function IndustriesPage() {
                   'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 10. Textile Rack
                   'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 11. Garment Stores
                   'col-span-12 md:col-span-6 lg:col-span-4 h-[240px]',                        // 12. Slotted Rack
+                  'col-span-12 lg:col-span-12 h-[280px] md:h-[370px] lg:h-[385px]',          // 13. Educational & Institutional Storage (Full width)
                 ];
 
                 const imagePositions = [
@@ -89,6 +90,7 @@ export default function IndustriesPage() {
                   'object-cover object-center',                        // 10. Textile Rack
                   'object-cover object-center',                        // 11. Garment Stores
                   'object-cover object-center',                        // 12. Slotted Rack
+                  'object-cover object-center',                        // 13. Educational & Institutional Storage
                 ];
 
                 const spanClass = collageClasses[i % collageClasses.length];

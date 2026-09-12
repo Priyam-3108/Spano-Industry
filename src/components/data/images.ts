@@ -12,6 +12,7 @@ export const IMAGES = {
   hero: {
     background: getImg('/images/latexImage_70350cf6c45042108f648c67e4b0f4b8.webp'),
     flyerCover: getImg('/images/latexImage_73bf32ac93819be6231b5a9f2923671b.webp'),
+    industrialCover: getImg('/images/latexImage_98c4ff31135ee80835ac75bd773a0471.webp'), // 2026 brochure cover: locker/library cupboard + pallet racking composite
   },
   about: {
     main: getImg('/images/latexImage_86599dc0152c691e6b3f8bc495560d35.webp'),
@@ -79,6 +80,26 @@ export const IMAGES = {
   heavyDuty: {
     warehouseRack: getImg('/images/latexImage_f4bf288ceaad27909d14e73744e9d21b.webp'),
     industrialStorage: getImg('/images/latexImage_a87a5cee743afd5ac722c2499ada302a.webp'), // Yellow & grey multi-tier slotted angle industrial storage
+    fullHeightPallet: getImg('/images/latexImage_09c3a3c8b5d36df89426b3b32a91fe2a.webp'), // Tall multi-bay pallet rack, full warehouse depth
+    bulkPackagingRack: getImg('/images/latexImage_5f9fbe355daadcde1c96c262eaeb6ffe.webp'), // Red/blue rack storing paint cans, chemicals & bulk sacks
+    textileRollRack: getImg('/images/latexImage_9cf74f1e08a228054fb1b33901e86cd9.webp'), // Heavy duty rack storing bulk fabric/textile rolls
+    bulkPouchRack: getImg('/images/latexImage_504012ae9928cd07c8dca20b27f79703.webp'), // Orange rack storing bulk packaged pouches
+    rawMaterialRack: getImg('/images/latexImage_ce044be61bb3d0a85286efafebaa2b7c.webp'), // Red/blue rack storing raw steel parts & metal stock
+    pipeStorageRack: getImg('/images/latexImage_3fcd3b7d57e85feb6e1f9f91428eff05.webp'), // Rack storing steel pipes & tubes
+  },
+  slottedAngle: {
+    binStorage: getImg('/images/latexImage_db4ef32bb9853088a7439bfe7c764d55.webp'), // Yellow slotted angle rack with bins & tool boxes
+    warehouseAisle: getImg('/images/latexImage_b936119dff74a903aa1a59177f99059e.webp'), // Wide banner: long multi-bay slotted angle aisle
+  },
+  cupboards: {
+    lockerHero: getImg('/images/latexImage_d2456be41a21d8eaa8a2a3feea29e8e3.webp'), // Real photo: open & closed locker cupboards in changing room
+    lockerClosed: getImg('/images/latexImage_1950d96f27c9b2f80023d60cd2396301.webp'), // Product cutout: 18-door locker cupboard, closed
+    lockerOpen: getImg('/images/latexImage_d6d88d3d946dc02b07b242499819beb2.webp'), // Product cutout: 3-column locker cupboard, open
+    libraryHero: getImg('/images/latexImage_c0b7ea07fea87ef058b25d6fea89ffcf.webp'), // Real photo: glass-door library cupboards in a library
+    libraryClosed: getImg('/images/latexImage_51f453a7b29f43eb4bdecf34aebdf0df.webp'), // Product cutout: glass-door library cupboard, closed
+    libraryOpen: getImg('/images/latexImage_7b73c1e357d32f73e92e95637db3cc1b.webp'), // Product cutout: glass-door library cupboard, open
+    storewellHero: getImg('/images/latexImage_62b72db0dba01116ac38e31a63b65d85.webp'), // Real photo: steel storewell cupboard in a workshop
+    storewellOpen: getImg('/images/latexImage_967df64618f02caa12b2a816df0c0725.webp'), // Product cutout: plain steel storewell cupboard, open
   },
   accessories: {
     trolleys: getImg('/images/latexImage_1cfd79d11a92672cf9fe1e031a5676ae.webp'), // Shopping trolley with green basket
@@ -99,5 +120,13 @@ export const IMAGES = {
     logo10: getImg('/images/latexImage_3a465ecb14a1a0b5b92237a4d7c84e13.webp'),
     logo11: getImg('/images/latexImage_bb4d17f4349ed66596fd9e2be0b61927.webp'),
     logo12: getImg('/images/latexImage_c0cf6edda283a6348898d49ac90bc2f5.webp'),
+    logo13: getImg('/images/latexImage_7ae74845a9dee42bdcb8f5224df41918.webp'), // TNS Pharma
+    logo14: getImg('/images/latexImage_67119fa79f5011671dce09749378fb37.webp'), // Avadh Utopia
+    logo15: getImg('/images/latexImage_ea3ddcf9880c18d3e62634060b3c19ef.webp'), // Jio
+    logo16: getImg('/images/latexImage_f19f538e564ab36ef5705b8891e68682.webp'), // PP Savani University
+    logo17: getImg('/images/latexImage_57621bf1312dfabe64da4d89c1f2781a.webp'), // DGVCL
+    logo18: getImg('/images/latexImage_ad88932f67140e8b388c1bd86457bac3.webp'), // Rajhans Desai-Jain Group
+    logo19: getImg('/images/latexImage_3fe3ce43b3ccedc9e9db1efaf498cb2e.webp'), // FirstCry
+    logo20: getImg('/images/latexImage_6bc1616c0e63e9aa5874a088fcd87a30.webp'), // Bharat Petroleum
   },
 } as const;

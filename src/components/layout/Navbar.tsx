@@ -59,11 +59,11 @@ export function Navbar() {
             <Link
               href="/"
               className="flex items-center group transition-transform duration-300 hover:scale-[1.02]"
-              aria-label="SPANO Industry Modern Retail Racking Solutions"
+              aria-label="SPANO Industry Industrial Racking & Storage Solutions"
             >
               <Image
                 src={IMAGES.logo}
-                alt="SPANO Industry Modern Retail Racking Solutions Logo"
+                alt="SPANO Industry Industrial Racking & Storage Solutions Logo"
                 width={220}
                 height={78}
                 priority

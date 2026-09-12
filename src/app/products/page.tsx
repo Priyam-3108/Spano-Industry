@@ -59,12 +59,12 @@ export default function ProductsPage() {
             <div className="max-w-3xl">
               <AnimatedSection direction="left">
                 <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
-                  <span className="font-extrabold">RETAIL RACKS,</span>{' '}
-                  <span className="font-light whitespace-nowrap">DISPLAY FIXTURES &amp;</span><br />
-                  <span className="text-[var(--color-spano-bright)] font-extrabold">HEAVY DUTY STORAGE</span>
+                  <span className="font-extrabold">HEAVY DUTY STORAGE,</span>{' '}
+                  <span className="font-light whitespace-nowrap">STORAGE CUPBOARDS &amp;</span><br />
+                  <span className="text-[var(--color-spano-bright)] font-extrabold">RETAIL RACKING</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  Explore our engineering range covering supermarket racks, boutique displays, custom wood-metal fixtures, slotted angles, warehouse racks, and checkout accessories.
+                  Explore our engineering range covering heavy duty warehouse racks, industrial slotted angles, locker &amp; library cupboards, supermarket racks, boutique displays, and checkout accessories.
                 </p>
               </AnimatedSection>
             </div>

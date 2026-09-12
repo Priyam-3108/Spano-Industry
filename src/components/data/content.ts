@@ -20,6 +20,139 @@ export interface ProductCategoryGroup {
 
 export const productCategories: ProductCategoryGroup[] = [
   {
+    id: 'heavy-duty-racking',
+    title: 'Heavy Duty Storage Racks',
+    description: 'Industrial-grade pallet and bulk storage racking systems engineered for warehouses, manufacturing plants, logistics facilities, and distribution centers.',
+    items: [
+      {
+        id: 'warehouse-pallet-rack',
+        name: 'Warehouse Pallet & Bulk Storage Rack',
+        category: 'Heavy Duty Storage Racks',
+        imageSrc: IMAGES.heavyDuty.warehouseRack,
+        imageFit: 'cover',
+        description: 'Heavy structural steel racking engineered for fork-lift access, pallet storage, and heavy industrial inventory management.',
+        features: [
+          'Load capacity up to 1000kg - 3000kg per level',
+          'Heavy beam connection connectors with safety locks',
+          'Powder-coated columns and galvanized decking',
+          'Custom vertical height frame options up to 20 feet',
+        ],
+      },
+      {
+        id: 'industrial-storage-unit',
+        name: 'Industrial Multi-Tier Storage Rack',
+        category: 'Heavy Duty Storage Racks',
+        imageSrc: IMAGES.heavyDuty.industrialStorage,
+        imageFit: 'cover',
+        description: 'High-density multi-tier shelving systems maximizing vertical warehouse volume for spare parts and carton storage.',
+        features: [
+          'Multi-level floor mezzanine integration',
+          'Heavy steel shelf decking panels',
+          'Impact-resistant column guard protectors',
+          'Engineered structural load safety factors',
+        ],
+      },
+      {
+        id: 'raw-material-rack',
+        name: 'Raw Material & Spare Parts Rack',
+        category: 'Heavy Duty Storage Racks',
+        imageSrc: IMAGES.heavyDuty.rawMaterialRack,
+        imageFit: 'cover',
+        description: 'Structural steel racking built for manufacturing plants storing raw steel stock, pipes, and machined spare parts across long-span shelves.',
+        features: [
+          'Long-span beams for pipes, sections & rods',
+          'Heavy-gauge decking for dense metal stock',
+          'Engineered for manufacturing plants & logistics facilities',
+          'Configurable bay widths for varied part sizes',
+        ],
+      },
+      {
+        id: 'bulk-material-rack',
+        name: 'Bulk Material & Bagged Storage Rack',
+        category: 'Heavy Duty Storage Racks',
+        imageSrc: IMAGES.heavyDuty.bulkPackagingRack,
+        imageFit: 'cover',
+        description: 'Wide-span heavy duty racks engineered for bulk sacks, drums, cartons, and packaged bulk inventory in warehouses and distribution centers.',
+        features: [
+          'Wide-span shelves for sacks, drums & cartons',
+          'Reinforced lower bays for palletized bulk loads',
+          'Ideal for distribution centers & bulk material storage areas',
+          'Corrosion-resistant powder-coated finish',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'slotted-angle-racks',
+    title: 'Slotted Angle Racks',
+    description: 'Versatile steel slotted angle shelving suitable for warehouses, workshops, e-commerce inventory, record rooms, and hardware shops.',
+    items: [
+      {
+        id: 'slotted-angle-standard',
+        name: 'Industrial Slotted Angle Shelving',
+        category: 'Slotted Angle Racks',
+        imageSrc: IMAGES.slottedAngle.binStorage,
+        imageFit: 'cover',
+        description: 'Precision-punched slotted angle posts with steel shelf plates, corner gussets, and nut-bolt assembly for reliable stock holding across warehouses, workshops, and e-commerce inventory rooms.',
+        features: [
+          'Angle sizes: 60" | 72" | 78" | 84" | 96" (16 & 14 gauge)',
+          'Shelf sizes: 36"×12"–24" & 48"×12"–24" (22, 20, 18 & 16 gauge)',
+          'Corner gusset plates for rigid stability',
+          'Easy reassembly & height modification',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cupboards-storage-systems',
+    title: 'Cupboards & Storage Systems',
+    description: 'Lockable steel storage cupboards for factories, libraries, institutions, and industrial facilities that need secure, organized storage rather than open shelving.',
+    items: [
+      {
+        id: 'locker-cupboard',
+        name: 'Locker Cupboard',
+        category: 'Cupboards & Storage Systems',
+        imageSrc: IMAGES.cupboards.lockerHero,
+        imageFit: 'cover',
+        description: 'Multi-door steel locker cupboards for staff changing rooms, factories, and institutions, available in 6 to 24-locker configurations.',
+        features: [
+          'Size: 78" × 36" × 19"',
+          'Configurations: 6 / 8 / 12 / 15 / 18 / 24 locker',
+          'Compartment sizes from 18"×24" down to 9"×12"',
+          'For factories, staff changing rooms, hostels & institutions',
+        ],
+      },
+      {
+        id: 'library-cupboard',
+        name: 'Library Cupboard',
+        category: 'Cupboards & Storage Systems',
+        imageSrc: IMAGES.cupboards.libraryHero,
+        imageFit: 'cover',
+        description: 'Glass-door steel library cupboards with adjustable shelving for organized, secure book and document storage.',
+        features: [
+          'Size: 78" × 36" × 18"',
+          'Glass-panel lockable doors with adjustable shelves',
+          'For libraries, offices & document storage rooms',
+          'Suited to educational institutions',
+        ],
+      },
+      {
+        id: 'storewell-cupboard',
+        name: 'Storewell Cupboard',
+        category: 'Cupboards & Storage Systems',
+        imageSrc: IMAGES.cupboards.storewellHero,
+        imageFit: 'cover',
+        description: 'Plain steel storewell cupboards built for tool, spare part, and document storage across industrial and commercial establishments.',
+        features: [
+          'Size: 78" × 34" × 17" (also available 78" × 36" × 18")',
+          'Lockable doors with adjustable internal shelves',
+          'For industrial & factory storage areas',
+          'Suited to warehouses, offices & commercial establishments',
+        ],
+      },
+    ],
+  },
+  {
     id: 'five-rack-options',
     title: 'Five Core Rack Options',
     description: 'Versatile, high-strength racking options engineered for modern supermarket, grocery, and departmental store layouts.',
@@ -226,61 +359,6 @@ export const productCategories: ProductCategoryGroup[] = [
     ],
   },
   {
-    id: 'heavy-duty-racking',
-    title: 'Heavy Duty Storage Racks',
-    description: 'Industrial-grade pallet and bulk storage racking systems designed for logistics centers, warehouses, and commercial stockrooms.',
-    items: [
-      {
-        id: 'warehouse-pallet-rack',
-        name: 'Warehouse Pallet & Bulk Storage Rack',
-        category: 'Heavy Duty Storage Racks',
-        imageSrc: IMAGES.heavyDuty.warehouseRack,
-        imageFit: 'cover',
-        description: 'Heavy structural steel racking engineered for fork-lift access, pallet storage, and heavy industrial inventory management.',
-        features: [
-          'Load capacity up to 1000kg - 3000kg per level',
-          'Heavy beam connection connectors with safety locks',
-          'Powder-coated columns and galvanized decking',
-          'Custom vertical height frame options up to 20 feet',
-        ],
-      },
-      {
-        id: 'industrial-storage-unit',
-        name: 'Industrial Multi-Tier Storage Rack',
-        category: 'Heavy Duty Storage Racks',
-        imageSrc: IMAGES.heavyDuty.industrialStorage,
-        imageFit: 'cover',
-        description: 'High-density multi-tier shelving systems maximizing vertical warehouse volume for spare parts and carton storage.',
-        features: [
-          'Multi-level floor mezzanine integration',
-          'Heavy steel shelf decking panels',
-          'Impact-resistant column guard protectors',
-          'Engineered structural load safety factors',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'slotted-angle-racks',
-    title: 'Slotted Angle Racks',
-    description: 'Versatile steel slotted angle shelving suitable for record rooms, archives, back-office storage, and hardware shops.',
-    items: [
-      {
-        id: 'slotted-angle-standard',
-        name: 'Standard Slotted Angle Rack',
-        category: 'Slotted Angle Racks',
-        imageSrc: IMAGES.customSolutions.slottedRack,
-        description: 'Precision-punched slotted angle posts with steel shelf plates, corner gussets, and nut-bolt assembly for reliable stock holding.',
-        features: [
-          'High quality cold-rolled steel channels',
-          'Corrosion-proof oven-baked powder coat',
-          'Corner gusset plates for rigid stability',
-          'Easy reassembly & height modification',
-        ],
-      },
-    ],
-  },
-  {
     id: 'retail-accessories',
     title: 'Retail Accessories & Counters',
     description: 'Essential supporting retail fixtures including checkout cash counters, shopping trolleys, dump bins, and display accessories.',
@@ -473,9 +551,37 @@ export const seoIndustries: SeoIndustry[] = [
     description: 'Cost-effective, highly adjustable slotted angle shelving units built for record archives, backroom parts storage, hardware shops, and general commercial stockrooms.',
     recommendedRacks: ['Standard Slotted Angle Racks', 'Adjustable Utility Shelving', 'Hardware Storage Units', 'File Archival Racks'],
   },
+  {
+    id: 'educational-institutional-storage',
+    name: 'Educational & Institutional Storage',
+    slug: 'educational-institutional-storage',
+    imageSrc: IMAGES.cupboards.libraryHero,
+    subtitle: 'Library, Locker & Staff Storage for Institutions',
+    searchTerms: ['library cupboard manufacturer', 'school locker cupboards', 'hostel locker storage', 'institutional storage cupboards'],
+    description: 'Schools, colleges, hostels, and libraries need secure, organized storage for books, documents, and personal belongings. Our library and locker cupboards outfit staff changing rooms, reading rooms, and administrative offices across educational institutions.',
+    recommendedRacks: ['Library Cupboard', 'Locker Cupboard', 'Storewell Cupboard', 'Industrial Slotted Angle Shelving'],
+  },
 ];
 
 export const homeProductsSummary = [
+  {
+    title: 'Heavy Duty Storage Racks',
+    imageSrc: IMAGES.heavyDuty.warehouseRack,
+    href: '/products#heavy-duty-racking',
+    desc: 'Industrial pallet & bulk storage racking for warehouses, manufacturing plants, and logistics facilities.',
+  },
+  {
+    title: 'Slotted Angle Racks',
+    imageSrc: IMAGES.slottedAngle.binStorage,
+    href: '/products#slotted-angle-racks',
+    desc: 'Economical, multi-purpose modular shelving for warehouses, workshops, and archives.',
+  },
+  {
+    title: 'Cupboards & Storage Systems',
+    imageSrc: IMAGES.cupboards.lockerHero,
+    href: '/products#cupboards-storage-systems',
+    desc: 'Locker, library, and storewell cupboards for factories, institutions, and offices.',
+  },
   {
     title: 'Supermarket Racks',
     imageSrc: IMAGES.supermarketRacks.wallUnit,
@@ -495,18 +601,6 @@ export const homeProductsSummary = [
     desc: 'Bespoke wooden & metal combo fixtures crafted for your floor plan.',
   },
   {
-    title: 'Heavy Duty Storage Racks',
-    imageSrc: IMAGES.heavyDuty.warehouseRack,
-    href: '/products#heavy-duty-racks',
-    desc: 'Industrial pallet & bulk storage racking for warehouses and stockrooms.',
-  },
-  {
-    title: 'Slotted Angle Racks',
-    imageSrc: IMAGES.customSolutions.slottedRack,
-    href: '/products#slotted-angle-racks',
-    desc: 'Economical, multi-purpose modular shelving for backrooms and archives.',
-  },
-  {
     title: 'Retail Accessories & Counters',
     imageSrc: IMAGES.accessories.cashCounter,
     href: '/products#retail-accessories',
@@ -515,6 +609,54 @@ export const homeProductsSummary = [
 ];
 
 export const allRackOptions = [
+  {
+    title: 'Heavy Duty Warehouse Pallet Rack',
+    imageSrc: IMAGES.heavyDuty.warehouseRack,
+    href: '/products#heavy-duty-racking',
+    desc: 'Heavy-duty pallet racking system designed for industrial storage, warehouses, and bulk inventory.',
+  },
+  {
+    title: 'Heavy Duty Industrial Storage System',
+    imageSrc: IMAGES.heavyDuty.industrialStorage,
+    href: '/products#heavy-duty-racking',
+    desc: 'High load capacity structural steel shelving engineered for manufacturing plants and distribution centers.',
+  },
+  {
+    title: 'Raw Material & Spare Parts Rack',
+    imageSrc: IMAGES.heavyDuty.rawMaterialRack,
+    href: '/products#heavy-duty-racking',
+    desc: 'Long-span structural steel racking for raw steel stock, pipes, and machined spare parts.',
+  },
+  {
+    title: 'Bulk Material & Bagged Storage Rack',
+    imageSrc: IMAGES.heavyDuty.bulkPackagingRack,
+    href: '/products#heavy-duty-racking',
+    desc: 'Wide-span heavy duty racks for bulk sacks, drums, cartons, and packaged inventory.',
+  },
+  {
+    title: 'Industrial Slotted Angle Shelving',
+    imageSrc: IMAGES.slottedAngle.binStorage,
+    href: '/products#slotted-angle-racks',
+    desc: 'Multi-purpose slotted steel shelving for warehouses, workshops, and document storage.',
+  },
+  {
+    title: 'Locker Cupboard',
+    imageSrc: IMAGES.cupboards.lockerHero,
+    href: '/products#cupboards-storage-systems',
+    desc: 'Multi-door steel locker cupboards for staff changing rooms, factories, and institutions.',
+  },
+  {
+    title: 'Library Cupboard',
+    imageSrc: IMAGES.cupboards.libraryHero,
+    href: '/products#cupboards-storage-systems',
+    desc: 'Glass-door steel cupboards with adjustable shelving for libraries and document storage.',
+  },
+  {
+    title: 'Storewell Cupboard',
+    imageSrc: IMAGES.cupboards.storewellHero,
+    href: '/products#cupboards-storage-systems',
+    desc: 'Plain steel storewell cupboards for tool, spare part, and document storage.',
+  },
   {
     title: 'Wall Unit With Back Panel',
     imageSrc: IMAGES.supermarketRacks.wallUnit,
@@ -546,18 +688,6 @@ export const allRackOptions = [
     desc: 'Floor-clearing direct wall-anchored shelving with clean floating appearance.',
   },
   {
-    title: 'Heavy Duty Warehouse Pallet Rack',
-    imageSrc: IMAGES.heavyDuty.warehouseRack,
-    href: '/products#heavy-duty-racks',
-    desc: 'Heavy-duty pallet racking system designed for industrial storage, warehouses, and bulk inventory.',
-  },
-  {
-    title: 'Heavy Duty Industrial Storage System',
-    imageSrc: IMAGES.heavyDuty.industrialStorage,
-    href: '/products#heavy-duty-racks',
-    desc: 'High load capacity structural steel shelving engineered for manufacturing plants and distribution centers.',
-  },
-  {
     title: 'Garment & Fashion Display',
     imageSrc: IMAGES.displayRacks.garmentDisplay,
     href: '/products#display-fixtures',
@@ -586,12 +716,6 @@ export const allRackOptions = [
     imageSrc: IMAGES.customSolutions.glassDisplay,
     href: '/products#customized-solutions',
     desc: 'Lockable toughened glass cabinet with integrated LED lighting for high-value merchandise.',
-  },
-  {
-    title: 'Slotted Angle Shelving',
-    imageSrc: IMAGES.customSolutions.slottedRack,
-    href: '/products#slotted-angle-racks',
-    desc: 'Multi-purpose economical slotted steel shelving for backrooms and document storage.',
   },
   {
     title: 'Checkout Cash Counter',
@@ -635,4 +759,12 @@ export const clientLogos = [
   { id: 'c10', imageSrc: IMAGES.clients.logo10, alt: 'Client 10' },
   { id: 'c11', imageSrc: IMAGES.clients.logo11, alt: 'Client 11' },
   { id: 'c12', imageSrc: IMAGES.clients.logo12, alt: 'Client 12' },
+  { id: 'c13', imageSrc: IMAGES.clients.logo13, alt: 'TNS Pharma' },
+  { id: 'c14', imageSrc: IMAGES.clients.logo14, alt: 'Avadh Utopia' },
+  { id: 'c15', imageSrc: IMAGES.clients.logo15, alt: 'Jio' },
+  { id: 'c16', imageSrc: IMAGES.clients.logo16, alt: 'PP Savani University' },
+  { id: 'c17', imageSrc: IMAGES.clients.logo17, alt: 'DGVCL' },
+  { id: 'c18', imageSrc: IMAGES.clients.logo18, alt: 'Rajhans Desai-Jain Group' },
+  { id: 'c19', imageSrc: IMAGES.clients.logo19, alt: 'FirstCry' },
+  { id: 'c20', imageSrc: IMAGES.clients.logo20, alt: 'Bharat Petroleum' },
 ];

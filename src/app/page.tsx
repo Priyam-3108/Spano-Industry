@@ -18,9 +18,9 @@ import { IMAGES } from '@/components/data/images';
 import { ArrowRight, CheckCircle2, Store, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'SPANO Industry | Modern Retail Racking Solutions',
+  title: 'SPANO Industry | Industrial Racking & Storage Solutions',
   description:
-    'Manufacturer & supplier of modern supermarket racks, retail display stands, heavy-duty storage racks, custom wooden-metal fixtures, and accessories across India.',
+    'Manufacturer & supplier of heavy duty warehouse storage racks, industrial slotted angle shelving, locker, library & storewell cupboards, plus supermarket racks and retail display fixtures across India.',
 };
 
 export default function HomePage() {
@@ -46,10 +46,10 @@ export default function HomePage() {
                 <AnimatedSection delay={0.1} direction="up" className="flex flex-col items-center">
                   <div className="space-y-4 text-[var(--color-spano-text)] text-base leading-relaxed font-body">
                     <p>
-                      With <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a market leader in designing and producing modern retail display fixtures and industrial storage systems.
+                      With <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a market leader in engineering heavy duty industrial racking and storage systems.
                     </p>
                     <p>
-                      We help supermarkets, departmental stores, boutique fashion outlets, and warehouses build organized, space-efficient, and visually stunning environments.
+                      We help warehouses, factories, logistics centers, and educational institutions build organized, space-efficient storage, and support supermarkets, departmental stores, and boutique fashion outlets with modern retail display fixtures.
                     </p>
                   </div>
 
@@ -88,11 +88,11 @@ export default function HomePage() {
                     <span className="font-extrabold uppercase">Product Range</span>
                   </span>
                 }
-                subtitle="Engineered for Every Retail Need"
+                subtitle="Engineered for Industry & Retail"
                 align="center"
               />
               <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
-                Discover our comprehensive categories of supermarket shelving, custom boutique fixtures, and heavy industrial storage.
+                Discover our comprehensive categories of heavy duty industrial racking, storage cupboards, and supermarket & retail fixtures.
               </p>
             </AnimatedSection>
 
@@ -125,11 +125,11 @@ export default function HomePage() {
             <AnimatedSection>
               <SectionHeader
                 title="Rack Options"
-                subtitle="Complete Store &amp; Industrial Racking Systems"
+                subtitle="Complete Industrial &amp; Retail Racking Systems"
                 align="center"
               />
               <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
-                Browse all our manufactured rack models from supermarket wall units and island aisles to heavy warehouse shelving and checkout counters.
+                Browse all our manufactured rack models from heavy duty warehouse shelving and storage cupboards to supermarket wall units and checkout counters.
               </p>
             </AnimatedSection>
 

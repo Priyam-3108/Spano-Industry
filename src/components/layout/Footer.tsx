@@ -10,11 +10,12 @@ const quickLinks = [
 ];
 
 const productLinks = [
+  { label: 'Heavy Duty Storage Racks', href: '/products#heavy-duty-racking' },
+  { label: 'Slotted Angle Racks', href: '/products#slotted-angle-racks' },
+  { label: 'Cupboards & Storage Systems', href: '/products#cupboards-storage-systems' },
   { label: 'Supermarket Racks', href: '/products#five-rack-options' },
   { label: 'Display & Retail Fixtures', href: '/products#display-fixtures' },
   { label: 'Customized Retail Solutions', href: '/products#customized-solutions' },
-  { label: 'Heavy Duty Storage Racks', href: '/products#heavy-duty-racks' },
-  { label: 'Slotted Angle Racks', href: '/products#slotted-angle-racks' },
   { label: 'Accessories & Cash Counters', href: '/products#retail-accessories' },
 ];
 
@@ -38,11 +39,11 @@ export function Footer() {
                 </span>
               </div>
               <p className="text-xs text-white/60 font-body uppercase tracking-wider mt-0.5">
-                Modern Retail Racking Solutions
+                Industrial Racking &amp; Storage Solutions
               </p>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed font-body">
-              Over 30 years of manufacturing excellence delivering durable, high-capacity, and beautifully styled racking systems across India.
+              Over 30 years of manufacturing excellence delivering durable, high-capacity heavy duty racking and storage systems, plus retail fixtures, across India.
             </p>
             <div className="pt-2 flex items-center gap-3">
               <a
@@ -162,7 +163,7 @@ export function Footer() {
             © {currentYear} SPANO Industry™. All rights reserved.
           </p>
           <p className="text-white/40 text-xs text-center sm:text-right">
-            Modern Retail Racking Solutions | Engineered for Excellence
+            Industrial Racking &amp; Storage Solutions | Engineered for Excellence
           </p>
         </div>
       </div>

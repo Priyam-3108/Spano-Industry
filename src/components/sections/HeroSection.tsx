@@ -31,8 +31,8 @@ export function HeroSection() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={IMAGES.hero.background}
-          alt="SPANO Industry Modern Retail Racking Solutions"
+          src={IMAGES.hero.industrialCover}
+          alt="SPANO Industry Industrial Racking & Storage Solutions"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
           loading="eager"
@@ -55,10 +55,10 @@ export function HeroSection() {
             <h1
               className="font-heading uppercase text-white/95 tracking-tight leading-[0.98] sm:leading-[0.96] text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3"
             >
-              <span className="font-extrabold">MODERN RETAIL</span>{' '}
-              <span className="font-light opacity-90">&amp;</span>
+              <span className="font-extrabold">HEAVY DUTY INDUSTRIAL</span>{' '}
+              <span className="font-light opacity-90">RACKING</span>
               <br className="hidden sm:inline" />{' '}
-              <span className="text-[var(--color-spano-bright)] font-extrabold">HEAVY DUTY RACKING</span>{' '}
+              <span className="text-[var(--color-spano-bright)] font-extrabold">&amp; STORAGE</span>{' '}
               <span className="text-[var(--color-spano-bright)] font-light">SOLUTIONS</span>
             </h1>
           </motion.div>
@@ -70,7 +70,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="font-heading font-bold text-white/90 text-base sm:text-lg leading-none mb-1 sm:mb-1.5"
           >
-            STRONG STRUCTURES. SEAMLESS SHOPPING.
+            INNOVATIVE RACKING FOR SMARTER STORAGE.
           </motion.p>
 
           {/* Description */}
@@ -80,7 +80,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-2 text-white/75 text-base sm:text-lg leading-snug max-w-2xl font-body"
           >
-            Manufacturer &amp; supplier of innovative, durable supermarket racks, retail display stands, heavy-duty warehouse storage, and custom store fixtures across India.
+            Manufacturer &amp; supplier of engineered heavy duty warehouse storage racks, industrial slotted angle shelving, and locker, library &amp; storewell cupboards for factories and institutions, plus supermarket racks and retail display fixtures for modern stores.
           </motion.p>
         </div>
       </div>
@@ -105,7 +105,7 @@ export function HeroSection() {
       <EnquireModal
         isOpen={isEnquireOpen}
         onClose={() => setIsEnquireOpen(false)}
-        defaultProduct="Modern Retail Racking Solutions"
+        defaultProduct="Industrial Racking & Storage Solutions"
       />
     </section>
   );

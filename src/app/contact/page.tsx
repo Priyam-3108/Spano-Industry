@@ -17,7 +17,7 @@ export default function ContactPage() {
     phone: '',
     email: '',
     city: '',
-    category: 'Supermarket Racks',
+    category: 'Heavy Duty Storage Racks',
     message: '',
   });
 
@@ -91,7 +91,7 @@ export default function ContactPage() {
                   <span className="text-[var(--color-spano-bright)] font-light whitespace-nowrap">WITH OUR RACKING EXPERTS</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  Have a store layout plan or need a customized quote for supermarket or warehouse racks? Contact our sales team today.
+                  Have a warehouse, factory, or store layout plan and need a customized quote for heavy duty racks, storage cupboards, or retail fixtures? Contact our sales team today.
                 </p>
               </AnimatedSection>
             </div>
@@ -291,11 +291,12 @@ export default function ContactPage() {
                             onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                             className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:border-[var(--color-spano-bright)] focus:ring-2 focus:ring-[var(--color-spano-bright)]/20 outline-none transition-all bg-white"
                           >
+                            <option value="Heavy Duty Storage Racks">Heavy Duty Storage Racks (Warehouse Pallet)</option>
+                            <option value="Slotted Angle Racks">Slotted Angle Racks</option>
+                            <option value="Cupboards & Storage Systems">Locker, Library &amp; Storewell Cupboards</option>
                             <option value="Supermarket Racks">Supermarket Racks (Wall &amp; Double Side)</option>
                             <option value="Display & Retail Fixtures">Display &amp; Retail Fixtures (Garment, Toys, Cosmetics)</option>
                             <option value="Customized Retail Solutions">Customized Retail Solutions (Wood &amp; Metal)</option>
-                            <option value="Heavy Duty Storage Racks">Heavy Duty Storage Racks (Warehouse Pallet)</option>
-                            <option value="Slotted Angle Racks">Slotted Angle Racks</option>
                             <option value="Retail Accessories & Counters">Retail Accessories &amp; Cash Counters</option>
                             <option value="Complete Store Setup">Complete Store Setup / Turnkey Project</option>
                           </select>

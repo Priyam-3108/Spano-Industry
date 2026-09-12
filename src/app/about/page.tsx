@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 z-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={IMAGES.about.main}
+              src={IMAGES.hero.background}
               alt="SPANO Industry Manufacturing Facility"
               className="w-full h-full object-cover object-center opacity-25"
             />
@@ -35,8 +35,8 @@ export default function AboutPage() {
               <AnimatedSection direction="left">
                 <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
                   <span className="font-black">30 YEARS</span><br />
-                  <span className="font-light whitespace-nowrap">OF RETAIL DISPLAY &amp;</span><br />
-                  <span className="text-[var(--color-spano-bright)] font-black">RACKING EXCELLENCE</span>
+                  <span className="font-light whitespace-nowrap">OF INDUSTRIAL RACKING &amp;</span><br />
+                  <span className="text-[var(--color-spano-bright)] font-black">STORAGE EXCELLENCE</span>
                 </h1>
               </AnimatedSection>
             </div>
@@ -59,16 +59,16 @@ export default function AboutPage() {
                 <AnimatedSection delay={0.1} direction="left">
                   <div className="space-y-4 text-[var(--color-spano-text)] text-base leading-relaxed font-body">
                     <p>
-                      With over <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry has established itself as one of the most trusted names in retail display and storage infrastructure.
+                      With over <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry has established itself as one of the most trusted names in industrial racking and storage infrastructure.
                     </p>
                     <p>
-                      We specialize in crafting versatile supermarket racks, departmental store displays, custom wooden-metal fixtures, heavy-duty warehouse storage, and essential checkout accessories.
+                      We specialize in engineering heavy duty warehouse pallet racks, industrial slotted angle shelving, and locker, library &amp; storewell cupboards, alongside supermarket racks, departmental store displays, and custom wooden-metal retail fixtures.
                     </p>
                     <p>
-                      Our state-of-the-art facility in Surat combines automated sheet-metal processing, precision spot welding, and electrostatic powder coating to build racking systems that withstand heavy daily retail use.
+                      Our state-of-the-art facility in Surat combines automated sheet-metal processing, precision spot welding, and electrostatic powder coating to build racking systems that withstand heavy daily industrial use.
                     </p>
                     <p>
-                      We partner directly with supermarket chains, retail store owners, wholesalers, and interior architects to transform empty store spaces into highly profitable retail environments.
+                      We partner directly with warehouses, factories, logistics centers, and educational institutions, as well as supermarket chains, retail store owners, and interior architects, to build organized, space-efficient storage environments.
                     </p>
                   </div>
                 </AnimatedSection>
