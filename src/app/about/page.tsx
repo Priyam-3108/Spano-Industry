@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main>
-        <section className="relative min-h-screen flex items-end overflow-hidden bg-[var(--color-spano-dark)] text-white">
+        <section className="relative min-h-[420px] sm:min-h-[480px] lg:min-h-[520px] flex items-center overflow-hidden bg-[var(--color-spano-dark)] text-white">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -25,12 +25,12 @@ export default function AboutPage() {
               alt="SPANO Industry Manufacturing Facility"
               className="w-full h-full object-cover object-center opacity-25"
             />
-            {/* Gradient Overlay like homepage */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/90 via-[var(--color-spano-dark)]/70 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/60 via-transparent to-black/30" />
+            {/* Green Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-spano-dark)]/95 via-[var(--color-spano-dark)]/80 to-[var(--color-spano-dark)]/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-spano-dark)]/80 via-transparent to-black/30" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-28 sm:pb-32">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 sm:pt-32 lg:pt-36 pb-14 sm:pb-16 lg:pb-20">
             <div className="max-w-3xl">
               <AnimatedSection direction="left">
                 <h1 className="font-heading uppercase text-white leading-[0.98] sm:leading-[0.96] text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
