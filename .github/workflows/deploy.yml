@@ -39,6 +39,9 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_BASE_PATH: /Spano-Industry
+          NEXT_PUBLIC_SITE_URL: https://priyam-3108.github.io/Spano-Industry
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET || 'production' }}
         run: npm run build
 
       - name: Upload artifact

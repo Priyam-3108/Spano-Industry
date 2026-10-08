@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -9,11 +9,34 @@ import { CtaBanner } from '@/components/sections/CtaBanner';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { IMAGES } from '@/components/data/images';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { createBreadcrumbSchema } from '@/components/seo/schemas';
 import { Factory, ShieldCheck, Cpu, Target, Eye, Award, Sparkles, CheckCircle2 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'About Us | 30+ Years Industrial Racking Excellence',
+  description:
+    'Discover SPANO Industry: over 30 years manufacturing heavy duty warehouse storage racks, industrial slotted angle shelving, and retail fixtures with precision engineering in Surat, Gujarat.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About SPANO Industry | 30+ Years Industrial Racking Excellence',
+    description:
+      'Over 30 years of manufacturing excellence in warehouse storage racks, industrial shelving, and retail fixtures across India.',
+    url: 'https://spanoindustry.com/about',
+  },
+};
+
 export default function AboutPage() {
+  const breadcrumbs = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'About Us', url: '/about' },
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbs} />
       <Navbar />
       <main>
         <section className="relative min-h-[420px] sm:min-h-[480px] lg:min-h-[520px] flex items-center overflow-hidden bg-[var(--color-spano-dark)] text-white">
