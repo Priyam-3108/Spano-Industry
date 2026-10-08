@@ -21,6 +21,15 @@ export const metadata: Metadata = {
   title: 'SPANO Industry | Industrial Racking & Storage Solutions',
   description:
     'Manufacturer & supplier of heavy duty warehouse storage racks, industrial slotted angle shelving, locker, library & storewell cupboards, plus supermarket racks and retail display fixtures across India.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'SPANO Industry | Industrial Racking & Storage Solutions',
+    description:
+      '30 years of manufacturing excellence in heavy duty warehouse pallet racks, slotted angle shelving, and store cupboards across India.',
+    url: 'https://spanoindustry.com',
+  },
 };
 
 export default function HomePage() {
