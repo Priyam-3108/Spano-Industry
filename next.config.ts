@@ -7,8 +7,10 @@ if (isGithubActions) {
   repo = process.env.GITHUB_REPOSITORY?.replace(/^.*?\//, "") || "";
 }
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  output: "export",
+  ...(isProd ? { output: "export" as const } : {}),
   trailingSlash: true,
   images: {
     unoptimized: true,
