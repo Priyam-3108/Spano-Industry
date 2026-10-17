@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -11,7 +12,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { productCategories, ProductItem } from '@/components/data/content';
 import { IMAGES } from '@/components/data/images';
-import { Send, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Send, CheckCircle2, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 export function ProductsClientView() {
   const [selectedProduct, setSelectedProduct] = useState<string>('');
@@ -237,21 +238,27 @@ export function ProductsClientView() {
                             isFeatured ? 'aspect-[4/3] lg:aspect-auto lg:w-2/5 lg:p-10' : 'aspect-[3/4]'
                           }`}
                         >
-                          <StaticImage
-                            src={item.imageSrc}
-                            alt={item.name}
-                            className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
-                              item.imageFit === 'cover' ? 'object-cover' : 'object-contain'
-                            }`}
-                          />
-                          <div className="absolute top-3 left-3 z-10">
+                          <Link
+                            href={`/products/${item.id}`}
+                            className="block w-full h-full cursor-pointer"
+                            aria-label={`View detailed specifications for ${item.name}`}
+                          >
+                            <StaticImage
+                              src={item.imageSrc}
+                              alt={item.name}
+                              className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
+                                item.imageFit === 'cover' ? 'object-cover' : 'object-contain'
+                              }`}
+                            />
+                          </Link>
+                          <div className="absolute top-3 left-3 z-10 pointer-events-none">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-spano-dark)]/85 text-white border border-white/20 text-[10px] font-heading font-black uppercase tracking-wider shadow-lg backdrop-blur-md">
                               <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-spano-bright)]" />
                               <span>{item.category}</span>
                             </div>
                           </div>
                           {isFeatured && (
-                            <div className="absolute bottom-3 right-3 z-10">
+                            <div className="absolute bottom-3 right-3 z-10 pointer-events-none">
                               <span className="px-2.5 py-1 rounded-full bg-[var(--color-spano-bright)] text-white text-[10px] font-heading font-black uppercase tracking-wider shadow-lg">
                                 Most Popular
                               </span>
@@ -262,7 +269,12 @@ export function ProductsClientView() {
                         {/* Details */}
                         <div className={`p-6 flex flex-col flex-grow ${isFeatured ? 'lg:w-3/5 lg:p-8 lg:justify-center' : ''}`}>
                           <h3 className={`font-heading font-bold text-[var(--color-spano-dark)] group-hover:text-[var(--color-spano-mid)] transition-colors mb-2 ${isFeatured ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
-                            {item.name}
+                            <Link
+                              href={`/products/${item.id}`}
+                              className="hover:text-[var(--color-spano-bright)] transition-colors"
+                            >
+                              {item.name}
+                            </Link>
                           </h3>
                           <p className={`text-[var(--color-spano-text)] leading-relaxed font-body mb-5 flex-grow ${isFeatured ? 'text-sm' : 'text-xs'}`}>
                             {item.description}
@@ -276,14 +288,24 @@ export function ProductsClientView() {
                             <FeatureList items={item.features} columns={isFeatured ? 2 : 1} />
                           </div>
 
-                          {/* Enquire Now CTA */}
-                          <button
-                            onClick={() => handleEnquire(item.name)}
-                            className={`py-3 px-4 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 text-xs font-heading shadow-md ${isFeatured ? 'w-full lg:w-auto lg:px-8' : 'w-full'}`}
-                          >
-                            <Send size={14} />
-                            Enquire Now for {item.name.split(' ')[0]}
-                          </button>
+                          {/* Actions: View Details + Enquire Now */}
+                          <div className={`flex flex-col sm:flex-row items-stretch gap-2.5 ${isFeatured ? 'w-full lg:w-auto' : 'w-full'}`}>
+                            <Link
+                              href={`/products/${item.id}`}
+                              className="flex-1 py-2.5 px-3.5 bg-white border border-[var(--color-spano-dark)]/80 hover:border-[var(--color-spano-bright)] text-[var(--color-spano-dark)] hover:bg-[var(--color-spano-light)]/50 font-bold rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 text-xs font-heading shadow-2xs"
+                            >
+                              <span>View Specs</span>
+                              <ArrowRight size={13} />
+                            </Link>
+
+                            <button
+                              onClick={() => handleEnquire(item.name)}
+                              className="flex-1 py-2.5 px-3.5 bg-[var(--color-spano-dark)] hover:bg-[var(--color-spano-bright)] text-white font-bold rounded-xl transition-colors duration-200 flex items-center justify-center gap-1.5 text-xs font-heading shadow-md cursor-pointer"
+                            >
+                              <Send size={13} />
+                              <span>Enquire Now</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </AnimatedSection>

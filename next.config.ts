@@ -7,7 +7,7 @@ if (isGithubActions) {
   repo = process.env.GITHUB_REPOSITORY?.replace(/^.*?\//, "") || "";
 }
 
-const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production" || Boolean(process.env.GITHUB_ACTIONS) || process.argv.includes("build");
 
 const nextConfig: NextConfig = {
   ...(isProd ? { output: "export" as const } : {}),
