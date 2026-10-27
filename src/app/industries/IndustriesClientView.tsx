@@ -49,7 +49,7 @@ export function IndustriesClientView() {
                   <span className="text-[var(--color-spano-bright)] font-extrabold">WE SERVE</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  From heavy duty warehouse racking and institutional storage cupboards to high-density supermarket aisles and boutique apparel hangs, we design customized solutions for every industry and retail niche.
+                  From heavy duty warehouse racks and industrial storage systems in Surat to supermarket display racks, institutional cupboards, and boutique clothing displays, we deliver customized storage and retail solutions for diverse industries.
                 </p>
               </AnimatedSection>
             </div>
@@ -161,7 +161,11 @@ export function IndustriesClientView() {
         </section>
 
         {/* Global CTA */}
-        <CtaBanner />
+        <CtaBanner
+          title="Solutions For Every Industry"
+          subtitle="From warehouse racking to retail displays, we serve diverse industries across India."
+          defaultProduct="Industry Racking Solution Project"
+        />
       </main>
 
       <Footer />

@@ -91,7 +91,7 @@ export function ContactClientView() {
                   <span className="text-[var(--color-spano-bright)] font-light whitespace-nowrap">WITH OUR RACKING EXPERTS</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  Have a warehouse, factory, or store layout plan and need a customized quote for heavy duty racks, storage cupboards, or retail fixtures? Contact our sales team today.
+                  Need heavy duty racks, industrial storage racks, or retail display fixtures in Surat? Contact our sales team for customized solutions tailored to your warehouse, factory, or store layout.
                 </p>
               </AnimatedSection>
             </div>

@@ -14,16 +14,18 @@ import { createBreadcrumbSchema } from '@/components/seo/schemas';
 import { Factory, ShieldCheck, Cpu, Target, Eye, Award, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | 30+ Years Industrial Racking Excellence',
+  title: {
+    absolute: 'About SPANO Industry | Rack Manufacturer in Surat',
+  },
   description:
-    'Discover SPANO Industry: over 30 years manufacturing heavy duty warehouse storage racks, industrial slotted angle shelving, and retail fixtures with precision engineering in Surat, Gujarat.',
+    "Discover SPANO Industry's experience in heavy duty racks, industrial storage systems and retail display solutions, manufactured in Surat, India.",
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'About SPANO Industry | 30+ Years Industrial Racking Excellence',
+    title: 'About SPANO Industry | Rack Manufacturer in Surat',
     description:
-      'Over 30 years of manufacturing excellence in warehouse storage racks, industrial shelving, and retail fixtures across India.',
+      "Discover SPANO Industry's experience in heavy duty racks, industrial storage systems and retail display solutions, manufactured in Surat, India.",
     url: 'https://spanoindustry.com/about',
   },
 };
@@ -82,16 +84,16 @@ export default function AboutPage() {
                 <AnimatedSection delay={0.1} direction="left">
                   <div className="space-y-4 text-[var(--color-spano-text)] text-base leading-relaxed font-body">
                     <p>
-                      With over <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry has established itself as one of the most trusted names in industrial racking and storage infrastructure.
+                      With over <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a trusted manufacturer of industrial racking and storage solutions in Surat.
                     </p>
                     <p>
-                      We specialize in engineering heavy duty warehouse pallet racks, industrial slotted angle shelving, and locker, library &amp; storewell cupboards, alongside supermarket racks, departmental store displays, and custom wooden-metal retail fixtures.
+                      We specialize in heavy duty warehouse pallet racks, industrial slotted angle shelving, steel storage racks, locker, library and storewell cupboards, supermarket racks, and custom retail display fixtures.
                     </p>
                     <p>
-                      Our state-of-the-art facility in Surat combines automated sheet-metal processing, precision spot welding, and electrostatic powder coating to build racking systems that withstand heavy daily industrial use.
+                      Our Surat facility combines precision sheet-metal processing, spot welding, and electrostatic powder coating to manufacture durable industrial racking systems designed for demanding daily use.
                     </p>
                     <p>
-                      We partner directly with warehouses, factories, logistics centers, and educational institutions, as well as supermarket chains, retail store owners, and interior architects, to build organized, space-efficient storage environments.
+                      We serve warehouses, factories, logistics centers, educational institutions, supermarket chains, retailers, and interior architects with space-efficient industrial storage racks, heavy duty storage racks, and modern retail display solutions tailored to diverse commercial and industrial requirements.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -147,7 +149,7 @@ export default function AboutPage() {
                       Mission
                     </h3>
                     <p className="text-[var(--color-spano-text)] text-base sm:text-lg leading-relaxed font-body">
-                      To provide innovative and reliable retail display solutions that help businesses create better shopping experiences.
+                      To deliver innovative, reliable supermarket racks and retail display solutions in Surat that help businesses create organized spaces and better shopping experiences.
                     </p>
                   </div>
                 </div>
@@ -177,7 +179,7 @@ export default function AboutPage() {
                       Vision
                     </h3>
                     <p className="text-[var(--color-spano-text)] text-base sm:text-lg leading-relaxed font-body">
-                      To become a leading name in retail infrastructure by delivering high-performance racking systems with modern aesthetics and long-lasting quality.
+                      To become a leading rack manufacturer in Surat, delivering durable industrial racking systems, steel storage racks, and modern retail display solutions with lasting quality.
                     </p>
                   </div>
                 </div>
@@ -190,7 +192,10 @@ export default function AboutPage() {
         <WhyChooseUs />
 
         {/* 6. Global CTA */}
-        <CtaBanner />
+        <CtaBanner
+          title="Let’s Build Your Storage Future"
+          subtitle="From 30 years of expertise to customized racking solutions across India."
+        />
       </main>
 
       <Footer />

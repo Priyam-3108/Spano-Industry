@@ -3,7 +3,24 @@ import { useState } from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 import { EnquireModal } from '@/components/ui/EnquireModal';
 
-export function CtaBanner() {
+export interface CtaBannerProps {
+  badge?: string;
+  title?: React.ReactNode;
+  subtitle?: string;
+  defaultProduct?: string;
+}
+
+export function CtaBanner({
+  badge = 'SPANO Industry Store Racking Solutions',
+  title = (
+    <>
+      <span className="font-extrabold uppercase block">LET&apos;S BUILD YOUR</span>
+      <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">Ideal Storage Space</span>
+    </>
+  ),
+  subtitle = 'From planning to manufacturing and installation, we deliver across India.',
+  defaultProduct = 'Industrial Storage Solutions Project',
+}: CtaBannerProps = {}) {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
@@ -15,14 +32,17 @@ export function CtaBanner() {
             {/* Text Content */}
             <div className="max-w-2xl">
               <span className="text-[var(--color-spano-bright)] text-xs font-heading font-bold uppercase tracking-widest block mb-1">
-                SPANO Industry Store Racking Solutions
+                {badge}
               </span>
-              <h2 className="font-heading text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-[0.98] sm:leading-[0.96]">
-                <span className="font-extrabold uppercase block">LET&apos;S BUILD YOUR</span>
-                <span className="font-light normal-case block text-[var(--color-spano-bright)] text-[0.85em]">Modern Retail Space</span>
+              <h2 className="font-heading text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-[1.08] sm:leading-[1.05]">
+                {typeof title === 'string' ? (
+                  <span className="font-extrabold uppercase block">{title}</span>
+                ) : (
+                  title
+                )}
               </h2>
               <p className="text-white/75 text-xs sm:text-sm font-body mt-2">
-                From store floor measurements to manufacturing &amp; final installation across India.
+                {subtitle}
               </p>
             </div>
 
@@ -30,7 +50,7 @@ export function CtaBanner() {
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 flex-shrink-0">
               <button
                 onClick={() => setIsQuoteOpen(true)}
-                className="btn-shine px-6 py-3 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-[var(--color-spano-dark)] font-heading font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-2"
+                className="btn-shine px-6 py-3 bg-[var(--color-spano-bright)] hover:bg-[var(--color-spano-lime)] text-[var(--color-spano-dark)] font-heading font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-2 cursor-pointer"
               >
                 Get Free Quote
                 <ArrowRight size={15} />
@@ -52,8 +72,9 @@ export function CtaBanner() {
       <EnquireModal
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
-        defaultProduct="Modern Retail Space Project"
+        defaultProduct={defaultProduct}
       />
     </section>
   );
 }
+

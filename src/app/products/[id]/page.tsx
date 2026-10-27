@@ -40,7 +40,9 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
     : `${siteUrl}${product.imageSrc}`;
 
   return {
-    title: product.seo.title,
+    title: {
+      absolute: product.seo.title,
+    },
     description: product.seo.metaDescription,
     keywords: product.seo.keywords,
     alternates: {

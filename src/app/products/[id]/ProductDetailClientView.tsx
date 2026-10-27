@@ -169,6 +169,21 @@ export function ProductDetailClientView({
                     {product.shortDescription}
                   </p>
 
+                  {/* SEO Spotlight Block (Added after product description) */}
+                  {product.seoDescription && (
+                    <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-emerald-50/70 to-[var(--color-spano-light)]/40 border border-emerald-200/60 shadow-2xs">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="w-2 h-2 rounded-full bg-[var(--color-spano-bright)] flex-shrink-0" />
+                        <h2 className="font-heading font-black text-sm sm:text-base text-[var(--color-spano-dark)] leading-snug">
+                          {product.seoDescription.heading}
+                        </h2>
+                      </div>
+                      <p className="text-xs sm:text-sm text-[var(--color-spano-text)] font-body leading-relaxed">
+                        {product.seoDescription.text}
+                      </p>
+                    </div>
+                  )}
+
                   {/* Key Highlights Pill Grid */}
                   <div className="mt-6 grid grid-cols-2 gap-2.5">
                     {product.specifications.slice(0, 4).map((spec, idx) => (
@@ -508,7 +523,12 @@ export function ProductDetailClientView({
         )}
 
         {/* Global CTA Banner */}
-        <CtaBanner />
+        <CtaBanner
+          badge={`${product.name} Inquiries`}
+          title={product.cta?.heading || "Let’s Build Your Ideal Storage Space"}
+          subtitle={product.cta?.description || "From planning to manufacturing and installation, we deliver across India."}
+          defaultProduct={product.name}
+        />
       </main>
 
       <Footer />

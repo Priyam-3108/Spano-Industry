@@ -80,7 +80,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-2 text-white/75 text-base sm:text-lg leading-snug max-w-2xl font-body"
           >
-            Manufacturer &amp; supplier of engineered heavy duty warehouse storage racks, industrial slotted angle shelving, and locker, library &amp; storewell cupboards for factories and institutions, plus supermarket racks and retail display fixtures for modern stores.
+            Manufacturer &amp; Supplier in Surat of heavy duty warehouse racks, industrial storage racks, slotted angle shelving, and locker, library &amp; storewell cupboards for factories and institutions, plus supermarket racks and retail display racks for modern stores.
           </motion.p>
         </div>
       </div>

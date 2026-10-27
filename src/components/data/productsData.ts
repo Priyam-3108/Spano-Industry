@@ -26,6 +26,14 @@ export interface ProductDetail {
   applications: string[];
   faqs: ProductFaq[];
   relatedProductIds: string[];
+  seoDescription?: {
+    heading: string;
+    text: string;
+  };
+  cta?: {
+    heading: string;
+    description: string;
+  };
   seo: {
     title: string;
     metaDescription: string;
@@ -96,9 +104,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['industrial-storage-unit', 'raw-material-rack', 'bulk-material-rack', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Heavy Duty Warehouse Pallet Storage Racks in Surat",
+      text: "SPANO Industry manufactures heavy duty storage racks and industrial pallet racking systems in Surat for warehouses, factories, logistics centers, and distribution facilities. Our steel storage racks support organized bulk inventory, efficient material handling, and optimal warehouse space utilization.",
+    },
+    cta: {
+      heading: "Maximize Your Warehouse Storage",
+      description: "From pallet racks to bulk storage, we deliver industrial solutions across India.",
+    },
     seo: {
-      title: 'Heavy Duty Warehouse Pallet Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Industrial selective pallet racking engineered for warehouse bulk storage. 1000-3500kg load capacity per level, custom upright heights up to 24ft, powder-coated steel.',
+      title: "Warehouse Pallet & Bulk Storage Racks in Surat",
+      metaDescription: "Find heavy duty warehouse pallet racks and bulk storage solutions in Surat for factories, warehouses, logistics hubs and distribution centers.",
       keywords: ['warehouse pallet rack', 'heavy duty storage racks', 'industrial pallet racking', 'selective pallet rack manufacturer', 'warehouse storage systems India'],
     },
   },
@@ -154,9 +170,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['warehouse-pallet-rack', 'slotted-angle-standard', 'raw-material-rack'],
+    seoDescription: {
+      heading: "Multi-Tier Industrial Storage Racking Systems in Surat",
+      text: "Maximize vertical space with industrial multi-tier storage racks designed for warehouses, manufacturing units, and commercial facilities. SPANO Industry provides durable industrial racking systems in Surat that help businesses organize inventory, improve accessibility, and increase storage capacity.",
+    },
+    cta: {
+      heading: "Make Every Storage Level Count",
+      description: "From vertical storage planning to installation, we deliver across India.",
+    },
     seo: {
-      title: 'Industrial Multi-Tier Storage Rack & Mezzanine | SPANO Industry',
-      metaDescription: 'High density multi-tier shelving and rack-supported catwalk mezzanines. Multiplies warehouse storage capacity for e-commerce, spare parts, and cartons.',
+      title: "Industrial Multi-Tier Storage Racks in Surat",
+      metaDescription: "Optimize vertical space with industrial multi-tier storage racks in Surat, designed for warehouses, factories and efficient inventory management.",
       keywords: ['multi tier storage racks', 'rack supported mezzanine', 'industrial two tier shelving', 'warehouse catwalk racking', 'spare parts storage system'],
     },
   },
@@ -208,9 +232,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['warehouse-pallet-rack', 'bulk-material-rack', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Industrial Racks for Raw Materials and Spare Parts Storage",
+      text: "SPANO Industry offers industrial storage racks in Surat for organizing raw materials, machinery components, tools, and spare parts. These steel racks provide practical storage solutions for workshops, factories, maintenance departments, and industrial warehouses requiring efficient inventory management.",
+    },
+    cta: {
+      heading: "Organise Your Materials Smarter",
+      description: "From spare parts shelving to industrial racks, we deliver across India.",
+    },
     seo: {
-      title: 'Raw Material & Spare Parts Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Heavy-duty structural raw material racks for steel pipes, bars, machined parts, and heavy metal inventory. Engineered for manufacturing plants and workshops.',
+      title: "Raw Material & Spare Parts Racks in Surat",
+      metaDescription: "Organize tools, raw materials and components with durable industrial storage racks in Surat for factories, workshops and warehouses.",
       keywords: ['raw material rack', 'steel pipe storage rack', 'long span heavy duty rack', 'toolroom rack', 'industrial stock racking'],
     },
   },
@@ -258,9 +290,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['warehouse-pallet-rack', 'industrial-storage-unit', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Heavy Duty Racks for Bulk Material and Bagged Storage",
+      text: "Our heavy duty industrial storage racks in Surat help businesses store packaged goods, bagged materials, and bulk inventory systematically. Designed for demanding industrial environments, these steel storage racks support organized stock management and efficient warehouse operations.",
+    },
+    cta: {
+      heading: "STORE MORE WITH CONFIDENCE",
+      description: "From bulk materials to bagged goods, we provide storage solutions across India.",
+    },
     seo: {
-      title: 'Bulk Material & Bagged Storage Rack | SPANO Industry',
-      metaDescription: 'Wide-span heavy capacity storage racks for sacks, drums, cartons, and bulk inventory. Engineered for distribution centers and chemical/agro warehouses.',
+      title: "Bulk Material & Bagged Storage Racks in Surat",
+      metaDescription: "Store bagged goods and bulk materials efficiently with heavy duty storage racks from SPANO Industry in Surat for industrial facilities.",
       keywords: ['bulk storage rack', 'bagged goods rack', 'drum storage racking', 'heavy duty wide span shelving', 'warehouse sack rack'],
     },
   },
@@ -326,9 +366,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['storewell-cupboard', 'locker-cupboard', 'warehouse-pallet-rack', 'wall-unit-back-panel'],
+    seoDescription: {
+      heading: "Adjustable Steel Slotted Angle Racks in Surat",
+      text: "SPANO Industry manufactures adjustable steel rack and slotted angle shelving solutions for workshops, warehouses, retail stores, and record rooms. These versatile steel shelf racks offer flexible configurations, making them suitable for tools, spare parts, documents, and general-purpose industrial storage.",
+    },
+    cta: {
+      heading: "Build Your Flexible Storage System",
+      description: "From adjustable steel shelving to installation, we deliver across India.",
+    },
     seo: {
-      title: 'Industrial Slotted Angle Racks Manufacturer | SPANO Industry',
-      metaDescription: 'Heavy-duty steel slotted angle racks and modular shelving for warehouses, workshops, and offices. 14/16 gauge angles, custom shelf sizes, powder-coated finish.',
+      title: "Slotted Angle Steel Racks in Surat | SPANO",
+      metaDescription: "Explore adjustable steel slotted angle racks in Surat for workshops, warehouses, shops and flexible, organized industrial storage.",
       keywords: ['slotted angle racks', 'slotted angle shelving manufacturer', 'industrial storage racks', 'record room shelving', 'steel angle racks India'],
     },
   },
@@ -390,9 +438,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['storewell-cupboard', 'library-cupboard', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Industrial Steel Locker Cupboards in Surat",
+      text: "Our steel locker cupboards provide secure personal storage for employees in factories, offices, schools, and commercial establishments. SPANO Industry offers durable steel storage solutions in Surat that help maintain organized workplaces while protecting personal belongings, uniforms, and essential items.",
+    },
+    cta: {
+      heading: "Secure Your Everyday Storage",
+      description: "From workplace lockers to steel cupboards, we supply solutions across India.",
+    },
     seo: {
-      title: 'Industrial Steel Locker Cupboard Manufacturer | SPANO Industry',
-      metaDescription: 'Multi-door steel locker cupboards for factories, staff rooms, and hostels. 6 to 24 locker options, ventilation louvers, secure locks, powder-coated CRCA steel.',
+      title: "Steel Locker Cupboards in Surat | SPANO Industry",
+      metaDescription: "Find durable steel locker cupboards in Surat for secure personal storage in factories, offices, schools and commercial workplaces.",
       keywords: ['locker cupboard', 'industrial staff lockers', 'steel locker manufacturer', 'factory worker lockers', 'multi compartment locker'],
     },
   },
@@ -443,9 +499,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['storewell-cupboard', 'locker-cupboard', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Steel Library Cupboards and Storage Solutions",
+      text: "SPANO Industry supplies steel library cupboards in Surat for educational institutions, offices, libraries, and training centers. Designed for organized storage of books, documents, and reference materials, these cupboards provide a practical alternative to open shelving where secure storage is required.",
+    },
+    cta: {
+      heading: "Organize Your Knowledge Space",
+      description: "From book storage to steel cupboards, we deliver solutions across India.",
+    },
     seo: {
-      title: 'Glass Door Library Cupboard Manufacturer | SPANO Industry',
-      metaDescription: 'Steel library cupboards with glass-panel lockable doors and adjustable shelves. Secure, dust-proof storage for books, legal records, and office documents.',
+      title: "Steel Library Cupboards in Surat | SPANO Industry",
+      metaDescription: "Discover steel library cupboards in Surat for organized storage of books, files and reference materials in schools, offices and institutions.",
       keywords: ['library cupboard', 'glass door book cupboard', 'steel library cabinet', 'office book storage cupboard', 'document storage cabinet'],
     },
   },
@@ -496,9 +560,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['locker-cupboard', 'library-cupboard', 'slotted-angle-standard'],
+    seoDescription: {
+      heading: "Steel Storewell Cupboards for Organized Storage in Surat",
+      text: "Our storewell cupboards provide practical storage for documents, office supplies, tools, uniforms, and institutional materials. SPANO Industry manufactures durable steel storage cupboards in Surat for factories, offices, schools, and commercial facilities seeking reliable and space-efficient storage solutions.",
+    },
+    cta: {
+      heading: "Create a More Organized Space",
+      description: "From document storage to steel cupboards, we deliver across India.",
+    },
     seo: {
-      title: 'Storewell Cupboard & Steel Almirah Manufacturer | SPANO Industry',
-      metaDescription: 'Heavy duty plain steel storewell cupboards for factories, offices, and workshops. 3-way shoot bolt lock, 4 adjustable shelves, CRCA powder-coated steel.',
+      title: "Storewell Steel Cupboards in Surat | SPANO Industry",
+      metaDescription: "Explore storewell steel cupboards in Surat for secure, space-saving storage of documents, supplies and equipment in offices and institutions.",
       keywords: ['storewell cupboard', 'steel cupboard manufacturer', 'industrial steel almirah', 'office storage cupboard', 'heavy duty tool cupboard'],
     },
   },
@@ -553,9 +625,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['double-side-rack', 'end-cap-display', 'corner-rack-unit', 'checkout-cash-counter'],
+    seoDescription: {
+      heading: "Supermarket Wall Display Racks with Back Panels",
+      text: "SPANO Industry manufactures supermarket display racks in Surat with back panels for neatly presenting packaged products, groceries, household essentials, and everyday merchandise. These wall-mounted retail fixtures help maximize floor space, organize product categories, and create an attractive shopping environment.",
+    },
+    cta: {
+      heading: "Transform Your Store Walls",
+      description: "From wall display racks to custom fixtures, we deliver across India.",
+    },
     seo: {
-      title: 'Supermarket Wall Display Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Heavy-duty supermarket perimeter wall racks with solid or perforated back panels. Adjustable multi-angle shelves, 80-150kg capacity, modular bay extensions.',
+      title: "Supermarket Wall Units with Back Panels | SPANO",
+      metaDescription: "Shop supermarket wall units with back panels for organized product displays and efficient use of retail space. Made by SPANO Industry in Surat.",
       keywords: ['supermarket wall rack', 'grocery display rack', 'retail wall unit with back panel', 'perforated supermarket rack', 'store display fixtures India'],
     },
   },
@@ -606,9 +686,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['end-cap-display', 'wall-unit-back-panel', 'corner-rack-unit', 'shopping-trolleys'],
+    seoDescription: {
+      heading: "Double-Sided Supermarket Island Display Racks in Surat",
+      text: "Our double-sided island racks provide accessible product displays from both sides, making them ideal for supermarkets, grocery stores, and departmental stores. SPANO Industry supplies supermarket racks in Surat designed to improve aisle organization, merchandise visibility, and efficient retail space utilization.",
+    },
+    cta: {
+      heading: "Make Every Aisle Work Smarter",
+      description: "From double-sided racks to supermarket displays, we deliver across India.",
+    },
     seo: {
-      title: 'Double Side Supermarket Island Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Supermarket double-sided gondola island racks for central shopping aisles. Heavy load capacity, adjustable multi-tier shelves, modular starter & adder bays.',
+      title: "Double-Sided Supermarket Island Racks in Surat",
+      metaDescription: "Discover double-sided supermarket island racks in Surat to improve aisle organization, product visibility and space use in grocery and retail stores.",
       keywords: ['double side supermarket rack', 'gondola racking system', 'center aisle display rack', 'supermarket island rack manufacturer', 'grocery aisle shelving'],
     },
   },
@@ -655,9 +743,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['double-side-rack', 'wall-unit-back-panel', 'dump-bin', 'checkout-cash-counter'],
+    seoDescription: {
+      heading: "Supermarket End Cap Display Racks for Promotional Products",
+      text: "SPANO Industry offers end cap racks in Surat for showcasing promotional products, seasonal merchandise, special offers, and fast-moving consumer goods. These supermarket display racks make effective use of aisle ends, helping retailers improve product visibility and create organized promotional displays.",
+    },
+    cta: {
+      heading: "Make Your Promotions Stand Out",
+      description: "From end cap racks to retail displays, we deliver across India.",
+    },
     seo: {
-      title: 'End Cap Promotional Display Rack | SPANO Industry',
-      metaDescription: 'High-visibility supermarket end-cap racks for promotional and impulse merchandising. Perfectly integrates with double-sided gondolas. Custom branded headers.',
+      title: "Supermarket End Cap Display Racks in Surat",
+      metaDescription: "Showcase offers and popular products with supermarket end cap display racks in Surat, designed for organized, high-visibility retail displays.",
       keywords: ['end cap display rack', 'gondola end rack', 'promotional supermarket rack', 'impulse display fixture', 'retail end cap manufacturer'],
     },
   },
@@ -703,9 +799,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['wall-unit-back-panel', 'wall-mounted-unit', 'double-side-rack'],
+    seoDescription: {
+      heading: "Corner Display Racks for Supermarkets and Retail Stores",
+      text: "Our corner rack units help retailers utilize underused corners and create organized product displays in compact spaces. SPANO Industry provides supermarket display racks in Surat for groceries, packaged goods, household products, and general merchandise, supporting efficient store layouts.",
+    },
+    cta: {
+      heading: "Turn Every Corner Into Opportunity",
+      description: "From corner shelving to custom display racks, we deliver across India.",
+    },
     seo: {
-      title: 'Corner Display Rack Unit for Supermarkets | SPANO Industry',
-      metaDescription: 'Specialized 90-degree corner racking units for retail stores and supermarkets. Connects wall runs seamlessly with continuous shelves and zero wasted space.',
+      title: "Corner Display Racks for Retail Stores | SPANO",
+      metaDescription: "Make better use of store corners with practical corner display racks in Surat for supermarkets, shops and modern retail spaces.",
       keywords: ['corner rack unit', 'supermarket corner display', '90 degree retail rack', 'corner shelving module', 'grocery store corner unit'],
     },
   },
@@ -752,9 +856,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['wall-unit-back-panel', 'corner-rack-unit', 'cosmetic-personal-care'],
+    seoDescription: {
+      heading: "Wall Mounted Steel Display Racks in Surat",
+      text: "SPANO Industry manufactures wall-mounted steel racks for supermarkets, hardware shops, departmental stores, and commercial spaces. These space-saving display fixtures help organize merchandise along walls while keeping products accessible, making them suitable for retail environments with limited floor space.",
+    },
+    cta: {
+      heading: "Make More Room For Display",
+      description: "From wall mounted steel racks to retail fixtures, we deliver across India.",
+    },
     seo: {
-      title: 'Wall Mounted Shelving Units & Racks | SPANO Industry',
-      metaDescription: 'Direct wall-mounted steel shelving units for boutiques, pharmacies, and stores. Floating floor clearance, adjustable bracket heights, premium powder coat.',
+      title: "Wall-Mounted Steel Racks in Surat | SPANO",
+      metaDescription: "Explore wall-mounted steel racks in Surat for space-saving product displays in supermarkets, hardware shops and retail stores.",
       keywords: ['wall mounted unit', 'wall mounted retail shelving', 'floating store racks', 'pharmacy wall rack', 'commercial wall shelf system'],
     },
   },
@@ -805,9 +917,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['wooden-metal-rack', 'wooden-metal-combo', 'wall-unit-back-panel'],
+    seoDescription: {
+      heading: "Clothes Racks and Garment Display Solutions in Surat",
+      text: "Our garment display racks help clothing stores, boutiques, and fashion outlets present apparel in an organized and accessible manner. SPANO Industry offers clothes racks in Surat, including practical retail display solutions for hanging garments, showcasing collections, and improving the shopping experience.",
+    },
+    cta: {
+      heading: "Showcase Your Style With Confidence",
+      description: "From clothes racks to garment displays, we deliver retail solutions across India.",
+    },
     seo: {
-      title: 'Garment & Fashion Display Rack Manufacturer | SPANO Industry',
-      metaDescription: 'High-end garment display racks for clothing showrooms and boutiques. Chrome hanging rails, wooden shelves, waterfall hooks, customizable fashion fixtures.',
+      title: "Garment & Clothes Display Racks in Surat",
+      metaDescription: "Find clothes racks and garment display solutions in Surat for boutiques, fashion outlets and apparel stores seeking organized product presentation.",
       keywords: ['garment fashion display', 'clothing store rack', 'apparel display fixture', 'boutique garment stand', 'garment showroom rack manufacturer'],
     },
   },
@@ -855,9 +975,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['gift-kids-rack', 'wooden-metal-rack', 'wall-unit-back-panel'],
+    seoDescription: {
+      heading: "Gift and Stationery Display Racks for Retail Shops",
+      text: "SPANO Industry provides gift and stationery display racks in Surat for presenting notebooks, greeting cards, gift items, art supplies, and everyday stationery. These retail fixtures help shop owners organize products by category, improve visibility, and make better use of available display space.",
+    },
+    cta: {
+      heading: "Make Every Product Visible",
+      description: "From stationery shelving to gift displays, we deliver across India.",
+    },
     seo: {
-      title: 'Gift & Stationery Display Racks | SPANO Industry',
-      metaDescription: 'Tiered gift and stationery display racks with slanted shelves and acrylic lips. Perfect for greeting cards, books, diaries, and art supplies.',
+      title: "Gift & Stationery Display Racks in Surat",
+      metaDescription: "Display cards, stationery and gifts neatly with retail display racks in Surat, designed for stationery shops, gift stores and specialty retailers.",
       keywords: ['gift stationery display', 'greeting card rack', 'bookstore display shelving', 'stationery store rack', 'tiered retail display stand'],
     },
   },
@@ -905,9 +1033,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['gift-stationery-display', 'dump-bin', 'wooden-metal-rack'],
+    seoDescription: {
+      heading: "Gift Shop and Kids Store Display Racks in Surat",
+      text: "Our gift and kids store racks are designed for displaying toys, gifts, games, accessories, and children's merchandise. SPANO Industry supplies retail display racks in Surat that help specialty stores create attractive product arrangements while keeping merchandise organized and accessible.",
+    },
+    cta: {
+      heading: "Create a Display That Delights",
+      description: "From kids' store racks to gift displays, we deliver across India.",
+    },
     seo: {
-      title: 'Toy & Kids Store Display Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Child-safe colorful display racks for toy shops and kids gift stores. Rounded corners, deep wire baskets, accessible heights, vibrant non-toxic colors.',
+      title: "Gift & Kids Store Display Racks in Surat",
+      metaDescription: "Explore gift and kids store display racks in Surat for organized, accessible presentation of toys, games, gifts and children's products.",
       keywords: ['gift kids rack', 'toy store display rack', 'kids showroom shelving', 'children store fixture', 'wire basket toy display'],
     },
   },
@@ -956,9 +1092,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['glass-display-units', 'wooden-metal-combo', 'wall-mounted-unit'],
+    seoDescription: {
+      heading: "Cosmetic and Personal Care Display Racks in Surat",
+      text: "SPANO Industry offers cosmetic display racks for beauty stores, pharmacies, supermarkets, and personal care retailers. Designed to showcase skincare, haircare, cosmetics, and grooming products, these retail fixtures help organize merchandise, enhance product visibility, and create appealing displays.",
+    },
+    cta: {
+      heading: "Put Your Best Products Forward",
+      description: "From cosmetic racks to personal care displays, we deliver across India.",
+    },
     seo: {
-      title: 'Cosmetic & Perfume Display Cases | SPANO Industry',
-      metaDescription: 'Luxury LED-illuminated glass cosmetic display cases for beauty stores, perfumes, and salons. Tempered glass, lockable sliding doors, mirrored back panels.',
+      title: "Cosmetic & Personal Care Display Racks in Surat",
+      metaDescription: "Showcase beauty and grooming products with cosmetic and personal care display racks in Surat for retail shops, pharmacies and supermarkets.",
       keywords: ['cosmetic personal care display', 'perfume showcase cabinet', 'beauty store display rack', 'illuminated cosmetic counter', 'glass display showcase'],
     },
   },
@@ -1005,9 +1149,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['wooden-metal-combo', 'garment-fashion-display', 'wall-unit-back-panel'],
+    seoDescription: {
+      heading: "Wooden Finish Retail Display Racks in Surat",
+      text: "Our wooden finish display racks combine practical storage with an attractive retail appearance, making them suitable for boutiques, gift shops, showrooms, and specialty stores. SPANO Industry provides retail display solutions in Surat that help showcase merchandise while complementing modern store interiors.",
+    },
+    cta: {
+      heading: "Add Style To Your Product Display",
+      description: "From wooden finish racks to custom retail fixtures, we deliver across India.",
+    },
     seo: {
-      title: 'Wooden & Metal Display Rack Manufacturer | SPANO Industry',
-      metaDescription: 'Artisan wooden finish retail display racks with industrial steel frames. Ideal for organic food stores, bakeries, liquor shops, and boutique showrooms.',
+      title: "Wooden Finish Display Racks in Surat | SPANO",
+      metaDescription: "Add a refined look to product presentation with wooden finish display racks in Surat for boutiques, showrooms and specialty retail stores.",
       keywords: ['wooden metal display rack', 'wood grocery store rack', 'bakery display shelving', 'organic food display rack', 'rustic retail shelving'],
     },
   },
@@ -1058,9 +1210,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['wooden-metal-rack', 'glass-display-units', 'garment-fashion-display'],
+    seoDescription: {
+      heading: "Wooden and Metal Combination Retail Display Racks",
+      text: "SPANO Industry manufactures wooden and metal combination display units in Surat for retailers seeking a balance of durability and contemporary design. These versatile fixtures suit boutiques, showrooms, gift shops, and departmental stores, providing organized shelving and attractive product presentation.",
+    },
+    cta: {
+      heading: "Combine Strength With Modern Style",
+      description: "From wooden and metal racks to custom displays, we deliver across India.",
+    },
     seo: {
-      title: 'Custom Wooden & Metal Retail Fixtures | SPANO Industry',
-      metaDescription: 'Bespoke custom retail display fixtures combining wood and steel. Engineered to your floor plan and brand aesthetics for flagship showrooms and stores.',
+      title: "Wood & Metal Retail Display Units in Surat",
+      metaDescription: "Explore wooden and metal retail display units in Surat, combining practical shelving and contemporary style for shops, boutiques and showrooms.",
       keywords: ['wooden metal combo unit', 'custom retail fixtures', 'bespoke store display manufacturer', 'architectural shop fixtures', 'custom showroom racks'],
     },
   },
@@ -1107,9 +1267,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['cosmetic-personal-care', 'wooden-metal-combo', 'wall-mounted-unit'],
+    seoDescription: {
+      heading: "Glass Display Cabinets for Retail Stores and Showrooms",
+      text: "Our glass display cabinets help retailers present valuable merchandise, accessories, gifts, and specialty products while maintaining a neat, professional appearance. SPANO Industry supplies retail display solutions in Surat for showrooms, boutiques, and commercial establishments requiring organized product presentation and visibility.",
+    },
+    cta: {
+      heading: "Present Your Products Beautifully",
+      description: "From glass display cabinets to retail fixtures, we deliver across India.",
+    },
     seo: {
-      title: 'Glass Display Showcases & Cabinets | SPANO Industry',
-      metaDescription: 'Lockable toughened glass display cabinets with LED lighting for electronics, jewelry, and luxury goods. Custom showcase manufacturer in India.',
+      title: "Glass Display Cabinets for Retail Stores | SPANO",
+      metaDescription: "Discover glass display cabinets for retail stores in Surat to present accessories, gifts and specialty products in a neat, professional setting.",
       keywords: ['glass display units', 'glass showcase cabinet', 'jewelry display case', 'mobile phone glass counter', 'lockable retail showcase'],
     },
   },
@@ -1157,9 +1325,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['slotted-rack-custom', 'wall-unit-back-panel', 'dump-bin'],
+    seoDescription: {
+      heading: "Retail Pegboard Display Systems with Hooks in Surat",
+      text: "SPANO Industry offers hanging and hook pegboard systems for displaying tools, hardware, accessories, packaged products, and small merchandise. These flexible retail fixtures help maximize wall space, simplify product arrangement, and improve accessibility in hardware shops and modern retail stores.",
+    },
+    cta: {
+      heading: "Organize Your Display With Ease",
+      description: "From hook pegboards to hanging systems, we deliver across India.",
+    },
     seo: {
-      title: 'Pegboard & Hanging Hook Racks Manufacturer | SPANO Industry',
-      metaDescription: 'Perforated metal pegboard racks and chrome hanging hook systems for mobile accessories, hardware tools, and blister packages. Custom sizes and hooks.',
+      title: "Pegboard Hook Display Systems in Surat | SPANO",
+      metaDescription: "Organize tools and packaged merchandise with hook pegboard display systems in Surat for hardware shops, supermarkets and retail stores.",
       keywords: ['hanging hook systems', 'perforated pegboard rack', 'slatwall display fixtures', 'retail hanging hooks', 'mobile accessory display stand'],
     },
   },
@@ -1206,9 +1382,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['slotted-angle-standard', 'storewell-cupboard', 'warehouse-pallet-rack'],
+    seoDescription: {
+      heading: "Modular Slotted Angle Steel Racking Systems in Surat",
+      text: "Our modular slotted angle systems provide flexible storage configurations for warehouses, workshops, factories, and commercial facilities. SPANO Industry manufactures adjustable steel racks in Surat that can be configured to suit changing inventory requirements, helping businesses maintain organized and space-efficient storage.",
+    },
+    cta: {
+      heading: "Design Storage That Adapts",
+      description: "From adjustable slotted angle racks to modular systems, we deliver across India.",
+    },
     seo: {
-      title: 'Custom Slotted Angle Modular Systems | SPANO Industry',
-      metaDescription: 'Customized modular slotted angle racking systems for retail stockrooms, archives, and workshops. Custom heights, shelf dividers, and heavy load capacities.',
+      title: "Modular Slotted Angle Racking in Surat | SPANO",
+      metaDescription: "Explore modular slotted angle racking in Surat with adjustable steel shelving for warehouses, workshops, stockrooms and commercial storage.",
       keywords: ['slotted rack custom', 'modular slotted angle rack', 'custom backroom shelving', 'pigeon hole storage rack', 'stockroom steel racks'],
     },
   },
@@ -1260,9 +1444,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['checkout-cash-counter', 'dump-bin', 'double-side-rack'],
+    seoDescription: {
+      heading: "Shopping Trolleys and Baskets for Supermarkets in Surat",
+      text: "SPANO Industry provides shopping trolleys and baskets for supermarkets, grocery stores, and departmental retailers. These essential retail accessories support convenient product collection and smooth customer movement, helping stores improve shopping convenience and maintain efficient day-to-day operations.",
+    },
+    cta: {
+      heading: "Make Every Shopping Trip Easier",
+      description: "From shopping trolleys to baskets, we supply retail essentials across India.",
+    },
     seo: {
-      title: 'Supermarket Shopping Trolleys & Baskets | SPANO Industry',
-      metaDescription: 'Heavy-duty zinc-plated supermarket shopping trolleys and plastic hand baskets. 60L to 180L capacities, silent swivel PU wheels, child seat safety.',
+      title: "Shopping Trolleys & Baskets for Retail | SPANO",
+      metaDescription: "Find shopping trolleys and baskets for supermarkets and retail stores from SPANO Industry, supporting convenient shopping and smooth store operations.",
       keywords: ['shopping trolleys', 'supermarket shopping cart manufacturer', 'grocery hand baskets', 'retail shopping trolley India', 'zinc plated supermarket cart'],
     },
   },
@@ -1316,9 +1508,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['shopping-trolleys', 'end-cap-display', 'dump-bin', 'double-side-rack'],
+    seoDescription: {
+      heading: "Retail Checkout Cash Counters for Modern Supermarkets",
+      text: "Our checkout cash counters are designed for supermarkets, grocery stores, and departmental stores requiring an organized billing area. SPANO Industry supplies retail counters in Surat that support efficient checkout operations, practical workspace organization, and a professional retail environment.",
+    },
+    cta: {
+      heading: "Create a Better Checkout Experience",
+      description: "From cash counters to checkout fixtures, we deliver retail solutions across India.",
+    },
     seo: {
-      title: 'Supermarket Checkout Cash Counter Manufacturer | SPANO Industry',
-      metaDescription: 'Ergonomic supermarket checkout cash counters with grade 304 stainless steel top, lockable cash drawer, POS integration, and front impulse shelving.',
+      title: "Retail Checkout Cash Counters in Surat | SPANO",
+      metaDescription: "Explore retail checkout cash counters in Surat for organized billing areas and efficient checkout operations in supermarkets and departmental stores.",
       keywords: ['checkout cash counter', 'supermarket billing counter', 'cashier counter table', 'retail POS desk', 'supermarket checkout counter manufacturer'],
     },
   },
@@ -1366,9 +1566,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['end-cap-display', 'shopping-trolleys', 'checkout-cash-counter'],
+    seoDescription: {
+      heading: "Promotional Dump Bins and Retail Display Fixtures in Surat",
+      text: "SPANO Industry offers promotional dump bins for supermarkets, discount stores, and retail outlets displaying offers, clearance items, packaged goods, and impulse purchases. These practical retail display fixtures help highlight promotional merchandise, encourage product discovery, and keep store layouts organized.",
+    },
+    cta: {
+      heading: "Put Your Special Offers In Focus",
+      description: "From promotional dump bins to display fixtures, we deliver across India.",
+    },
     seo: {
-      title: 'Retail Promotional Dump Bins Manufacturer | SPANO Industry',
-      metaDescription: 'Mobile wire dump bins for supermarket clearance sales and promotions. Adjustable bottom height, lockable caster wheels, collapsible space-saving design.',
+      title: "Retail Promotional Dump Bins in Surat | SPANO",
+      metaDescription: "Promote offers and clearance products with retail dump bins in Surat, ideal for supermarkets, discount stores and promotional merchandise displays.",
       keywords: ['dump bin', 'promotional dump basket', 'retail clearance bin', 'supermarket wire dump bin', 'mobile promotion basket'],
     },
   },
@@ -1416,9 +1624,17 @@ export const productsData: ProductDetail[] = [
       },
     ],
     relatedProductIds: ['dump-bin', 'wall-unit-back-panel', 'slotted-rack-custom'],
+    seoDescription: {
+      heading: "Broom and Hardware Display Stands for Retail Shops",
+      text: "Our broom and hardware display stands help retailers organize cleaning tools, household accessories, hand tools, and related merchandise. SPANO Industry provides steel display racks in Surat for hardware shops, home improvement stores, and supermarkets seeking durable, space-efficient product presentation solutions.",
+    },
+    cta: {
+      heading: "Display Every Product With Purpose",
+      description: "From broom stands to hardware racks, we deliver retail solutions across India.",
+    },
     seo: {
-      title: 'Broom & Mop Display Stand Manufacturer | SPANO Industry',
-      metaDescription: 'Heavy-duty steel display stand for brooms, mops, and cleaning tools. Multi-slot grid divider, deep anti-slip base tray, compact retail footprint.',
+      title: "Broom & Hardware Display Stands in Surat",
+      metaDescription: "Display brooms, tools and hardware with sturdy retail display stands in Surat for hardware shops, supermarkets and home improvement stores.",
       keywords: ['broom stand', 'mop display stand', 'cleaning tool display rack', 'hardware retail stand', 'broom organizer rack'],
     },
   },
