@@ -13,8 +13,8 @@ export function OurClients() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
         <AnimatedSection>
           <SectionHeader title="Our Trusted" subtitle="Clients & Partners" align="center" />
-          <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-lg mx-auto -mt-4">
-            Trusted by leading retailers, supermarkets, and commercial brands across India
+          <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4">
+            Trusted by leading retailers, supermarkets, and commercial brands across Surat and India for quality steel racks and industrial storage solutions.
           </p>
         </AnimatedSection>
       </div>

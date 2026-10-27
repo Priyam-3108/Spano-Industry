@@ -18,16 +18,18 @@ import { IMAGES } from '@/components/data/images';
 import { ArrowRight, CheckCircle2, Store, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'SPANO Industry | Industrial Racking & Storage Solutions',
+  title: {
+    absolute: 'Steel Racks & Storage Solutions in Surat | SPANO',
+  },
   description:
-    'Manufacturer & supplier of heavy duty warehouse storage racks, industrial slotted angle shelving, locker, library & storewell cupboards, plus supermarket racks and retail display fixtures across India.',
+    'Explore SPANO Industry steel racks, heavy duty storage racks and supermarket display solutions in Surat for warehouses, factories and retail stores.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'SPANO Industry | Industrial Racking & Storage Solutions',
+    title: 'Steel Racks & Storage Solutions in Surat | SPANO',
     description:
-      '30 years of manufacturing excellence in heavy duty warehouse pallet racks, slotted angle shelving, and store cupboards across India.',
+      'Explore SPANO Industry steel racks, heavy duty storage racks and supermarket display solutions in Surat for warehouses, factories and retail stores.',
     url: 'https://spanoindustry.com',
   },
 };
@@ -55,10 +57,10 @@ export default function HomePage() {
                 <AnimatedSection delay={0.1} direction="up" className="flex flex-col items-center">
                   <div className="space-y-4 text-[var(--color-spano-text)] text-base leading-relaxed font-body">
                     <p>
-                      With <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a market leader in engineering heavy duty industrial racking and storage systems.
+                      With <strong className="text-[var(--color-spano-dark)]">30 years of manufacturing experience</strong>, SPANO Industry is a leading manufacturer in Surat, specializing in heavy duty industrial racking and steel storage rack systems.
                     </p>
                     <p>
-                      We help warehouses, factories, logistics centers, and educational institutions build organized, space-efficient storage, and support supermarkets, departmental stores, and boutique fashion outlets with modern retail display fixtures.
+                      We help warehouses, factories, logistics centers, and educational institutions with industrial storage racks and space-efficient solutions, while supplying supermarket display racks and modern retail fixtures for departmental stores and fashion outlets.
                     </p>
                   </div>
 
@@ -100,8 +102,8 @@ export default function HomePage() {
                 subtitle="Engineered for Industry & Retail"
                 align="center"
               />
-              <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
-                Discover our comprehensive categories of heavy duty industrial racking, storage cupboards, and supermarket & retail fixtures.
+              <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-2xl mx-auto -mt-4 mb-12">
+                Explore our range of heavy duty industrial racking, steel storage racks, storage cupboards, and supermarket display racks in Surat, engineered for industrial storage and modern retail spaces.
               </p>
             </AnimatedSection>
 
@@ -137,8 +139,8 @@ export default function HomePage() {
                 subtitle="Complete Industrial &amp; Retail Racking Systems"
                 align="center"
               />
-              <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
-                Browse all our manufactured rack models from heavy duty warehouse shelving and storage cupboards to supermarket wall units and checkout counters.
+              <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-2xl mx-auto -mt-4 mb-12">
+                Explore our rack models, from heavy duty warehouse racks and industrial storage racks to supermarket wall racks and retail display fixtures, manufactured in Surat.
               </p>
             </AnimatedSection>
 
@@ -150,7 +152,10 @@ export default function HomePage() {
         <OurClients />
 
         {/* 9. Contact CTA Banner */}
-        <CtaBanner />
+        <CtaBanner
+          title="Let’s Build Your Ideal Storage Space"
+          subtitle="From planning to manufacturing and installation, we deliver across India."
+        />
       </main>
 
       <Footer />

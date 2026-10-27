@@ -4,23 +4,25 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { createBreadcrumbSchema } from '@/components/seo/schemas';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Factory & Sales Office Surat | SPANO Industry',
+  title: {
+    absolute: 'Contact SPANO Industry | Rack Manufacturer Surat',
+  },
   description:
-    'Contact SPANO Industry for industrial racking inquiries, store layout plans, price quotes, and custom warehouse storage orders. Factory located at VR Eco Park, Kamrej, Surat, Gujarat.',
+    'Contact SPANO Industry in Surat for heavy duty racks, industrial storage systems, supermarket displays and customized retail racking solutions.',
   keywords: [
-    'contact racking manufacturer',
+    'contact racking manufacturer Surat',
     'industrial rack price quote',
     'warehouse storage supplier Surat',
-    'supermarket rack inquiry',
+    'supermarket rack inquiry Surat',
     'SPANO Industry contact',
   ],
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact SPANO Industry | Industrial Racking & Storage Inquiries',
+    title: 'Contact SPANO Industry | Rack Manufacturer Surat',
     description:
-      'Get in touch with our sales engineers for warehouse racking and supermarket store fixture quotes in Surat, Gujarat & Pan-India.',
+      'Contact SPANO Industry in Surat for heavy duty racks, industrial storage systems, supermarket displays and customized retail racking solutions.',
     url: 'https://spanoindustry.com/contact',
   },
 };

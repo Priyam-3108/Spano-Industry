@@ -11,11 +11,13 @@ import { getBlogPosts } from '@/sanity/client';
 import { IMAGES } from '@/components/data/images';
 
 export const metadata: Metadata = {
-  title: 'Industrial Racking & Storage Insights | SPANO Industry Blog',
+  title: {
+    absolute: 'Racking & Storage Insights | SPANO Industry Blog',
+  },
   description:
-    'Expert articles, warehouse racking engineering guides, supermarket merchandising ideas, and heavy duty storage solutions from SPANO Industry.',
+    'Read expert insights on heavy duty storage racks, warehouse planning, industrial racking and retail display solutions from SPANO Industry.',
   keywords: [
-    'industrial racking blog',
+    'industrial racking blog Surat',
     'warehouse storage guide',
     'pallet racking tips',
     'supermarket layout ideas',
@@ -25,9 +27,9 @@ export const metadata: Metadata = {
     canonical: '/blog',
   },
   openGraph: {
-    title: 'Industrial Racking & Storage Insights | SPANO Industry Blog',
+    title: 'Racking & Storage Insights | SPANO Industry Blog',
     description:
-      'Explore expert guides on warehouse pallet racks, retail display fixtures, and space-saving industrial storage solutions.',
+      'Read expert insights on heavy duty storage racks, warehouse planning, industrial racking and retail display solutions from SPANO Industry.',
     url: 'https://spanoindustry.com/blog',
   },
 };
@@ -69,7 +71,7 @@ export default async function BlogPage() {
                   <span className="text-[var(--color-spano-bright)] font-extrabold">STORAGE INSIGHTS</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  Expert advice on heavy duty warehouse optimization, pallet rack load ratings, slotted angle installation, and high-conversion retail layouts.
+                  Expert insights on heavy duty storage racks, warehouse optimization, pallet racking systems, slotted angle shelving, and supermarket display racks in Surat.
                 </p>
               </AnimatedSection>
             </div>
@@ -84,7 +86,11 @@ export default async function BlogPage() {
         </section>
 
         {/* Global CTA Banner */}
-        <CtaBanner />
+        <CtaBanner
+          title="Let’s Build Smarter Storage Knowledge"
+          subtitle="From warehouse optimization to retail displays, explore expert insights from SPANO Industry."
+          defaultProduct="Racking & Storage Insights"
+        />
       </main>
 
       <Footer />

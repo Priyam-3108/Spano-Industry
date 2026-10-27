@@ -5,7 +5,7 @@ import { ShieldCheck, Award, Layers, Wrench, Clock, Sparkles } from 'lucide-reac
 const reasons = [
   {
     icon: Award,
-    title: '30+ Years Industry Expertise',
+    title: '30+ Years of Industry Expertise',
     desc: 'Decades of specialized engineering and manufacturing experience in retail racking and storage.',
   },
   {
@@ -15,12 +15,12 @@ const reasons = [
   },
   {
     icon: ShieldCheck,
-    title: 'Heavy-Duty Steel Construction',
+    title: 'Heavy-Duty Steel Rack Construction',
     desc: 'High-grade prime steel structure with superior load-bearing strength and anti-corrosive powder finish.',
   },
   {
     icon: Wrench,
-    title: 'Modular & Scalable Design',
+    title: 'Modular & Scalable Racking Design',
     desc: 'Easy-to-adjust shelf heights, modular extensions, and tool-free reconfigurations as your business grows.',
   },
   {
@@ -30,7 +30,7 @@ const reasons = [
   },
   {
     icon: Sparkles,
-    title: 'Turnkey Retail Solutions',
+    title: 'Complete Retail Display Solutions',
     desc: 'End-to-end service from initial store measurements to final quality inspection and installation.',
   },
 ];
@@ -46,8 +46,8 @@ export function WhyChooseUs() {
             subtitleFirst
             align="center"
           />
-          <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-xl mx-auto -mt-4 mb-12">
-            Delivering precision-engineered retail display systems that combine aesthetic elegance with long-lasting structural strength.
+          <p className="text-center text-[var(--color-spano-text)] text-sm font-body max-w-2xl mx-auto -mt-4 mb-12">
+            Delivering precision-engineered steel racks and industrial racking systems in Surat, combining modern retail aesthetics, space optimization, and long-lasting structural strength.
           </p>
         </AnimatedSection>
 

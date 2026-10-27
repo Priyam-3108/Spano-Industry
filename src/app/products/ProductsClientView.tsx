@@ -65,7 +65,7 @@ export function ProductsClientView() {
                   <span className="text-[var(--color-spano-bright)] font-extrabold">RETAIL RACKING</span>
                 </h1>
                 <p className="mt-3 text-white/80 text-base sm:text-lg max-w-2xl font-body leading-normal">
-                  Explore our engineering range covering heavy duty warehouse racks, industrial slotted angles, locker &amp; library cupboards, supermarket racks, boutique displays, and checkout accessories.
+                  Explore our range of heavy duty warehouse racks, industrial storage racks, slotted angle shelving, storage cupboards, supermarket racks, and retail display fixtures, manufactured in Surat.
                 </p>
               </AnimatedSection>
             </div>
@@ -317,7 +317,11 @@ export function ProductsClientView() {
         </div>
 
         {/* Global CTA */}
-        <CtaBanner />
+        <CtaBanner
+          title="Find The Right Rack For Your Space"
+          subtitle="From heavy duty racks to retail displays, we deliver solutions across India."
+          defaultProduct="Industrial & Retail Racking Inquiries"
+        />
       </main>
 
       <Footer />

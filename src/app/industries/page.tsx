@@ -5,11 +5,13 @@ import { createBreadcrumbSchema } from '@/components/seo/schemas';
 import { seoIndustries } from '@/components/data/content';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Warehouse, Retail & Institutional Storage',
+  title: {
+    absolute: 'Industrial & Retail Storage Solutions | SPANO',
+  },
   description:
-    'Customized racking and storage solutions for Supermarkets, Warehouses, Logistics Hubs, Textile Industries, Departmental Stores, and Institutions across India.',
+    'SPANO Industry supplies industrial storage racks, heavy duty racking and supermarket display solutions in Surat for diverse business needs.',
   keywords: [
-    'warehouse storage solutions',
+    'warehouse storage solutions Surat',
     'supermarket racking systems',
     'textile roll storage racks',
     'grocery store shelving',
@@ -20,9 +22,9 @@ export const metadata: Metadata = {
     canonical: '/industries',
   },
   openGraph: {
-    title: 'Industries We Serve | SPANO Industry Storage Solutions',
+    title: 'Industrial & Retail Storage Solutions | SPANO',
     description:
-      'Engineered storage and display solutions tailored for Warehousing, Supermarket Chains, Garment Stores, and Industrial facilities across India.',
+      'SPANO Industry supplies industrial storage racks, heavy duty racking and supermarket display solutions in Surat for diverse business needs.',
     url: 'https://spanoindustry.com/industries',
   },
 };

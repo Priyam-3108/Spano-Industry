@@ -22,7 +22,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'heavy-duty-racking',
     title: 'Heavy Duty Storage Racks',
-    description: 'Industrial-grade pallet and bulk storage racking systems engineered for warehouses, manufacturing plants, logistics facilities, and distribution centers.',
+    description: 'Industrial-grade heavy duty storage racks and pallet racking systems in Surat, engineered for warehouses, manufacturing plants, logistics facilities, and distribution centers.',
     items: [
       {
         id: 'warehouse-pallet-rack',
@@ -85,7 +85,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'slotted-angle-racks',
     title: 'Slotted Angle Racks',
-    description: 'Versatile steel slotted angle shelving suitable for warehouses, workshops, e-commerce inventory, record rooms, and hardware shops.',
+    description: 'Versatile steel slotted angle racks in Surat, ideal for warehouses, workshops, e-commerce inventory, record rooms, and hardware shops requiring organized storage.',
     items: [
       {
         id: 'slotted-angle-standard',
@@ -155,7 +155,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'five-rack-options',
     title: 'Five Core Rack Options',
-    description: 'Versatile, high-strength racking options engineered for modern supermarket, grocery, and departmental store layouts.',
+    description: 'High-strength supermarket display racks in Surat, engineered for efficient storage and modern supermarket, grocery, and departmental store layouts.',
     items: [
       {
         id: 'wall-unit-back-panel',
@@ -227,7 +227,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'display-fixtures',
     title: 'Display Rack & Retail Fixtures',
-    description: 'Category-specific retail display units crafted to showcase apparel, gifts, stationery, cosmetics, and specialty merchandise.',
+    description: 'Custom retail display racks in Surat, designed to showcase apparel, gifts, stationery, cosmetics, and specialty merchandise in modern stores.',
     items: [
       {
         id: 'garment-fashion-display',
@@ -302,7 +302,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'customized-solutions',
     title: 'Customized Retail Solutions',
-    description: 'Tailor-made retail fixtures engineered around your exact store dimensions, brand identity, and merchandise specifications.',
+    description: 'Custom retail display racks in Surat, tailored to your store dimensions, brand identity, and merchandise requirements.',
     items: [
       {
         id: 'wooden-metal-combo',
@@ -361,7 +361,7 @@ export const productCategories: ProductCategoryGroup[] = [
   {
     id: 'retail-accessories',
     title: 'Retail Accessories & Counters',
-    description: 'Essential supporting retail fixtures including checkout cash counters, shopping trolleys, dump bins, and display accessories.',
+    description: 'Retail checkout counters, shopping trolleys, dump bins, and display accessories in Surat, designed for efficient store operations and product presentation.',
     items: [
       {
         id: 'shopping-trolleys',

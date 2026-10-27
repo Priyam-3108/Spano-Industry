@@ -5,9 +5,11 @@ import { createBreadcrumbSchema } from '@/components/seo/schemas';
 import { productCategories } from '@/components/data/content';
 
 export const metadata: Metadata = {
-  title: 'Heavy Duty Storage Racks, Slotted Angle & Cupboards | Products',
+  title: {
+    absolute: 'Industrial Racks & Supermarket Displays | SPANO',
+  },
   description:
-    'Explore SPANO Industry manufacturing catalog: Heavy Duty Warehouse Pallet Racks, Slotted Angle Shelving, Storewell & Locker Cupboards, Supermarket Display Racks & Retail Fixtures.',
+    'Browse heavy duty storage racks, industrial racking systems, steel cupboards and supermarket display racks from SPANO Industry in Surat.',
   keywords: [
     'heavy duty storage racks',
     'warehouse pallet racking',
@@ -16,14 +18,15 @@ export const metadata: Metadata = {
     'locker cupboards',
     'supermarket display racks',
     'retail shelving systems',
+    'Surat rack manufacturer',
   ],
   alternates: {
     canonical: '/products',
   },
   openGraph: {
-    title: 'Industrial Storage Racks & Retail Solutions | SPANO Industry Products',
+    title: 'Industrial Racks & Supermarket Displays | SPANO',
     description:
-      'High capacity industrial warehouse racking, heavy duty slotted angles, storage cupboards, and supermarket fixtures engineered for extreme durability.',
+      'Browse heavy duty storage racks, industrial racking systems, steel cupboards and supermarket display racks from SPANO Industry in Surat.',
     url: 'https://spanoindustry.com/products',
   },
 };
